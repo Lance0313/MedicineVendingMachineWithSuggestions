@@ -49,6 +49,12 @@
     <Compile Include="ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MainSuggestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainSuggestion.Designer.cs">
+      <DependentUpon>MainSuggestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     <Compile Include="CartSummary.Designer.cs">
       <DependentUpon>CartSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuggestionQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuggestionQuery.Designer.cs">
+      <DependentUpon>SuggestionQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thankyou.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +129,9 @@
     <EmbeddedResource Include="E-cashPayment.resx">
       <DependentUpon>E-cashPayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainSuggestion.resx">
+      <DependentUpon>MainSuggestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="PaymentMethod.resx">
       <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuggestionQuery.resx">
+      <DependentUpon>SuggestionQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thankyou.resx">
       <DependentUpon>Thankyou.cs</DependentUpon>

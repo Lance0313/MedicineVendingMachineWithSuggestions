@@ -32,5 +32,13 @@ namespace ThesisBeta
             // Close Form1
             this.Hide();
         }
+
+        private void StartScreenSuggestion_Click(object sender, EventArgs e)
+        {
+            SuggestionQuery suggestionQuery = new SuggestionQuery();
+            suggestionQuery.Show();
+
+            this.Hide();
+        }
     }
 }

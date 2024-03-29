@@ -86,6 +86,7 @@
             this.StartScreenSuggestion.Text = "Suggestion";
             this.StartScreenSuggestion.TextColor = System.Drawing.Color.Black;
             this.StartScreenSuggestion.UseVisualStyleBackColor = true;
+            this.StartScreenSuggestion.Click += new System.EventHandler(this.StartScreenSuggestion_Click);
             // 
             // label1
             // 
