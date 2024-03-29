@@ -72,6 +72,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PaymentMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentMethod.Designer.cs">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CashPayment.Designer.cs">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E-cashPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="E-cashPayment.Designer.cs">
+      <DependentUpon>E-cashPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CartSummary.Designer.cs">
+      <DependentUpon>CartSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thankyou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Thankyou.Designer.cs">
+      <DependentUpon>Thankyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Water.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Water.Designer.cs">
+      <DependentUpon>Water.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CartSummary.resx">
+      <DependentUpon>CartSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashPayment.resx">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E-cashPayment.resx">
+      <DependentUpon>E-cashPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +133,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PaymentMethod.resx">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thankyou.resx">
+      <DependentUpon>Thankyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Water.resx">
+      <DependentUpon>Water.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +172,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\images\Minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Peso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Gcash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\SampleQR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Total.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Water.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
