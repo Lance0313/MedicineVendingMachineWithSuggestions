@@ -36,7 +36,6 @@
             this.SuggestionBackButton = new ePOSOne.btnProduct.RoundButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuggestionPanel.SuspendLayout();
@@ -46,10 +45,10 @@
             // SuggestionPanel
             // 
             this.SuggestionPanel.BackColor = System.Drawing.Color.White;
-            this.SuggestionPanel.Controls.Add(this.label3);
+            this.SuggestionPanel.Controls.Add(this.label1);
             this.SuggestionPanel.Controls.Add(this.PLACEHOLDER1);
             this.SuggestionPanel.Controls.Add(this.YourCart);
-            this.SuggestionPanel.Location = new System.Drawing.Point(153, 28);
+            this.SuggestionPanel.Location = new System.Drawing.Point(109, 84);
             this.SuggestionPanel.Name = "SuggestionPanel";
             this.SuggestionPanel.Size = new System.Drawing.Size(581, 157);
             this.SuggestionPanel.TabIndex = 12;
@@ -85,7 +84,7 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.Location = new System.Drawing.Point(459, 357);
+            this.ExitButton.Location = new System.Drawing.Point(529, 392);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.ExitButton.OnHoverButtonColor = System.Drawing.Color.Gold;
@@ -108,7 +107,7 @@
             this.PurchaseMedicineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PurchaseMedicineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PurchaseMedicineButton.ForeColor = System.Drawing.Color.Black;
-            this.PurchaseMedicineButton.Location = new System.Drawing.Point(57, 357);
+            this.PurchaseMedicineButton.Location = new System.Drawing.Point(12, 392);
             this.PurchaseMedicineButton.Name = "PurchaseMedicineButton";
             this.PurchaseMedicineButton.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.PurchaseMedicineButton.OnHoverButtonColor = System.Drawing.Color.Gold;
@@ -145,48 +144,37 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(137, 191);
+            this.panel1.Location = new System.Drawing.Point(109, 247);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(581, 157);
+            this.panel1.Size = new System.Drawing.Size(581, 119);
             this.panel1.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 56);
+            this.label1.Location = new System.Drawing.Point(72, 79);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 17;
-            this.label1.Text = "AVAILABLE:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(438, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "SUGGESTIONS BASED ON YOUR SYMTOMPS";
+            this.label1.Text = "Information";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 82);
+            this.label3.Location = new System.Drawing.Point(61, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Information";
+            this.label3.Text = "AVAILABLE:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 79);
+            this.label4.Location = new System.Drawing.Point(61, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
@@ -224,7 +212,6 @@
         private ePOSOne.btnProduct.RoundButton SuggestionBackButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }

@@ -27,10 +27,42 @@ namespace ThesisBeta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainSuggestion suggestion = new MainSuggestion();
-            suggestion.Show();
+            // Check if the text box is empty
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                ShowCustomMessageBox("Please tell me your sickness before proceeding.");
+                return;
+            }
+
+            string userInput = textBox1.Text.ToLower();
+            MainSuggestion suggestionForm = new MainSuggestion(userInput);
+            suggestionForm.Show();
 
             this.Hide();
+        }
+
+        private void ShowCustomMessageBox(string message)
+        {
+            Form messageBoxForm = new Form();
+            messageBoxForm.FormBorderStyle = FormBorderStyle.None;
+            messageBoxForm.StartPosition = FormStartPosition.CenterParent;
+            messageBoxForm.Size = new Size(300, 150);
+
+            Label label = new Label();
+            label.Text = message;
+            label.AutoSize = true;
+            label.Location = new Point(50, 30);
+            label.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+
+            Button closeButton = new Button();
+            closeButton.Text = "OK";
+            closeButton.Location = new Point(115, 80);
+            closeButton.Size = new Size(70, 30);
+            closeButton.Click += (sender, e) => { messageBoxForm.Close(); };
+
+            messageBoxForm.Controls.Add(label);
+            messageBoxForm.Controls.Add(closeButton);
+            messageBoxForm.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -44,7 +76,6 @@ namespace ThesisBeta
             ShowVirtualKeyboard();
         }
 
-        // Event handler for when the text box loses focus
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (virtualKeyboardForm != null)
