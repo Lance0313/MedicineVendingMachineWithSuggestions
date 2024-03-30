@@ -19,22 +19,51 @@ namespace ThesisBeta
 
             keywordMap = new Dictionary<string, string>
             {
-                { "sneeze", "BUMILI KA NA NG CETIRIZINE NAMIN HAHAH" },
-                { "rhinitis", "BUMILI KA NA NG CETIRIZINE NAMIN HAHAH" },
-                { "fever", "BUMILI KA NA NG BIOFLU NAMIN HAHAH" }
+                { "sneeze", "Take cetirizine" },
+                { "rhinitis", "Take cetirizine" },
+                { "fever", "Take bioflu" }
                 // Add more keywords and suggestions
             };
 
-            string closestKeyword = FindClosestKeyword(userInput);
+            string recommendation = GetMedicineRecommendation(userInput);
 
-            if (keywordMap.ContainsKey(closestKeyword))
+            if (!string.IsNullOrEmpty(recommendation))
             {
-                label1.Text = keywordMap[closestKeyword];
+                label1.Text = recommendation;
             }
             else
             {
-                label1.Text = "No information available for the entered keyword.";
+                label1.Text = "No information available for the entered symptoms.";
             }
+        }
+
+        private string GetMedicineRecommendation(string userInput)
+        {
+            userInput = userInput.ToLower();
+            userInput = System.Text.RegularExpressions.Regex.Replace(userInput, @"[^\w\s]", "");
+
+            string[] tokens = userInput.Split(' ');
+
+            string[] stopWords = { "a", "an", "the", "and", "or", "but", "so", "of", "in", "on", "at", "for", "to" };
+            List<string> filteredTokens = new List<string>();
+
+            foreach (var token in tokens)
+            {
+                if (!stopWords.Contains(token))
+                {
+                    filteredTokens.Add(token);
+                }
+            }
+
+            foreach (var keyword in keywordMap.Keys)
+            {
+                if (filteredTokens.Contains(keyword))
+                {
+                    return keywordMap[keyword];
+                }
+            }
+
+            return null;
         }
 
         private void SuggestionBackButton_Click(object sender, EventArgs e)
@@ -121,6 +150,8 @@ namespace ThesisBeta
 
             this.Hide();
         }
+
+
     }
  }
 

@@ -27,7 +27,6 @@ namespace ThesisBeta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Check if the text box is empty
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 ShowCustomMessageBox("Please enter a keyword before proceeding.");
