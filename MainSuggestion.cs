@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpNL.Tokenize;
+using SharpNL.Tokenize.Language;
 
 namespace ThesisBeta
 {
@@ -39,10 +41,8 @@ namespace ThesisBeta
 
         private string GetMedicineRecommendation(string userInput)
         {
-            userInput = userInput.ToLower();
-            userInput = System.Text.RegularExpressions.Regex.Replace(userInput, @"[^\w\s]", "");
-
-            string[] tokens = userInput.Split(' ');
+            var tokenizer = SimpleTokenizer.Instance;
+            string[] tokens = tokenizer.Tokenize(userInput.ToLower());
 
             string[] stopWords = { "a", "an", "the", "and", "or", "but", "so", "of", "in", "on", "at", "for", "to" };
             List<string> filteredTokens = new List<string>();
