@@ -209,5 +209,13 @@ namespace ThesisBeta
             UpdateLabel("Biogesic", PurchaseBiogesicQuantity * BiogesicPrice);
             PurchaseMinusBiogesic.Visible = PurchaseBiogesicQuantity > 0;
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            StartScreen startScreen = new StartScreen();
+            startScreen.Show();
+
+            this.Hide();
+        }
     }
 }

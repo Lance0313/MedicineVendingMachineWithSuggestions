@@ -30,7 +30,7 @@ namespace ThesisBeta
             // Check if the text box is empty
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
-                ShowCustomMessageBox("Please tell me your sickness before proceeding.");
+                ShowCustomMessageBox("Please enter a keyword before proceeding.");
                 return;
             }
 
@@ -250,6 +250,19 @@ namespace ThesisBeta
         }
 
         private void SuggestionBackButton_Click(object sender, EventArgs e)
+        {
+            StartScreen startScreen = new StartScreen();
+            startScreen.Show();
+
+            this.Hide();
+        }
+
+        private void KeypadLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
         {
             StartScreen startScreen = new StartScreen();
             startScreen.Show();

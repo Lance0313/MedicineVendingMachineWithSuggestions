@@ -97,5 +97,30 @@ namespace ThesisBeta
             }
             return d[n, m];
         }
+
+        private void StartScreenPurchase_Click(object sender, EventArgs e)
+        {
+            Purchase purchase = new Purchase();
+            purchase.Show();
+
+            this.Hide();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            SuggestionQuery suggestionQuery = new SuggestionQuery();
+            suggestionQuery.Show();
+
+            this.Hide();
+        }
+
+        private void ExitButton_Click_1(object sender, EventArgs e)
+        {
+            StartScreen startScreen = new StartScreen();
+            startScreen.Show();
+
+            this.Hide();
+        }
     }
-}
+ }
+
