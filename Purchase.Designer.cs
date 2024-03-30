@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.PurchaseTabs = new System.Windows.Forms.Panel();
-            this.BackButton = new ePOSOne.btnProduct.RoundButton();
             this.PurchaseCartButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PurchaseProceed = new ePOSOne.btnProduct.RoundButton();
             this.PurchaseCartPanel = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -88,6 +86,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BackButton = new ePOSOne.btnProduct.RoundButton();
+            this.PurchaseProceed = new ePOSOne.btnProduct.RoundButton();
             this.PurchaseTabs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseCartButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,25 +139,6 @@
             this.PurchaseTabs.Size = new System.Drawing.Size(800, 53);
             this.PurchaseTabs.TabIndex = 0;
             // 
-            // BackButton
-            // 
-            this.BackButton.BorderColor = System.Drawing.Color.Transparent;
-            this.BackButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.BackButton.FlatAppearance.BorderSize = 0;
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(12, 10);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.BackButton.OnHoverButtonColor = System.Drawing.Color.Gold;
-            this.BackButton.OnHoverTextColor = System.Drawing.Color.Black;
-            this.BackButton.Size = new System.Drawing.Size(105, 36);
-            this.BackButton.TabIndex = 20;
-            this.BackButton.Text = "Back";
-            this.BackButton.TextColor = System.Drawing.Color.Black;
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
             // PurchaseCartButton
             // 
             this.PurchaseCartButton.Image = global::ThesisBeta.Properties.Resources.shopping_cart;
@@ -177,31 +158,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // PurchaseProceed
-            // 
-            this.PurchaseProceed.BorderColor = System.Drawing.Color.Transparent;
-            this.PurchaseProceed.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.PurchaseProceed.FlatAppearance.BorderSize = 0;
-            this.PurchaseProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PurchaseProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchaseProceed.Location = new System.Drawing.Point(686, 10);
-            this.PurchaseProceed.Name = "PurchaseProceed";
-            this.PurchaseProceed.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.PurchaseProceed.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.PurchaseProceed.OnHoverTextColor = System.Drawing.Color.Black;
-            this.PurchaseProceed.Size = new System.Drawing.Size(105, 36);
-            this.PurchaseProceed.TabIndex = 4;
-            this.PurchaseProceed.Text = "Proceed";
-            this.PurchaseProceed.TextColor = System.Drawing.Color.Black;
-            this.PurchaseProceed.UseVisualStyleBackColor = true;
-            this.PurchaseProceed.Click += new System.EventHandler(this.PurchaseProceed_Click);
-            // 
             // PurchaseCartPanel
             // 
             this.PurchaseCartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.PurchaseCartPanel.Controls.Add(this.label22);
             this.PurchaseCartPanel.Controls.Add(this.panel1);
-            this.PurchaseCartPanel.Location = new System.Drawing.Point(573, 381);
+            this.PurchaseCartPanel.Location = new System.Drawing.Point(48, 40);
             this.PurchaseCartPanel.Name = "PurchaseCartPanel";
             this.PurchaseCartPanel.Size = new System.Drawing.Size(200, 443);
             this.PurchaseCartPanel.TabIndex = 86;
@@ -302,6 +264,7 @@
             this.PurchaseMinusKremilS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusKremilS.TabIndex = 126;
             this.PurchaseMinusKremilS.TabStop = false;
+            this.PurchaseMinusKremilS.Click += new System.EventHandler(this.PurchaseMinusKremilS_Click);
             // 
             // PurchaseAddKremilS
             // 
@@ -312,6 +275,7 @@
             this.PurchaseAddKremilS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddKremilS.TabIndex = 125;
             this.PurchaseAddKremilS.TabStop = false;
+            this.PurchaseAddKremilS.Click += new System.EventHandler(this.PurchaseAddKremilS_Click);
             // 
             // label11
             // 
@@ -352,6 +316,7 @@
             this.PurchaseMinusNeozep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusNeozep.TabIndex = 121;
             this.PurchaseMinusNeozep.TabStop = false;
+            this.PurchaseMinusNeozep.Click += new System.EventHandler(this.PurchaseMinusNeozep_Click);
             // 
             // PurchaseAddNeozep
             // 
@@ -362,6 +327,7 @@
             this.PurchaseAddNeozep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddNeozep.TabIndex = 120;
             this.PurchaseAddNeozep.TabStop = false;
+            this.PurchaseAddNeozep.Click += new System.EventHandler(this.PurchaseAddNeozep_Click);
             // 
             // label13
             // 
@@ -402,6 +368,7 @@
             this.PurchaseMinusCetirizine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusCetirizine.TabIndex = 116;
             this.PurchaseMinusCetirizine.TabStop = false;
+            this.PurchaseMinusCetirizine.Click += new System.EventHandler(this.PurchaseMinusCetirizine_Click);
             // 
             // PurchaseAddCetirizine
             // 
@@ -412,6 +379,7 @@
             this.PurchaseAddCetirizine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddCetirizine.TabIndex = 115;
             this.PurchaseAddCetirizine.TabStop = false;
+            this.PurchaseAddCetirizine.Click += new System.EventHandler(this.PurchaseAddCetirizine_Click);
             // 
             // label15
             // 
@@ -453,6 +421,7 @@
             this.PurchaseMinusIbuprofen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusIbuprofen.TabIndex = 111;
             this.PurchaseMinusIbuprofen.TabStop = false;
+            this.PurchaseMinusIbuprofen.Click += new System.EventHandler(this.PurchaseMinusIbuprofen_Click);
             // 
             // PurchaseAddIbuprofen
             // 
@@ -463,6 +432,7 @@
             this.PurchaseAddIbuprofen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddIbuprofen.TabIndex = 110;
             this.PurchaseAddIbuprofen.TabStop = false;
+            this.PurchaseAddIbuprofen.Click += new System.EventHandler(this.PurchaseAddIbuprofen_Click);
             // 
             // label17
             // 
@@ -557,6 +527,7 @@
             this.PurchaseMinusAscorbic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusAscorbic.TabIndex = 101;
             this.PurchaseMinusAscorbic.TabStop = false;
+            this.PurchaseMinusAscorbic.Click += new System.EventHandler(this.PurchaseMinusAscorbic_Click);
             // 
             // PurchaseAddAscorbic
             // 
@@ -567,6 +538,7 @@
             this.PurchaseAddAscorbic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddAscorbic.TabIndex = 100;
             this.PurchaseAddAscorbic.TabStop = false;
+            this.PurchaseAddAscorbic.Click += new System.EventHandler(this.PurchaseAddAscorbic_Click);
             // 
             // label9
             // 
@@ -608,6 +580,7 @@
             this.PurchaseMinusDiatabs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusDiatabs.TabIndex = 96;
             this.PurchaseMinusDiatabs.TabStop = false;
+            this.PurchaseMinusDiatabs.Click += new System.EventHandler(this.PurchaseMinusDiatabs_Click);
             // 
             // PurchaseAddDiatabs
             // 
@@ -618,6 +591,7 @@
             this.PurchaseAddDiatabs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddDiatabs.TabIndex = 95;
             this.PurchaseAddDiatabs.TabStop = false;
+            this.PurchaseAddDiatabs.Click += new System.EventHandler(this.PurchaseAddDiatabs_Click);
             // 
             // label5
             // 
@@ -658,6 +632,7 @@
             this.PurchaseMinusBioflu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseMinusBioflu.TabIndex = 91;
             this.PurchaseMinusBioflu.TabStop = false;
+            this.PurchaseMinusBioflu.Click += new System.EventHandler(this.PurchaseMinusBioflu_Click);
             // 
             // PurchaseAddBioflu
             // 
@@ -668,6 +643,7 @@
             this.PurchaseAddBioflu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PurchaseAddBioflu.TabIndex = 90;
             this.PurchaseAddBioflu.TabStop = false;
+            this.PurchaseAddBioflu.Click += new System.EventHandler(this.PurchaseAddBioflu_Click);
             // 
             // label7
             // 
@@ -802,6 +778,44 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // BackButton
+            // 
+            this.BackButton.BorderColor = System.Drawing.Color.Transparent;
+            this.BackButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(12, 10);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.BackButton.OnHoverButtonColor = System.Drawing.Color.Gold;
+            this.BackButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.BackButton.Size = new System.Drawing.Size(105, 36);
+            this.BackButton.TabIndex = 20;
+            this.BackButton.Text = "Back";
+            this.BackButton.TextColor = System.Drawing.Color.Black;
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // PurchaseProceed
+            // 
+            this.PurchaseProceed.BorderColor = System.Drawing.Color.Transparent;
+            this.PurchaseProceed.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.PurchaseProceed.FlatAppearance.BorderSize = 0;
+            this.PurchaseProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PurchaseProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseProceed.Location = new System.Drawing.Point(686, 10);
+            this.PurchaseProceed.Name = "PurchaseProceed";
+            this.PurchaseProceed.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.PurchaseProceed.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.PurchaseProceed.OnHoverTextColor = System.Drawing.Color.Black;
+            this.PurchaseProceed.Size = new System.Drawing.Size(105, 36);
+            this.PurchaseProceed.TabIndex = 4;
+            this.PurchaseProceed.Text = "Proceed";
+            this.PurchaseProceed.TextColor = System.Drawing.Color.Black;
+            this.PurchaseProceed.UseVisualStyleBackColor = true;
+            this.PurchaseProceed.Click += new System.EventHandler(this.PurchaseProceed_Click);
             // 
             // Purchase
             // 

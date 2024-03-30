@@ -57,6 +57,7 @@ namespace ThesisBeta
         private int PurchaseBiofluQuantity = 0;
         private int PurchaseAscorbicQuantity = 0;
         private int PurchaseIbuprofenQuantity = 0;
+        private int PurchaseKremilSQuantity = 0;
         private const int BiogesicPrice = 68;
         private const int NeozepPrice = 75;
         private const int MefenamicPrice = 100;
@@ -66,6 +67,7 @@ namespace ThesisBeta
         private const int BiofluPrice = 56;
         private const int AscorbicPrice = 83;
         private const int IbuprofenPrice = 62;
+        private const int KremilSPrice = 66;
         private int GetQuantity(string productName)
         {
             switch (productName)
@@ -88,6 +90,8 @@ namespace ThesisBeta
                     return Math.Max(0, PurchaseAscorbicQuantity);
                 case "Ibuprofen":
                     return Math.Max(0, PurchaseIbuprofenQuantity);
+                case "KremilS":
+                    return Math.Max(0, PurchaseKremilSQuantity);
                 default:
                     return 0;
             }
@@ -102,7 +106,8 @@ namespace ThesisBeta
                         PurchaseCetirizineQuantity * CetirizinePrice +
                         PurchaseBiofluQuantity * BiofluPrice +
                         PurchaseAscorbicQuantity * AscorbicPrice +
-                        PurchaseIbuprofenQuantity * IbuprofenPrice;
+                        PurchaseIbuprofenQuantity * IbuprofenPrice +
+                        PurchaseKremilSQuantity * KremilSPrice;
             return total;
         }
 
@@ -216,6 +221,111 @@ namespace ThesisBeta
             startScreen.Show();
 
             this.Hide();
+        }
+
+        private void PurchaseAddIbuprofen_Click(object sender, EventArgs e)
+        {
+            PurchaseIbuprofenQuantity++;
+            UpdateLabel("Ibuprofen", PurchaseIbuprofenQuantity * IbuprofenPrice);
+
+            PurchaseMinusIbuprofen.Visible = true;
+        }
+
+        private void PurchaseMinusIbuprofen_Click(object sender, EventArgs e)
+        {
+            PurchaseIbuprofenQuantity--;
+            UpdateLabel("Ibuprofen", PurchaseIbuprofenQuantity * IbuprofenPrice);
+            PurchaseMinusIbuprofen.Visible = PurchaseIbuprofenQuantity > 0;
+        }
+
+        private void PurchaseAddBioflu_Click(object sender, EventArgs e)
+        {
+            PurchaseBiofluQuantity++;
+            UpdateLabel("Bioflu", PurchaseBiofluQuantity * BiofluPrice);
+
+            PurchaseMinusBioflu.Visible = true;
+        }
+
+        private void PurchaseMinusBioflu_Click(object sender, EventArgs e)
+        {
+            PurchaseBiofluQuantity--;
+            UpdateLabel("Bioflu", PurchaseBiofluQuantity * BiofluPrice);
+            PurchaseMinusBioflu.Visible = PurchaseBiofluQuantity > 0;
+        }
+
+        private void PurchaseAddCetirizine_Click(object sender, EventArgs e)
+        {
+            PurchaseCetirizineQuantity++;
+            UpdateLabel("Cetirizine", PurchaseCetirizineQuantity * CetirizinePrice);
+
+            PurchaseMinusCetirizine.Visible = true;
+        }
+
+        private void PurchaseMinusCetirizine_Click(object sender, EventArgs e)
+        {
+            PurchaseCetirizineQuantity--;
+            UpdateLabel("Cetirizine", PurchaseCetirizineQuantity * CetirizinePrice);
+            PurchaseMinusCetirizine.Visible = PurchaseCetirizineQuantity > 0;
+        }
+
+        private void PurchaseAddDiatabs_Click(object sender, EventArgs e)
+        {
+            PurchaseDiatabsQuantity++;
+            UpdateLabel("Diatabs", PurchaseDiatabsQuantity * DiatabsPrice);
+
+            PurchaseMinusDiatabs.Visible = true;
+        }
+
+        private void PurchaseMinusDiatabs_Click(object sender, EventArgs e)
+        {
+            PurchaseDiatabsQuantity--;
+            UpdateLabel("Diatabs", PurchaseDiatabsQuantity * DiatabsPrice);
+            PurchaseMinusDiatabs.Visible = PurchaseDiatabsQuantity > 0;
+        }
+
+        private void PurchaseAddNeozep_Click(object sender, EventArgs e)
+        {
+            PurchaseNeozepQuantity++;
+            UpdateLabel("Neozep", PurchaseNeozepQuantity * NeozepPrice);
+
+            PurchaseMinusNeozep.Visible = true;
+        }
+
+        private void PurchaseMinusNeozep_Click(object sender, EventArgs e)
+        {
+            PurchaseNeozepQuantity--;
+            UpdateLabel("Neozep", PurchaseNeozepQuantity * NeozepPrice);
+            PurchaseMinusNeozep.Visible = PurchaseNeozepQuantity > 0;
+        }
+
+        private void PurchaseAddAscorbic_Click(object sender, EventArgs e)
+        {
+            PurchaseAscorbicQuantity++;
+            UpdateLabel("Ascorbic", PurchaseAscorbicQuantity * AscorbicPrice);
+
+            PurchaseMinusAscorbic.Visible = true;
+        }
+
+        private void PurchaseMinusAscorbic_Click(object sender, EventArgs e)
+        {
+            PurchaseAscorbicQuantity--;
+            UpdateLabel("Ascorbic", PurchaseAscorbicQuantity * AscorbicPrice);
+            PurchaseMinusAscorbic.Visible = PurchaseAscorbicQuantity > 0;
+        }
+
+        private void PurchaseAddKremilS_Click(object sender, EventArgs e)
+        {
+            PurchaseKremilSQuantity++;
+            UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
+
+            PurchaseMinusKremilS.Visible = true;
+        }
+
+        private void PurchaseMinusKremilS_Click(object sender, EventArgs e)
+        {
+            PurchaseKremilSQuantity--;
+            UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
+            PurchaseMinusKremilS.Visible = PurchaseKremilSQuantity > 0;
         }
     }
 }
