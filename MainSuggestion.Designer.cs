@@ -30,7 +30,6 @@
         {
             this.SuggestionPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.PLACEHOLDER1 = new System.Windows.Forms.Label();
             this.YourCart = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,16 +37,12 @@
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
             this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
             this.ExitButton = new ePOSOne.btnProduct.RoundButton();
-            this.SuggestionPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SuggestionPanel
             // 
             this.SuggestionPanel.BackColor = System.Drawing.Color.White;
-            this.SuggestionPanel.Controls.Add(this.label1);
-            this.SuggestionPanel.Controls.Add(this.PLACEHOLDER1);
-            this.SuggestionPanel.Controls.Add(this.YourCart);
             this.SuggestionPanel.Location = new System.Drawing.Point(56, 84);
             this.SuggestionPanel.Name = "SuggestionPanel";
             this.SuggestionPanel.Size = new System.Drawing.Size(698, 157);
@@ -56,28 +51,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 79);
+            this.label1.Location = new System.Drawing.Point(61, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Information";
             // 
-            // PLACEHOLDER1
-            // 
-            this.PLACEHOLDER1.AutoSize = true;
-            this.PLACEHOLDER1.Location = new System.Drawing.Point(72, 45);
-            this.PLACEHOLDER1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PLACEHOLDER1.Name = "PLACEHOLDER1";
-            this.PLACEHOLDER1.Size = new System.Drawing.Size(42, 13);
-            this.PLACEHOLDER1.TabIndex = 17;
-            this.PLACEHOLDER1.Text = "Header";
-            // 
             // YourCart
             // 
             this.YourCart.AutoSize = true;
             this.YourCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YourCart.Location = new System.Drawing.Point(131, 15);
+            this.YourCart.Location = new System.Drawing.Point(185, 36);
             this.YourCart.Name = "YourCart";
             this.YourCart.Size = new System.Drawing.Size(438, 22);
             this.YourCart.TabIndex = 0;
@@ -86,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(56, 247);
@@ -178,23 +164,22 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.StartScreenPurchase);
+            this.Controls.Add(this.YourCart);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SuggestionPanel);
             this.Name = "MainSuggestion";
             this.Text = "MainSuggestion";
-            this.SuggestionPanel.ResumeLayout(false);
-            this.SuggestionPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel SuggestionPanel;
-        private System.Windows.Forms.Label PLACEHOLDER1;
         private System.Windows.Forms.Label YourCart;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

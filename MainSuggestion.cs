@@ -21,9 +21,24 @@ namespace ThesisBeta
 
             keywordMap = new Dictionary<string, string>
             {
+                { "cold", "Take cetirizine" },
                 { "sneeze", "Take cetirizine" },
+                { "sneezing", "Take cetirizine" },
+                { "itchy", "Take cetirizine" },
+                { "itching", "Take cetirizine" },
+                { "allergy", "Take cetirizine" },
+                { "allergic", "Take cetirizine" },
                 { "rhinitis", "Take cetirizine" },
-                { "fever", "Take bioflu" }
+                { "watery", "Take cetirizine" },
+                { "runny", "Take cetirizine" },
+
+                { "flu", "Take bioflu" },
+                { "headache", "Take bioflu" },
+                { "fever", "Take bioflu" },
+                { "ache", "Take bioflu" },
+                { "body pain", "Take bioflu" },
+                { "body ache", "Take bioflu" }
+                
                 // Add more keywords and suggestions
             };
 
@@ -37,6 +52,8 @@ namespace ThesisBeta
             {
                 label1.Text = "No information available for the entered symptoms.";
             }
+
+            AddSampleParagraph();
         }
 
         private string GetMedicineRecommendation(string userInput)
@@ -44,87 +61,22 @@ namespace ThesisBeta
             var tokenizer = SimpleTokenizer.Instance;
             string[] tokens = tokenizer.Tokenize(userInput.ToLower());
 
-            string[] stopWords = { "a", "an", "the", "and", "or", "but", "so", "of", "in", "on", "at", "for", "to" };
-            List<string> filteredTokens = new List<string>();
+            List<string> phrases = new List<string>();
 
-            foreach (var token in tokens)
+            for (int i = 0; i < tokens.Length - 1; i++)
             {
-                if (!stopWords.Contains(token))
-                {
-                    filteredTokens.Add(token);
-                }
+                phrases.Add(tokens[i] + " " + tokens[i + 1]);
             }
 
             foreach (var keyword in keywordMap.Keys)
             {
-                if (filteredTokens.Contains(keyword))
+                if (tokens.Contains(keyword) || phrases.Contains(keyword))
                 {
                     return keywordMap[keyword];
                 }
             }
 
             return null;
-        }
-
-        private void SuggestionBackButton_Click(object sender, EventArgs e)
-        {
-            SuggestionQuery suggestionQuery = new SuggestionQuery();
-            suggestionQuery.Show();
-
-            this.Hide();
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            StartScreen startScreen = new StartScreen();
-            startScreen.Show();
-
-            this.Hide();
-        }
-
-        private string FindClosestKeyword(string userInput)
-        {
-            string closestKeyword = null;
-            int minDistance = int.MaxValue;
-
-            foreach (string keyword in keywordMap.Keys)
-            {
-                int distance = ComputeLevenshteinDistance(keyword, userInput);
-                if (distance < minDistance)
-                {
-                    minDistance = distance;
-                    closestKeyword = keyword;
-                }
-            }
-
-            return closestKeyword;
-        }
-
-        private int ComputeLevenshteinDistance(string s, string t)
-        {
-            int n = s.Length;
-            int m = t.Length;
-            int[,] d = new int[n + 1, m + 1];
-
-            if (n == 0)
-                return m;
-            if (m == 0)
-                return n;
-
-            for (int i = 0; i <= n; d[i, 0] = i++) ;
-            for (int j = 0; j <= m; d[0, j] = j++) ;
-
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = 1; j <= m; j++)
-                {
-                    int cost = (t[j - 1] == s[i - 1]) ? 0 : 1;
-                    d[i, j] = Math.Min(
-                        Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
-                        d[i - 1, j - 1] + cost);
-                }
-            }
-            return d[n, m];
         }
 
         private void StartScreenPurchase_Click(object sender, EventArgs e)
@@ -151,7 +103,19 @@ namespace ThesisBeta
             this.Hide();
         }
 
+        private void AddSampleParagraph()
+        {
+            // Create a RichTextBox for displaying the sample paragraph
+            RichTextBox richTextBox = new RichTextBox();
+            richTextBox.Dock = DockStyle.Fill;
+            richTextBox.ReadOnly = true;
+            richTextBox.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBox.BorderStyle = BorderStyle.None;
+            richTextBox.Text = "This is a sample paragraph. It can contain multiple lines and provide information or instructions to the user.";
 
+            // Add the RichTextBox to the panel
+            SuggestionPanel.Controls.Add(richTextBox);
+        }
     }
  }
 

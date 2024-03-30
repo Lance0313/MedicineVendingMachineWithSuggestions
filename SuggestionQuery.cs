@@ -64,11 +64,6 @@ namespace ThesisBeta
             messageBoxForm.ShowDialog();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_Click(object sender, EventArgs e)
         {
             targetTextBox = (TextBox)sender;
@@ -246,14 +241,6 @@ namespace ThesisBeta
                     btn.Text = capsLockEnabled ? Char.ToUpper(originalChar).ToString() : originalChar.ToString();
                 }
             }
-        }
-
-        private void SuggestionBackButton_Click(object sender, EventArgs e)
-        {
-            StartScreen startScreen = new StartScreen();
-            startScreen.Show();
-
-            this.Hide();
         }
 
         private void KeypadLabel_Click(object sender, EventArgs e)
