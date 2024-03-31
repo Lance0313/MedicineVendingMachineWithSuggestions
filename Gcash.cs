@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace ThesisBeta
 {
-    public partial class CartSummary : Form
+    public partial class Gcash : Form
     {
-        public CartSummary()
+
+        public Gcash()
         {
             InitializeComponent();
-            CartSummaryTotal.Text = "Total Price: Php "+Purchase.totalPrice.ToString();
+            GcashAmountReceived.Text = "0.00";
+            GcashTotal.Text = Purchase.totalPrice.ToString();
         }
 
         private void CartSummaryBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-        }
-        private void CartSummaryProceed_Click(object sender, EventArgs e)
-        {
-            PaymentOption paymentOption = new PaymentOption();
-            paymentOption.Show();
+            this.Close();
         }
     }
 }

@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ThesisBeta
 {
     public partial class Purchase : Form
     {
         private bool isPanelVisible = false;
+        public static int totalPrice = 0;
         public Purchase()
         {
             InitializeComponent();
@@ -27,20 +29,18 @@ namespace ThesisBeta
             PurchaseMinusDiatabs.Visible = false;
             PurchaseMinusKremilS.Visible = false;
             PurchaseMinusAscorbic.Visible = false;
-
-
         }
 
         private void PurchaseCartButton_Click(object sender, EventArgs e)
         {
             if (isPanelVisible)
             {
-                // If panel is currently visible, hide it
+                
                 PurchaseCartPanel.Visible = false;
             }
             else
             {
-                // If panel is currently hidden, show it
+               
                 PurchaseCartPanel.Visible = true;
             }
 
@@ -57,6 +57,7 @@ namespace ThesisBeta
         private int PurchaseBiofluQuantity = 0;
         private int PurchaseAscorbicQuantity = 0;
         private int PurchaseIbuprofenQuantity = 0;
+        private int PurchaseKremilSQuantity = 0;
         private const int BiogesicPrice = 68;
         private const int NeozepPrice = 75;
         private const int MefenamicPrice = 100;
@@ -66,6 +67,7 @@ namespace ThesisBeta
         private const int BiofluPrice = 56;
         private const int AscorbicPrice = 83;
         private const int IbuprofenPrice = 62;
+        private const int KremilSPrice = 62;
         private int GetQuantity(string productName)
         {
             switch (productName)
@@ -92,7 +94,7 @@ namespace ThesisBeta
                     return 0;
             }
         }
-        private int CalculateTotalPrice()
+        public int CalculateTotalPrice()
         {
             int total = PurchaseBiogesicQuantity * BiogesicPrice +
                         PurchaseNeozepQuantity * NeozepPrice +
@@ -110,6 +112,7 @@ namespace ThesisBeta
         {
             //Ensures non-negative
             totalPrice = Math.Max(0, totalPrice);
+
             // Check if a label for the product already exists
             int quantity = GetQuantity(productName);
 
@@ -143,14 +146,12 @@ namespace ThesisBeta
                     // Calculate Y-position for the label
                     int newY = PurchaseCartText.Controls.Count * newLabel.Height;
 
-                    // Set the location of the label
                     newLabel.Location = new System.Drawing.Point(0, newY);
-
-                    // Add the label to the panel
                     PurchaseCartText.Controls.Add(newLabel);
                 }
             }
         }
+
 
         private void PurchaseProceed_Click(object sender, EventArgs e)
         {
@@ -159,9 +160,9 @@ namespace ThesisBeta
                 MessageBox.Show("Please add items to the order before checking out.");
                 return;
             }
-            int totalPrice = CalculateTotalPrice();
-            this.Hide();
-
+            totalPrice = CalculateTotalPrice();
+            CartSummary cartSummary = new CartSummary();
+            cartSummary.Show();
         }
 
         private void PurchaseAddAdvil_Click(object sender, EventArgs e)
@@ -176,7 +177,6 @@ namespace ThesisBeta
             PurchaseAdvilQuantity--;
             UpdateLabel("Advil", PurchaseAdvilQuantity * AdvilPrice);
             PurchaseMinusAdvil.Visible = PurchaseAdvilQuantity > 0;
-
         }
 
         private void PurchaseMinusMefenamic_Click(object sender, EventArgs e)
@@ -199,7 +199,6 @@ namespace ThesisBeta
         {
             PurchaseBiogesicQuantity++;
             UpdateLabel("Biogesic", PurchaseBiogesicQuantity * BiogesicPrice);
-            
             PurchaseMinusBiogesic.Visible = true;
         }
 
@@ -208,6 +207,104 @@ namespace ThesisBeta
             PurchaseBiogesicQuantity--;
             UpdateLabel("Biogesic", PurchaseBiogesicQuantity * BiogesicPrice);
             PurchaseMinusBiogesic.Visible = PurchaseBiogesicQuantity > 0;
+        }
+
+        private void PurchaseMinusIbuprofen_Click(object sender, EventArgs e)
+        {
+            PurchaseIbuprofenQuantity--;
+            UpdateLabel("Ibuprofen", PurchaseIbuprofenQuantity * IbuprofenPrice);
+            PurchaseMinusIbuprofen.Visible = PurchaseIbuprofenQuantity > 0;
+        }
+
+        private void PurchaseAddIbuprofen_Click(object sender, EventArgs e)
+        {
+            PurchaseIbuprofenQuantity++;
+            UpdateLabel("Ibuprofen", PurchaseIbuprofenQuantity * IbuprofenPrice);
+            PurchaseMinusIbuprofen.Visible = true;
+        }
+
+        private void PurchaseMinusBioflu_Click(object sender, EventArgs e)
+        {
+            PurchaseBiofluQuantity--;
+            UpdateLabel("Bioflu", PurchaseBiofluQuantity * BiofluPrice);
+            PurchaseMinusBioflu.Visible = PurchaseBiofluQuantity > 0;
+        }
+
+        private void PurchaseAddBioflu_Click(object sender, EventArgs e)
+        {
+            PurchaseBiofluQuantity++;
+            UpdateLabel("Bioflu", PurchaseBiofluQuantity * BiofluPrice);
+            PurchaseMinusBioflu.Visible = true;
+        }
+
+        private void PurchaseMinusCetirizine_Click(object sender, EventArgs e)
+        {
+            PurchaseCetirizineQuantity--;
+            UpdateLabel("Cetirizine", PurchaseCetirizineQuantity * CetirizinePrice);
+            PurchaseMinusCetirizine.Visible = PurchaseCetirizineQuantity > 0;
+        }
+
+        private void PurchaseAddCetirizine_Click(object sender, EventArgs e)
+        {
+            PurchaseCetirizineQuantity++;
+            UpdateLabel("Cetirizine", PurchaseCetirizineQuantity * CetirizinePrice);
+            PurchaseMinusCetirizine.Visible = true;
+        }
+
+        private void PurchaseMinusDiatabs_Click(object sender, EventArgs e)
+        {
+            PurchaseDiatabsQuantity--;
+            UpdateLabel("Diatabs", PurchaseDiatabsQuantity * DiatabsPrice);
+            PurchaseMinusDiatabs.Visible = PurchaseDiatabsQuantity > 0;
+        }
+
+        private void PurchaseAddDiatabs_Click(object sender, EventArgs e)
+        {
+            PurchaseDiatabsQuantity++;
+            UpdateLabel("Diatabs", PurchaseDiatabsQuantity * DiatabsPrice);
+            PurchaseMinusDiatabs.Visible = true;
+        }
+
+        private void PurchaseMinusNeozep_Click(object sender, EventArgs e)
+        {
+            PurchaseNeozepQuantity--;
+            UpdateLabel("Neozep", PurchaseNeozepQuantity * NeozepPrice);
+            PurchaseMinusNeozep.Visible = PurchaseNeozepQuantity > 0;
+        }
+
+        private void PurchaseAddNeozep_Click(object sender, EventArgs e)
+        {
+            PurchaseNeozepQuantity++;
+            UpdateLabel("Neozep", PurchaseNeozepQuantity * NeozepPrice);
+            PurchaseMinusNeozep.Visible = true;
+        }
+
+        private void PurchaseMinusAscorbic_Click(object sender, EventArgs e)
+        {
+            PurchaseAscorbicQuantity--;
+            UpdateLabel("Ascorbic", PurchaseAscorbicQuantity * AscorbicPrice);
+            PurchaseMinusAscorbic.Visible = PurchaseAscorbicQuantity > 0;
+        }
+
+        private void PurchaseAddAscorbic_Click(object sender, EventArgs e)
+        {
+            PurchaseAscorbicQuantity++;
+            UpdateLabel("Ascorbic", PurchaseAscorbicQuantity * AscorbicPrice);
+            PurchaseMinusAscorbic.Visible = true;
+        }
+
+        private void PurchaseMinusKremilS_Click(object sender, EventArgs e)
+        {
+            PurchaseKremilSQuantity--;
+            UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
+            PurchaseMinusKremilS.Visible = PurchaseKremilSQuantity > 0;
+        }
+
+        private void PurchaseAddKremilS_Click(object sender, EventArgs e)
+        {
+            PurchaseKremilSQuantity++;
+            UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
+            PurchaseMinusKremilS.Visible = true;
         }
     }
 }

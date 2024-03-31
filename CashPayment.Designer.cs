@@ -35,7 +35,6 @@
             this.TotalAmount = new System.Windows.Forms.Label();
             this.Cash = new System.Windows.Forms.Label();
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.InsertpictureBox = new System.Windows.Forms.PictureBox();
             this.TotalpictureBox = new System.Windows.Forms.PictureBox();
             this.CashPaymentPanel.SuspendLayout();
@@ -136,11 +135,6 @@
             this.BackButton.TextColor = System.Drawing.Color.Black;
             this.BackButton.UseVisualStyleBackColor = true;
             // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 50;
-            this.elipseControl1.TargetControl = this.CashPaymentPanel;
-            // 
             // InsertpictureBox
             // 
             this.InsertpictureBox.Image = global::ThesisBeta.Properties.Resources.Insert;
@@ -187,7 +181,6 @@
         private System.Windows.Forms.Label TotalInserted;
         private System.Windows.Forms.Label TotalAmountValue;
         private System.Windows.Forms.Label TotalAmount;
-        private ElipseToolDemo.ElipseControl elipseControl1;
         private System.Windows.Forms.PictureBox TotalpictureBox;
         private System.Windows.Forms.PictureBox InsertpictureBox;
     }
