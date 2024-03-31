@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SharpNL.Tokenize;
 using SharpNL.Tokenize.Language;
+using HtmlAgilityPack;
 
 namespace ThesisBeta
 {
@@ -105,13 +106,37 @@ namespace ThesisBeta
 
         private void AddSampleParagraph()
         {
-            // Create a RichTextBox for displaying the sample paragraph
+            // Load the HTML content from the website
+            var htmlWeb = new HtmlWeb();
+            var htmlDoc = htmlWeb.Load("https://www.drugs.com/cetirizine-hcl.html");
+
+            // Find the elements containing the desired information using combined XPath expression
+            var infoNodes = htmlDoc.DocumentNode.SelectNodes("//*[@id='content']/p[3] | //*[@id=\"content\"]/p[4] | //*[@id='content']/p[5]");
+
+            // Initialize a string to store the combined text of both elements
+            string combinedText = "";
+
+            if (infoNodes != null)
+            {
+                // Concatenate the inner text of each selected element
+                foreach (var node in infoNodes)
+                {
+                    combinedText += node.InnerText.Trim() + "\n\n"; // Add a new line for separation
+                }
+            }
+            else
+            {
+                // If information extraction fails, display a message
+                combinedText = "Failed to retrieve information from the website.";
+            }
+
+            // Create a RichTextBox for displaying the scraped information
             RichTextBox richTextBox = new RichTextBox();
             richTextBox.Dock = DockStyle.Fill;
             richTextBox.ReadOnly = true;
             richTextBox.ScrollBars = RichTextBoxScrollBars.Vertical;
             richTextBox.BorderStyle = BorderStyle.None;
-            richTextBox.Text = "This is a sample paragraph. It can contain multiple lines and provide information or instructions to the user.";
+            richTextBox.Text = combinedText;
 
             // Add the RichTextBox to the panel
             SuggestionPanel.Controls.Add(richTextBox);
