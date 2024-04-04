@@ -12,20 +12,19 @@ namespace ThesisBeta
 {
     public partial class SuggestionQuery : Form
     {
-        private Form virtualKeyboardForm;
-        private TextBox targetTextBox;
         private bool capsLockEnabled = false;
-
         public SuggestionQuery()
         {
             InitializeComponent();
-        }
-        private void SuggestionQuery_Click(object sender, EventArgs e)
-        {
-            this.ActiveControl = null;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enterButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
@@ -37,7 +36,9 @@ namespace ThesisBeta
             MainSuggestion suggestionForm = new MainSuggestion(userInput);
             suggestionForm.Show();
 
-            this.Hide();
+            this.Hide(); 
+
+            /*textBox1.Text += "\n";*/
         }
 
         private void ShowCustomMessageBox(string message)
@@ -64,188 +65,173 @@ namespace ThesisBeta
             messageBoxForm.ShowDialog();
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
+        private void q_Click(object sender, EventArgs e)
         {
-            targetTextBox = (TextBox)sender;
-            ShowVirtualKeyboard();
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "Q" : "q";
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void w_Click(object sender, EventArgs e)
         {
-            if (virtualKeyboardForm != null)
-            {
-                virtualKeyboardForm.Hide();
-            }
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "W" : "w";
         }
 
-        private void ShowVirtualKeyboard()
+        private void e_Click(object sender, EventArgs e)
         {
-            if (virtualKeyboardForm == null || virtualKeyboardForm.IsDisposed)
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "E" : "e";
+        }
+
+        private void r_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "R" : "r";
+
+        }
+
+        private void t_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "T" : "t";
+        }
+
+        private void y_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "Y" : "y";
+        }
+
+        private void u_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "U" : "u";
+        }
+
+        private void i_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "I" : "i";
+        }
+
+        private void o_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "O" : "o";
+        }
+
+        private void p_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "P" : "p";
+        }
+
+        private void a_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "A" : "a";
+        }
+
+        private void s_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "S" : "s";
+        }
+
+        private void d_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "D" : "d";
+        }
+
+        private void f_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "F" : "f";
+        }
+
+        private void g_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "G" : "g";
+        }
+
+        private void h_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "H" : "h";
+        }
+
+        private void j_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "J" : "j";
+        }
+
+        private void k_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "K" : "k";
+        }
+
+        private void l_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "L" : "l";
+        }
+
+        private void z_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "Z" : "z";
+        }
+
+        private void x_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "X" : "x";
+        }
+
+        private void c_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "C" : "c";
+        }
+
+        private void v_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "V" : "v";
+        }
+
+        private void b_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "B" : "b";
+
+        }
+
+        private void n_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "N" : "n";
+        }
+
+        private void m_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (capsLockEnabled || Control.IsKeyLocked(Keys.CapsLock)) ? "M" : "m";
+        }
+
+        private void capsLock_Click(object sender, EventArgs e)
+        {
+            capsLockEnabled = !capsLockEnabled; // Toggle caps lock state
+
+            // Update letter button labels based on caps lock state
+            foreach (Control control in Controls)
             {
-                virtualKeyboardForm = new Form();
-
-                virtualKeyboardForm.FormBorderStyle = FormBorderStyle.None;
-                virtualKeyboardForm.StartPosition = FormStartPosition.Manual;
-
-                Point textBoxLocation = targetTextBox.PointToScreen(Point.Empty);
-                int buttonWidth = 30;
-                int buttonHeight = 30;
-                int keyboardWidth = 13 * buttonWidth;
-
-                virtualKeyboardForm.Location = new Point(textBoxLocation.X, textBoxLocation.Y + targetTextBox.Height);
-                virtualKeyboardForm.Width = keyboardWidth;
-                virtualKeyboardForm.Height = buttonHeight * 5; // Increased height for space button
-
-                int x = 0, y = 0;
-                string keys = "qwertyuiopasdfghjklzxcvbnm";
-                foreach (char c in keys)
+                if (control is Button)
                 {
-                    AddLetterButton(c, x, y, buttonWidth, buttonHeight);
-                    x++;
-                    if (x >= keyboardWidth / buttonWidth)
+                    Button button = (Button)control;
+                    char buttonChar;
+                    if (char.TryParse(button.Text, out buttonChar) && char.IsLetter(buttonChar))
                     {
-                        x = 0;
-                        y++;
+                        button.Text = capsLockEnabled ? button.Text.ToUpper() : button.Text.ToLower();
                     }
                 }
-
-                int spaceButtonWidth = buttonWidth * 7;
-                int spaceButtonHeight = buttonHeight;
-                int spaceButtonX = (keyboardWidth - spaceButtonWidth) / 2;
-                int spaceButtonY = (y + 0) * buttonHeight; // Positioned below the last row of letter keys
-
-                AddSpaceButton(spaceButtonX, spaceButtonY, spaceButtonWidth, spaceButtonHeight);
-
-                int backspaceButtonX = spaceButtonX + spaceButtonWidth;
-                int backspaceButtonY = spaceButtonY;
-
-                AddBackspaceButton(backspaceButtonX, backspaceButtonY, buttonWidth, buttonHeight);
-
-
-                int capsLockButtonX = 0; // Positioning it at the start of the keyboard
-                int capsLockButtonY = (y + 0) * buttonHeight; // Aligning vertically below the letter keys
-                int capsLockButtonWidth = buttonWidth * 3; // Adjusted width for Caps Lock button
-
-                AddCapsLockButton(capsLockButtonX, capsLockButtonY, capsLockButtonWidth, buttonHeight);
-
-
-
-                int enterButtonX = backspaceButtonX + buttonWidth;
-                int enterButtonY = backspaceButtonY;
-
-                AddEnterButton(enterButtonX, enterButtonY, buttonWidth, buttonHeight);
-            }
-
-            virtualKeyboardForm.Show();
-        }
-
-        private void AddLetterButton(char character, int x, int y, int buttonWidth, int buttonHeight)
-        {
-            Button btn = new Button();
-            btn.Text = character.ToString();
-            btn.Width = buttonWidth;
-            btn.Height = buttonHeight;
-            btn.Location = new Point(x * buttonWidth, y * buttonHeight);
-            btn.Click += (s, e) =>
-            {
-                if (targetTextBox != null)
-                {
-                    char charToAdd = capsLockEnabled ? Char.ToUpper(character) : Char.ToLower(character);
-                    targetTextBox.Text += charToAdd;
-                }
-            };
-            virtualKeyboardForm.Controls.Add(btn);
-        }
-
-        private void AddSpaceButton(int x, int y, int buttonWidth, int buttonHeight)
-        {
-            Button btn = new Button();
-            btn.Text = " ";
-            btn.Width = buttonWidth;
-            btn.Height = buttonHeight;
-            btn.Location = new Point(x, y);
-            btn.Click += (s, e) =>
-            {
-                if (targetTextBox != null)
-                {
-                    targetTextBox.Text += " ";
-                }
-            };
-            virtualKeyboardForm.Controls.Add(btn);
-        }
-
-        private void AddBackspaceButton(int x, int y, int buttonWidth, int buttonHeight)
-        {
-            Button backspaceBtn = new Button();
-            backspaceBtn.Text = "⌫"; // Unicode character for backspace
-            backspaceBtn.Width = buttonWidth;
-            backspaceBtn.Height = buttonHeight;
-            backspaceBtn.Location = new Point(x, y);
-            backspaceBtn.Click += (s, e) =>
-            {
-                if (targetTextBox != null && targetTextBox.Text.Length > 0)
-                {
-                    targetTextBox.Text = targetTextBox.Text.Remove(targetTextBox.Text.Length - 1);
-                }
-            };
-            virtualKeyboardForm.Controls.Add(backspaceBtn);
-        }
-
-        private void AddCapsLockButton(int x, int y, int buttonWidth, int buttonHeight)
-        {
-            Button capsLockBtn = new Button();
-            capsLockBtn.Text = "Caps Lock";
-            capsLockBtn.Width = buttonWidth * 1;
-            capsLockBtn.Height = buttonHeight;
-            capsLockBtn.Location = new Point(x, y);
-            capsLockBtn.Click += (s, e) =>
-            {
-                capsLockEnabled = !capsLockEnabled;
-                UpdateButtonLabels();
-            };
-            capsLockBtn.KeyPress += (s, e) =>
-            {
-                if (e.KeyChar == (char)Keys.CapsLock)
-                {
-                    capsLockEnabled = !capsLockEnabled;
-                    UpdateButtonLabels();
-                }
-            };
-            virtualKeyboardForm.Controls.Add(capsLockBtn);
-        }
-
-        private void AddEnterButton(int x, int y, int buttonWidth, int buttonHeight)
-        {
-            Button enterBtn = new Button();
-            enterBtn.Text = "Enter";
-            enterBtn.Width = buttonWidth * 2;
-            enterBtn.Height = buttonHeight;
-            enterBtn.Location = new Point(x, y);
-            enterBtn.Click += (s, e) =>
-            {
-                if (virtualKeyboardForm != null)
-                {
-                    virtualKeyboardForm.Hide();
-                }
-            };
-            virtualKeyboardForm.Controls.Add(enterBtn);
-        }
-
-        private void UpdateButtonLabels()
-        {
-            foreach (Control control in virtualKeyboardForm.Controls)
-            {
-                if (control is Button btn && btn.Text.Length == 1)
-                {
-                    char originalChar = Char.ToLower(btn.Text[0]);
-                    btn.Text = capsLockEnabled ? Char.ToUpper(originalChar).ToString() : originalChar.ToString();
-                }
             }
         }
 
-        private void KeypadLabel_Click(object sender, EventArgs e)
+        private void space_Click(object sender, EventArgs e)
         {
+            textBox1.Text += " "; // Append a space when the space button is clicked
+        }
 
+        private void back_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1); // Remove the last character from textBox1
+            }
+        }
+
+        private void enter_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "\r\n";
         }
 
         private void BackButton_Click(object sender, EventArgs e)
