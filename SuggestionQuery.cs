@@ -42,7 +42,7 @@ namespace ThesisBeta
             string userInput = textBox1.Text.ToLower();
             List<string> matchedSuggestions = suggestions.Where(s => s.StartsWith(userInput)).ToList();
 
-            if (matchedSuggestions.Any())
+            if (matchedSuggestions.Any() && !string.IsNullOrWhiteSpace(userInput))
             {
                 suggestionsListBox.Items.Clear();
                 suggestionsListBox.Items.AddRange(matchedSuggestions.ToArray());
