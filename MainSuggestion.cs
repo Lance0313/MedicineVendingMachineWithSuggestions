@@ -25,6 +25,7 @@ namespace ThesisBeta
                 { "cold", "Take cetirizine" },
                 { "sneeze", "Take cetirizine" },
                 { "sneezing", "Take cetirizine" },
+                { "nose itch", "Take cetirizine" },
                 { "itchy", "Take cetirizine" },
                 { "itching", "Take cetirizine" },
                 { "allergy", "Take cetirizine" },

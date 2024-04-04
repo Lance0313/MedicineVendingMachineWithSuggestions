@@ -12,16 +12,46 @@ namespace ThesisBeta
 {
     public partial class SuggestionQuery : Form
     {
+        private List<string> suggestions = new List<string> { "cold", "sneeze", "nose itch", "allergy", "allergic rhinitis", "runny nose", "watery eyes" };
+
         private bool capsLockEnabled = false;
         public SuggestionQuery()
         {
             InitializeComponent();
+            InitializeSuggestionsListBox();
+        }
 
+        private void InitializeSuggestionsListBox()
+        {
+            suggestionsListBox.Visible = false;
+            suggestionsListBox.SelectedIndexChanged += SuggestionsListBox_SelectedIndexChanged;
+            Controls.Add(suggestionsListBox);
+        }
+
+        private void SuggestionsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (suggestionsListBox.SelectedItem != null)
+            {
+                textBox1.Text = suggestionsListBox.SelectedItem.ToString();
+                suggestionsListBox.Visible = false;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            string userInput = textBox1.Text.ToLower();
+            List<string> matchedSuggestions = suggestions.Where(s => s.StartsWith(userInput)).ToList();
 
+            if (matchedSuggestions.Any())
+            {
+                suggestionsListBox.Items.Clear();
+                suggestionsListBox.Items.AddRange(matchedSuggestions.ToArray());
+                suggestionsListBox.Visible = true;
+            }
+            else
+            {
+                suggestionsListBox.Visible = false;
+            }
         }
 
         private void enterButton_Click(object sender, EventArgs e)

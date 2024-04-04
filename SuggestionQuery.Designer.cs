@@ -61,6 +61,7 @@
             this.capsLock = new System.Windows.Forms.Button();
             this.enterButton = new ePOSOne.btnProduct.RoundButton();
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
+            this.suggestionsListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -413,11 +414,20 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // suggestionsListBox
+            // 
+            this.suggestionsListBox.FormattingEnabled = true;
+            this.suggestionsListBox.Location = new System.Drawing.Point(297, 177);
+            this.suggestionsListBox.Name = "suggestionsListBox";
+            this.suggestionsListBox.Size = new System.Drawing.Size(109, 43);
+            this.suggestionsListBox.TabIndex = 34;
+            // 
             // SuggestionQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.suggestionsListBox);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.enter);
@@ -493,5 +503,6 @@
         private System.Windows.Forms.Button capsLock;
         private ePOSOne.btnProduct.RoundButton BackButton;
         private ePOSOne.btnProduct.RoundButton enterButton;
+        private System.Windows.Forms.ListBox suggestionsListBox;
     }
 }
