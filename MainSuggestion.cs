@@ -22,24 +22,24 @@ namespace ThesisBeta
 
             keywordMap = new Dictionary<string, string>
             {
-                { "cold", "Take cetirizine" },
-                { "sneeze", "Take cetirizine" },
-                { "sneezing", "Take cetirizine" },
-                { "nose itch", "Take cetirizine" },
-                { "itchy", "Take cetirizine" },
-                { "itching", "Take cetirizine" },
-                { "allergy", "Take cetirizine" },
-                { "allergic", "Take cetirizine" },
-                { "rhinitis", "Take cetirizine" },
-                { "watery", "Take cetirizine" },
-                { "runny", "Take cetirizine" },
+                { "cold", "Available: cetirizine" },
+                { "sneeze", "Available: cetirizine" },
+                { "sneezing", "Available: cetirizine" },
+                { "nose itch", "Available: cetirizine" },
+                { "itchy", "Available: cetirizine" },
+                { "itching", "Available: cetirizine" },
+                { "allergy", "Available: cetirizine" },
+                { "allergic", "Available: cetirizine" },
+                { "rhinitis", "Available: cetirizine" },
+                { "watery", "Available: cetirizine" },
+                { "runny", "Available: cetirizine" },
 
-                { "flu", "Take bioflu" },
-                { "headache", "Take bioflu" },
-                { "fever", "Take bioflu" },
-                { "ache", "Take bioflu" },
-                { "body pain", "Take bioflu" },
-                { "body ache", "Take bioflu" }
+                { "flu", "Available: bioflu" },
+                { "headache", "Available: bioflu" },
+                { "fever", "Available: bioflu" },
+                { "ache", "Available: bioflu" },
+                { "body pain", "Available: bioflu" },
+                { "body ache", "Available: bioflu" }
                 
                 // Add more keywords and suggestions
             };
@@ -143,5 +143,4 @@ namespace ThesisBeta
             SuggestionPanel.Controls.Add(richTextBox);
         }
     }
- }
-
+}
