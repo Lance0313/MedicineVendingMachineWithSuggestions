@@ -12,9 +12,11 @@ namespace ThesisBeta
 {
     public partial class SuggestionQuery : Form
     {
-        private List<string> suggestions = new List<string> { "cold", "sneeze", "nose itch", "allergy", "allergic rhinitis", "runny nose", "watery eyes" };
+        private List<string> suggestions = new List<string> { "cold", "sneeze", "nose itch", "allergy", "allergic rhinitis", "runny nose", "watery eyes", "flu", "headache", "fever", "ache" };
 
         private bool capsLockEnabled = false;
+
+
         public SuggestionQuery()
         {
             InitializeComponent();
