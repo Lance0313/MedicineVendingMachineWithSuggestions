@@ -80,7 +80,7 @@
             this.StartScreenFooter.BackColor = System.Drawing.Color.Transparent;
             this.StartScreenFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartScreenFooter.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.StartScreenFooter.Location = new System.Drawing.Point(282, 429);
+            this.StartScreenFooter.Location = new System.Drawing.Point(272, 429);
             this.StartScreenFooter.Name = "StartScreenFooter";
             this.StartScreenFooter.Size = new System.Drawing.Size(270, 20);
             this.StartScreenFooter.TabIndex = 5;
@@ -93,7 +93,7 @@
             this.BacktoStartButton.FlatAppearance.BorderSize = 0;
             this.BacktoStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BacktoStartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BacktoStartButton.Location = new System.Drawing.Point(309, 287);
+            this.BacktoStartButton.Location = new System.Drawing.Point(298, 287);
             this.BacktoStartButton.Name = "BacktoStartButton";
             this.BacktoStartButton.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.BacktoStartButton.OnHoverButtonColor = System.Drawing.Color.Gold;
@@ -110,14 +110,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(800, 480);
             this.Controls.Add(this.BacktoStartButton);
             this.Controls.Add(this.StartScreenFooter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ThankyouLabel);
             this.Controls.Add(this.SPKLabel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Thankyou";
-            this.Size = new System.Drawing.Size(800, 480);
             this.ResumeLayout(false);
             this.PerformLayout();
 

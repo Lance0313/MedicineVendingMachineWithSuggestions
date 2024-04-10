@@ -36,15 +36,17 @@
             this.GcashAmountReceived = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.GcashQR = new System.Windows.Forms.PictureBox();
             this.CartSummaryBack = new ePOSOne.btnProduct.RoundButton();
+            this.GcashProceed = new ePOSOne.btnProduct.RoundButton();
+            this.GcashQRImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GcashQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GcashQRImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.GcashQRImage);
             this.panel1.Controls.Add(this.GcashTotal);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -52,7 +54,6 @@
             this.panel1.Controls.Add(this.GcashAmountReceived);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.GcashQR);
             this.panel1.Location = new System.Drawing.Point(63, 79);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 362);
@@ -128,17 +129,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Amount Received:";
             // 
-            // GcashQR
-            // 
-            this.GcashQR.BackColor = System.Drawing.Color.White;
-            this.GcashQR.Image = global::ThesisBeta.Properties.Resources.SampleQR;
-            this.GcashQR.Location = new System.Drawing.Point(29, 32);
-            this.GcashQR.Name = "GcashQR";
-            this.GcashQR.Size = new System.Drawing.Size(287, 289);
-            this.GcashQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GcashQR.TabIndex = 0;
-            this.GcashQR.TabStop = false;
-            // 
             // CartSummaryBack
             // 
             this.CartSummaryBack.BorderColor = System.Drawing.Color.Transparent;
@@ -146,7 +136,7 @@
             this.CartSummaryBack.FlatAppearance.BorderSize = 0;
             this.CartSummaryBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CartSummaryBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CartSummaryBack.Location = new System.Drawing.Point(12, 12);
+            this.CartSummaryBack.Location = new System.Drawing.Point(23, 12);
             this.CartSummaryBack.Name = "CartSummaryBack";
             this.CartSummaryBack.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.CartSummaryBack.OnHoverButtonColor = System.Drawing.Color.Gold;
@@ -158,12 +148,41 @@
             this.CartSummaryBack.UseVisualStyleBackColor = true;
             this.CartSummaryBack.Click += new System.EventHandler(this.CartSummaryBack_Click);
             // 
+            // GcashProceed
+            // 
+            this.GcashProceed.BorderColor = System.Drawing.Color.Transparent;
+            this.GcashProceed.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.GcashProceed.FlatAppearance.BorderSize = 0;
+            this.GcashProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GcashProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GcashProceed.Location = new System.Drawing.Point(668, 12);
+            this.GcashProceed.Name = "GcashProceed";
+            this.GcashProceed.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.GcashProceed.OnHoverButtonColor = System.Drawing.Color.Gold;
+            this.GcashProceed.OnHoverTextColor = System.Drawing.Color.Black;
+            this.GcashProceed.Size = new System.Drawing.Size(106, 46);
+            this.GcashProceed.TabIndex = 12;
+            this.GcashProceed.Text = "Proceed";
+            this.GcashProceed.TextColor = System.Drawing.Color.Black;
+            this.GcashProceed.UseVisualStyleBackColor = true;
+            this.GcashProceed.Click += new System.EventHandler(this.GcashProceed_Click);
+            // 
+            // GcashQRImage
+            // 
+            this.GcashQRImage.Location = new System.Drawing.Point(60, 48);
+            this.GcashQRImage.Name = "GcashQRImage";
+            this.GcashQRImage.Size = new System.Drawing.Size(256, 268);
+            this.GcashQRImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GcashQRImage.TabIndex = 8;
+            this.GcashQRImage.TabStop = false;
+            // 
             // Gcash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(800, 480);
+            this.Controls.Add(this.GcashProceed);
             this.Controls.Add(this.CartSummaryBack);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -172,7 +191,7 @@
             this.Text = "Gcash";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GcashQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GcashQRImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,9 +204,10 @@
         private System.Windows.Forms.Label GcashAmountReceived;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox GcashQR;
         private System.Windows.Forms.Label GcashTotal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private ePOSOne.btnProduct.RoundButton GcashProceed;
+        private System.Windows.Forms.PictureBox GcashQRImage;
     }
 }

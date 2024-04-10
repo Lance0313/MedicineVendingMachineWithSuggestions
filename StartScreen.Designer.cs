@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.StartScreenFooter = new System.Windows.Forms.Label();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
-            this.StartScreenSuggestion = new ePOSOne.btnProduct.RoundButton();
-            this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartScreenSuggestion = new ePOSOne.btnProduct.RoundButton();
+            this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,8 +88,26 @@
             this.ProductPrice});
             this.dataGridViewCart.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewCart.Name = "dataGridViewCart";
-            this.dataGridViewCart.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewCart.Size = new System.Drawing.Size(334, 183);
             this.dataGridViewCart.TabIndex = 5;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "String";
+            this.ProductName.HeaderText = "ProductName";
+            this.ProductName.Name = "ProductName";
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "int";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.DataPropertyName = "double";
+            this.ProductPrice.HeaderText = "ProductPrice";
+            this.ProductPrice.Name = "ProductPrice";
             // 
             // StartScreenSuggestion
             // 
@@ -127,24 +145,6 @@
             this.StartScreenPurchase.TextColor = System.Drawing.Color.Black;
             this.StartScreenPurchase.UseVisualStyleBackColor = true;
             this.StartScreenPurchase.Click += new System.EventHandler(this.StartScreenPurchase_Click);
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "String";
-            this.ProductName.HeaderText = "ProductName";
-            this.ProductName.Name = "ProductName";
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "int";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // ProductPrice
-            // 
-            this.ProductPrice.DataPropertyName = "double";
-            this.ProductPrice.HeaderText = "ProductPrice";
-            this.ProductPrice.Name = "ProductPrice";
             // 
             // StartScreen
             // 

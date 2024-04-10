@@ -180,10 +180,9 @@
             this.PurchaseCartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.PurchaseCartPanel.Controls.Add(this.label22);
             this.PurchaseCartPanel.Controls.Add(this.panel1);
-            this.PurchaseCartPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.PurchaseCartPanel.Location = new System.Drawing.Point(0, 0);
             this.PurchaseCartPanel.Name = "PurchaseCartPanel";
-            this.PurchaseCartPanel.Size = new System.Drawing.Size(200, 427);
+            this.PurchaseCartPanel.Size = new System.Drawing.Size(246, 430);
             this.PurchaseCartPanel.TabIndex = 86;
             // 
             // label22
@@ -192,7 +191,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.label22.Location = new System.Drawing.Point(67, 18);
+            this.label22.Location = new System.Drawing.Point(91, 18);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(73, 25);
             this.label22.TabIndex = 87;
@@ -204,15 +203,15 @@
             this.panel1.Controls.Add(this.PurchaseCartText);
             this.panel1.Location = new System.Drawing.Point(12, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(174, 375);
+            this.panel1.Size = new System.Drawing.Size(217, 359);
             this.panel1.TabIndex = 87;
             // 
             // PurchaseCartText
             // 
-            this.PurchaseCartText.Font = new System.Drawing.Font("MicraC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseCartText.Font = new System.Drawing.Font("MicraC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PurchaseCartText.Location = new System.Drawing.Point(15, 20);
             this.PurchaseCartText.Name = "PurchaseCartText";
-            this.PurchaseCartText.Size = new System.Drawing.Size(144, 336);
+            this.PurchaseCartText.Size = new System.Drawing.Size(187, 320);
             this.PurchaseCartText.TabIndex = 0;
             // 
             // PurchaseTabPanel

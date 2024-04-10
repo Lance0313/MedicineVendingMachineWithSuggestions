@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace ThesisBeta
 {
-    public partial class Thankyou : UserControl
+    public partial class Thankyou : Form
     {
+        MotorControl motorControl = new MotorControl();
         public Thankyou()
         {
             InitializeComponent();
+            
         }
+        private void ActivateMotorBasedOnQuantity(MotorControl motorControl, int quantity, Action activateMotor)
+        {
+            // Activate the motor based on the quantity
+            for (int i = 0; i < quantity; i++)
+            {
+                activateMotor();
+            }
+        }
+
+
     }
 }

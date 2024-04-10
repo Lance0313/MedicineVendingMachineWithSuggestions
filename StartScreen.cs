@@ -29,5 +29,7 @@ namespace ThesisBeta
             purchase.Show();
             this.Visible = false;
         }
+
+        
     }
 }
