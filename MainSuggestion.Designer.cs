@@ -36,21 +36,23 @@
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
             this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
             this.ExitButton = new ePOSOne.btnProduct.RoundButton();
+            this.SuggestionPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SuggestionPanel
             // 
             this.SuggestionPanel.BackColor = System.Drawing.Color.White;
-            this.SuggestionPanel.Location = new System.Drawing.Point(56, 84);
+            this.SuggestionPanel.Controls.Add(this.YourCart);
+            this.SuggestionPanel.Location = new System.Drawing.Point(56, 73);
             this.SuggestionPanel.Name = "SuggestionPanel";
-            this.SuggestionPanel.Size = new System.Drawing.Size(698, 157);
+            this.SuggestionPanel.Size = new System.Drawing.Size(493, 302);
             this.SuggestionPanel.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 43);
+            this.label1.Location = new System.Drawing.Point(18, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
@@ -61,7 +63,7 @@
             // 
             this.YourCart.AutoSize = true;
             this.YourCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YourCart.Location = new System.Drawing.Point(185, 36);
+            this.YourCart.Location = new System.Drawing.Point(26, 252);
             this.YourCart.Name = "YourCart";
             this.YourCart.Size = new System.Drawing.Size(438, 22);
             this.YourCart.TabIndex = 0;
@@ -72,15 +74,15 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(56, 247);
+            this.panel1.Location = new System.Drawing.Point(555, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(698, 119);
+            this.panel1.Size = new System.Drawing.Size(209, 302);
             this.panel1.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 75);
+            this.label4.Location = new System.Drawing.Point(18, 59);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
@@ -151,17 +153,17 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.StartScreenPurchase);
-            this.Controls.Add(this.YourCart);
-            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.StartScreenPurchase);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SuggestionPanel);
             this.Name = "MainSuggestion";
             this.Text = "MainSuggestion";
+            this.SuggestionPanel.ResumeLayout(false);
+            this.SuggestionPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -273,5 +273,10 @@ namespace ThesisBeta
 
             this.Hide();
         }
+
+        private void SuggestionQuery_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
