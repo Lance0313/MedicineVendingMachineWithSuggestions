@@ -1,36 +1,88 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ThesisBeta
 {
     public class MotorControl
     {
-        private SerialPort serialPort;
+        SerialPort serialPort;
+
         public void ActivateMotor1()
         {
             Console.WriteLine("A");
+            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
+            try
+            {
+                serialPort.Open(); // Open the serial port
+                serialPort.WriteLine("A");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port: " + ex.Message);
+            }
         }
 
         public void ActivateMotor2()
         {
             Console.WriteLine("B");
+            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
+            try
+            {
+                serialPort.Open(); // Open the serial port
+                serialPort.WriteLine("B");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port: " + ex.Message);
+            }
         }
         public void ActivateMotor3()
         {
             Console.WriteLine("C");
+            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
+            try
+            {
+                serialPort.Open(); // Open the serial port
+                serialPort.WriteLine("C");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port: " + ex.Message);
+            }
         }
 
         public void ActivateMotor4()
         {
             Console.WriteLine("D");
+            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
+            try
+            {
+                serialPort.Open(); // Open the serial port
+                serialPort.WriteLine("D");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port: " + ex.Message);
+            }
         }
         public void ActivateMotor5()
         {
             Console.WriteLine("E");
+            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
+            try
+            {
+                serialPort.Open(); // Open the serial port
+                serialPort.WriteLine("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port: " + ex.Message);
+            }
         }
 
         public void ActivateMotor6()
@@ -44,7 +96,7 @@ namespace ThesisBeta
 
         public void ActivateMotor8()
         {
-            serialPort.WriteLine("H");
+            Console.WriteLine("H");
         }
         public void ActivateMotor9()
         {
