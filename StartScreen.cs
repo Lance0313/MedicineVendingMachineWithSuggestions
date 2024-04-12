@@ -15,6 +15,10 @@ namespace ThesisBeta
         public StartScreen()
         {
             InitializeComponent();
+            //DatabaseSuggestion.InitializeDatabase();
+
+            //DatabaseSuggestion.AddSampleKeywordsFromCsv(@"..\..\Files\keywords.csv");
+
         }
 
         private void StartScreenLabel_Click(object sender, EventArgs e)
