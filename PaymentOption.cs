@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +29,13 @@ namespace ThesisBeta
         {
             Gcash gcash = new Gcash();
             gcash.Visible = true;
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CashPayment cashPayment = new CashPayment();
+            cashPayment.Visible = true;
             this.Hide();
         }
     }
