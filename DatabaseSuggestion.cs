@@ -53,6 +53,8 @@ namespace ThesisBeta
                 using (var reader = new StreamReader(csvPath))
                 using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
+
+
                     csv.Read();
                     csv.ReadHeader();
 
@@ -66,8 +68,10 @@ namespace ThesisBeta
                                 string keyword = csv.GetField<string>("Keyword");
                                 string available_meds = csv.GetField<string>("Available");
                                 string unavailable_meds = csv.GetField<string>("Unavailable");
-                                string description = csv.GetField<string>("Description");
+                                string description = csv.GetField<string>("Description").Replace("\n", "<br>"); //Replace("\n", Environment.NewLine)
                                 string source_link = csv.GetField<string>("SourceLink");
+
+
 
                                 command.CommandText = "INSERT INTO Keywords (keyword, available_meds, unavailable_meds, description, source_link) VALUES (@keyword, @available_meds, @unavailable_meds, @description, @source_link)";
                                 command.Parameters.AddWithValue("@keyword", keyword);
