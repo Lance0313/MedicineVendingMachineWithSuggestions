@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="serialPort1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>81</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABQAAAAMgCAYAAAB8mM/7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjJyUURWRlpBOjc5LGo6NTc2ODQwNzM3NjA0
+        wQAADsEBuJFr7QAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjJyUURWRlpBOjc5LGo6NTc2ODQwNzM3NjA0
         NjA3MTYxMyx0OjI0MDMxOTEwv2cnPAAAKWZJREFUeF7t3eu/V2Pi//H529xK5dBJQ7sDlbNQJIdK51AS
         CZNIB50oCpEkNR0kmlQOacTkkUppjjd/j+v3uNb3OzNmZn2H6LD3ez9vPG8h7c9nrWtd12uvta5f/b/+
         MwoAAAAAkEkABAAAAIBgAiAAAAAABBMAAQAAACCYAAgAAAAAwQRAAAAAAAgmAAIAAABAMAEQAAAAAIIJ
