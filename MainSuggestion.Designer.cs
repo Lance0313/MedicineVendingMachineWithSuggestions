@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.SuggestionPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.YourCart = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.unavailableText = new System.Windows.Forms.Label();
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
             this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
             this.ExitButton = new ePOSOne.btnProduct.RoundButton();
+            this.availableText = new System.Windows.Forms.Label();
+            this.linkText = new System.Windows.Forms.Label();
             this.SuggestionPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,21 +45,12 @@
             // SuggestionPanel
             // 
             this.SuggestionPanel.BackColor = System.Drawing.Color.White;
+            this.SuggestionPanel.Controls.Add(this.label1);
             this.SuggestionPanel.Controls.Add(this.YourCart);
             this.SuggestionPanel.Location = new System.Drawing.Point(56, 73);
             this.SuggestionPanel.Name = "SuggestionPanel";
             this.SuggestionPanel.Size = new System.Drawing.Size(493, 302);
             this.SuggestionPanel.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Information";
             // 
             // YourCart
             // 
@@ -69,25 +62,36 @@
             this.YourCart.TabIndex = 0;
             this.YourCart.Text = "SUGGESTIONS BASED ON YOUR SYMTOMPS";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Information";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.linkText);
+            this.panel1.Controls.Add(this.availableText);
+            this.panel1.Controls.Add(this.unavailableText);
             this.panel1.Location = new System.Drawing.Point(555, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 302);
             this.panel1.TabIndex = 18;
             // 
-            // label4
+            // unavailableText
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 59);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "UNAVAILABLE: ";
+            this.unavailableText.AutoSize = true;
+            this.unavailableText.Location = new System.Drawing.Point(18, 126);
+            this.unavailableText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.unavailableText.Name = "unavailableText";
+            this.unavailableText.Size = new System.Drawing.Size(66, 13);
+            this.unavailableText.TabIndex = 18;
+            this.unavailableText.Text = "Unavailable:";
             // 
             // BackButton
             // 
@@ -146,6 +150,26 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click_1);
             // 
+            // availableText
+            // 
+            this.availableText.AutoSize = true;
+            this.availableText.Location = new System.Drawing.Point(18, 55);
+            this.availableText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.availableText.Name = "availableText";
+            this.availableText.Size = new System.Drawing.Size(53, 13);
+            this.availableText.TabIndex = 19;
+            this.availableText.Text = "Available:";
+            // 
+            // linkText
+            // 
+            this.linkText.AutoSize = true;
+            this.linkText.Location = new System.Drawing.Point(18, 193);
+            this.linkText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkText.Name = "linkText";
+            this.linkText.Size = new System.Drawing.Size(35, 13);
+            this.linkText.TabIndex = 20;
+            this.linkText.Text = "Links:";
+            // 
             // MainSuggestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,9 +197,11 @@
         private System.Windows.Forms.Label YourCart;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label unavailableText;
         private ePOSOne.btnProduct.RoundButton BackButton;
         private ePOSOne.btnProduct.RoundButton StartScreenPurchase;
         private ePOSOne.btnProduct.RoundButton ExitButton;
+        private System.Windows.Forms.Label linkText;
+        private System.Windows.Forms.Label availableText;
     }
 }

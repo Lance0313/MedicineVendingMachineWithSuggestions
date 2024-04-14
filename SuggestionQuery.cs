@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using CsvHelper;
+using System.Globalization;
 
 namespace ThesisBeta
 {
     public partial class SuggestionQuery : Form
     {
-        private List<string> suggestions = new List<string> { "cold", "sneeze", "nose itch", "allergy", "allergic rhinitis", "runny nose", "watery eyes", "flu", "headache", "fever", "ache" };
+        private string connectionString = @"Data Source=..\..\Files\ThesisBeta.db;Version=3;";
+
+        //private List<string> suggestions = new List<string> { "cold", "sneeze", "nose itch", "allergy", "allergic rhinitis", "runny nose", "watery eyes", "flu", "headache", "fever", "ache" };
 
         private bool capsLockEnabled = false;
 
@@ -28,6 +34,8 @@ namespace ThesisBeta
             suggestionsListBox.Visible = false;
             suggestionsListBox.SelectedIndexChanged += SuggestionsListBox_SelectedIndexChanged;
             Controls.Add(suggestionsListBox);
+
+            PopulateSuggestionsListBox();
         }
 
         private void SuggestionsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,21 +47,78 @@ namespace ThesisBeta
             }
         }
 
+        private void PopulateSuggestionsListBox()
+        {
+            string query = "SELECT keyword FROM Keywords;";
+            List<string> keywords = new List<string>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string keyword = reader["keyword"].ToString();
+                            keywords.Add(keyword);
+                        }
+                    }
+                }
+            }
+
+            suggestionsListBox.Items.AddRange(keywords.ToArray());
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string userInput = textBox1.Text.ToLower();
-            List<string> matchedSuggestions = suggestions.Where(s => s.StartsWith(userInput)).ToList();
 
-            if (matchedSuggestions.Any() && !string.IsNullOrWhiteSpace(userInput))
+            if (!string.IsNullOrWhiteSpace(userInput))
             {
-                suggestionsListBox.Items.Clear();
-                suggestionsListBox.Items.AddRange(matchedSuggestions.ToArray());
-                suggestionsListBox.Visible = true;
+                List<string> matchedSuggestions = GetMatchingKeywords(userInput);
+
+                if (matchedSuggestions.Any())
+                {
+                    suggestionsListBox.Items.Clear();
+                    suggestionsListBox.Items.AddRange(matchedSuggestions.ToArray());
+                    suggestionsListBox.Visible = true;
+                }
+                else
+                {
+                    suggestionsListBox.Visible = false;
+                }
             }
             else
             {
                 suggestionsListBox.Visible = false;
             }
+        }
+
+        private List<string> GetMatchingKeywords(string userInput)
+        {
+            string query = "SELECT keyword FROM Keywords WHERE keyword LIKE @userInput;";
+            List<string> matchedKeywords = new List<string>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@userInput", userInput + "%");
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string keyword = reader["keyword"].ToString();
+                            matchedKeywords.Add(keyword);
+                        }
+                    }
+                }
+            }
+
+            return matchedKeywords;
         }
 
         private void enterButton_Click(object sender, EventArgs e)

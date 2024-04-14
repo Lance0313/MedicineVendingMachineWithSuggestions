@@ -10,76 +10,151 @@ using System.Windows.Forms;
 using SharpNL.Tokenize;
 using SharpNL.Tokenize.Language;
 using HtmlAgilityPack;
+using System.Data.SQLite;
 
 namespace ThesisBeta
 {
     public partial class MainSuggestion : Form
     {
-        private Dictionary<string, string> keywordMap;
+        private string userInput;
+        private string connectionString = @"Data Source=..\..\Files\ThesisBeta.db;Version=3;";
         public MainSuggestion(string userInput)
         {
             InitializeComponent();
 
-            keywordMap = new Dictionary<string, string>
+            this.userInput = userInput.ToLower();
+            DisplayDescription();
+            DisplayAvailable();
+            DisplayUnavailable();
+            DisplaySourceLink();
+        }
+
+        private void DisplayDescription()
+        {
+            string query = "SELECT description FROM Keywords WHERE keyword=@keyword;";
+            string description = null;
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                { "cold", "Available: cetirizine" },
-                { "sneeze", "Available: cetirizine" },
-                { "sneezing", "Available: cetirizine" },
-                { "nose itch", "Available: cetirizine" },
-                { "itchy", "Available: cetirizine" },
-                { "itching", "Available: cetirizine" },
-                { "allergy", "Available: cetirizine" },
-                { "allergic", "Available: cetirizine" },
-                { "rhinitis", "Available: cetirizine" },
-                { "watery", "Available: cetirizine" },
-                { "runny", "Available: cetirizine" },
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@keyword", userInput);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            description = reader["description"].ToString();
+                        }
+                    }
+                }
+            }
 
-                { "flu", "Available: bioflu" },
-                { "headache", "Available: bioflu" },
-                { "fever", "Available: bioflu" },
-                { "ache", "Available: bioflu" },
-                { "body pain", "Available: bioflu" },
-                { "body ache", "Available: bioflu" }
-                
-                // Add more keywords and suggestions
-            };
-
-            string recommendation = GetMedicineRecommendation(userInput);
-
-            if (!string.IsNullOrEmpty(recommendation))
+            if (!string.IsNullOrEmpty(description))
             {
-                label1.Text = recommendation;
+                // Replace "<br>" with newline character "\n"
+                description = description.Replace("<br>", "\n");
+                label1.Text = description;
             }
             else
             {
                 label1.Text = "No information available for the entered symptoms.";
             }
-
-            AddSampleParagraph();
         }
 
-        private string GetMedicineRecommendation(string userInput)
+        private void DisplayAvailable()
         {
-            var tokenizer = SimpleTokenizer.Instance;
-            string[] tokens = tokenizer.Tokenize(userInput.ToLower());
+            string query = "SELECT available_meds FROM Keywords WHERE keyword=@keyword;";
+            string available = null;
 
-            List<string> phrases = new List<string>();
-
-            for (int i = 0; i < tokens.Length - 1; i++)
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                phrases.Add(tokens[i] + " " + tokens[i + 1]);
-            }
-
-            foreach (var keyword in keywordMap.Keys)
-            {
-                if (tokens.Contains(keyword) || phrases.Contains(keyword))
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    return keywordMap[keyword];
+                    command.Parameters.AddWithValue("@keyword", userInput);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            available = reader["available_meds"].ToString();
+                        }
+                    }
                 }
             }
 
-            return null;
+            if (!string.IsNullOrEmpty(available))
+            {
+                availableText.Text = "Available: " + available;
+            }
+            else
+            {
+                availableText.Text = "No available medications information.";
+            }
         }
+
+        private void DisplayUnavailable()
+        {
+            string query = "SELECT unavailable_meds FROM Keywords WHERE keyword=@keyword;";
+            string unavailable = null;
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@keyword", userInput);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            unavailable = reader["unavailable_meds"].ToString();
+                        }
+                    }
+                }
+            }
+
+            if (!string.IsNullOrEmpty(unavailable))
+            {
+                unavailableText.Text = "Unavailable: " + unavailable;
+            }
+            else
+            {
+                unavailableText.Text = "No unavailable medications information.";
+            }
+        }
+
+        private void DisplaySourceLink()
+        {
+            string query = "SELECT source_link FROM Keywords WHERE keyword=@keyword;";
+            string sourceLink = null;
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@keyword", userInput);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            sourceLink = reader["source_link"].ToString();
+                        }
+                    }
+                }
+            }
+
+            if (!string.IsNullOrEmpty(sourceLink))
+            {
+                linkText.Text = "Link: " + sourceLink;
+            }
+            else
+            {
+                linkText.Text = "No source link available.";
+            }
+        }
+
 
         private void StartScreenPurchase_Click(object sender, EventArgs e)
         {
@@ -103,44 +178,6 @@ namespace ThesisBeta
             startScreen.Show();
 
             this.Hide();
-        }
-
-        private void AddSampleParagraph()
-        {
-            // Load the HTML content from the website
-            var htmlWeb = new HtmlWeb();
-            var htmlDoc = htmlWeb.Load("https://www.drugs.com/cetirizine-hcl.html");
-
-            // Find the elements containing the desired information using combined XPath expression
-            var infoNodes = htmlDoc.DocumentNode.SelectNodes("//*[@id='content']/p[3] | //*[@id=\"content\"]/p[4] | //*[@id='content']/p[5]");
-
-            // Initialize a string to store the combined text of both elements
-            string combinedText = "";
-
-            if (infoNodes != null)
-            {
-                // Concatenate the inner text of each selected element
-                foreach (var node in infoNodes)
-                {
-                    combinedText += node.InnerText.Trim() + "\n\n"; // Add a new line for separation
-                }
-            }
-            else
-            {
-                // If information extraction fails, display a message
-                combinedText = "Failed to retrieve information from the website.";
-            }
-
-            // Create a RichTextBox for displaying the scraped information
-            RichTextBox richTextBox = new RichTextBox();
-            richTextBox.Dock = DockStyle.Fill;
-            richTextBox.ReadOnly = true;
-            richTextBox.ScrollBars = RichTextBoxScrollBars.Vertical;
-            richTextBox.BorderStyle = BorderStyle.None;
-            richTextBox.Text = combinedText;
-
-            // Add the RichTextBox to the panel
-            SuggestionPanel.Controls.Add(richTextBox);
         }
     }
 }
