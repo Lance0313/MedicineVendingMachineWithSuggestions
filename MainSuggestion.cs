@@ -179,5 +179,15 @@ namespace ThesisBeta
 
             this.Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void YourResults_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

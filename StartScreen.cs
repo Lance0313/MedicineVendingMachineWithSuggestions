@@ -15,9 +15,9 @@ namespace ThesisBeta
         public StartScreen()
         {
             InitializeComponent();
-            //DatabaseSuggestion.InitializeDatabase();
+            DatabaseSuggestion.InitializeDatabase();
 
-            //DatabaseSuggestion.AddSampleKeywordsFromCsv(@"..\..\Files\keywords.csv");
+            DatabaseSuggestion.AddSampleKeywordsFromCsv(@"..\..\Files\keywords.csv");
 
         }
 
