@@ -180,9 +180,10 @@
             this.PurchaseCartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.PurchaseCartPanel.Controls.Add(this.label22);
             this.PurchaseCartPanel.Controls.Add(this.panel1);
+            this.PurchaseCartPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.PurchaseCartPanel.Location = new System.Drawing.Point(0, 0);
             this.PurchaseCartPanel.Name = "PurchaseCartPanel";
-            this.PurchaseCartPanel.Size = new System.Drawing.Size(246, 430);
+            this.PurchaseCartPanel.Size = new System.Drawing.Size(246, 427);
             this.PurchaseCartPanel.TabIndex = 86;
             // 
             // label22

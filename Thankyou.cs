@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Threading;
 
 namespace ThesisBeta
 {
@@ -29,10 +30,10 @@ namespace ThesisBeta
                     case "Advil":
                         ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor1);
                         break;
-                    case "Neozep":
+                    case "Biogesic":
                         ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor2);
                         break;
-                    case "Biogesic":
+                    case "Bioflu":
                         ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor3);
                         break;
                     case "Diatabs":
@@ -41,6 +42,21 @@ namespace ThesisBeta
                     case "Ascorbic":
                         ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor5);
                         break;
+                    case "Mefenamic":
+                        ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor6);
+                        break;
+                    case "Ibuprofen":
+                        ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor7);
+                        break;
+                    case "Cetirizine":
+                        ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor8);
+                        break;
+                    case "Neozep":
+                        ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor9);
+                        break;
+                    case "KremilS":
+                        ActivateMotorBasedOnQuantity(motorControl, quantity, motorControl.ActivateMotor10);
+                        break;
                     // Add cases for other items
                     default:
                         Console.WriteLine($"No motor activation found for item: {itemName}");
@@ -48,19 +64,26 @@ namespace ThesisBeta
                 }
             }
         }
-
-        private void BacktoStartButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ActivateMotorBasedOnQuantity(MotorControl motorControl, int quantity, Action activateMotor)
         {
             // Activate the motor based on the quantity
             for (int i = 0; i < quantity; i++)
             {
                 activateMotor();
+                Thread.Sleep(1500);
             }
+        }
+
+        private void BacktoStartButton_Click(object sender, EventArgs e)
+        {
+            CartSummary cartSummary = new CartSummary();
+            cartSummary.Close();
+            Purchase purchase = new Purchase();
+            purchase.Close();
+            this.Close();
+            StartScreen startScreen = new StartScreen();
+            startScreen.Visible = true;
+            
         }
     }
 }

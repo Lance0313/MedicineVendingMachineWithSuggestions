@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,7 @@ namespace ThesisBeta
 {
     public partial class CartSummary : Form
     {
-        private Timer timer;
-        private int currentIndex = 0;
-
+        
         public CartSummary()
         {
             InitializeComponent();
@@ -88,6 +87,8 @@ namespace ThesisBeta
                 prodPrice.Location = new Point(0, newY);
                 CartSummaryPrice.Controls.Add(prodPrice);
             }
+           
+
         }
         //Back button of the form
         private void CartSummaryBack_Click(object sender, EventArgs e)

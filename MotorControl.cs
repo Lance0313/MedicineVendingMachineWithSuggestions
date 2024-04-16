@@ -11,101 +11,105 @@ namespace ThesisBeta
     public class MotorControl
     {
         SerialPort serialPort;
-
-        public void ActivateMotor1()
+        //Open Serial Port
+        public void OpenSerial()
         {
-            Console.WriteLine("A");
-            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
+            serialPort = new SerialPort("COM8", 9600);
             try
             {
-                serialPort.Open(); // Open the serial port
-                serialPort.WriteLine("A");
+                serialPort.Open();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error opening serial port: " + ex.Message);
             }
+        }
+        //Close Serial port
+        public void CloseSerial()
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.Close(); 
+                serialPort.Dispose();  
+            }
+        }
+
+        public void ActivateMotor1()
+        {
+            Console.WriteLine("A");
+            OpenSerial();
+            serialPort.WriteLine("A");
+            CloseSerial();
+
         }
 
         public void ActivateMotor2()
         {
             Console.WriteLine("B");
-            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
-            try
-            {
-                serialPort.Open(); // Open the serial port
-                serialPort.WriteLine("B");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error opening serial port: " + ex.Message);
-            }
+            OpenSerial();
+            serialPort.WriteLine("B");
+            CloseSerial();
+
         }
         public void ActivateMotor3()
         {
             Console.WriteLine("C");
-            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
-            try
-            {
-                serialPort.Open(); // Open the serial port
-                serialPort.WriteLine("C");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error opening serial port: " + ex.Message);
-            }
+            OpenSerial();
+            serialPort.WriteLine("C");
+            CloseSerial();
         }
 
         public void ActivateMotor4()
         {
             Console.WriteLine("D");
-            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
-            try
-            {
-                serialPort.Open(); // Open the serial port
-                serialPort.WriteLine("D");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error opening serial port: " + ex.Message);
-            }
+            OpenSerial();
+            serialPort.WriteLine("D");
+            CloseSerial();
         }
         public void ActivateMotor5()
         {
             Console.WriteLine("E");
-            serialPort = new SerialPort("COM4", 9600); // Change COM port and baud rate as needed
-            try
-            {
-                serialPort.Open(); // Open the serial port
-                serialPort.WriteLine("");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error opening serial port: " + ex.Message);
-            }
+            OpenSerial();
+            serialPort.WriteLine("E");
+            CloseSerial();
         }
 
         public void ActivateMotor6()
         {
             Console.WriteLine("F");
+            OpenSerial();
+            serialPort.WriteLine("F");
+            CloseSerial();
         }
         public void ActivateMotor7()
         {
             Console.WriteLine("G");
+            OpenSerial();
+            serialPort.WriteLine("G");
+            CloseSerial();
         }
 
         public void ActivateMotor8()
         {
             Console.WriteLine("H");
+            OpenSerial();
+            serialPort.WriteLine("H");
+            CloseSerial();
         }
         public void ActivateMotor9()
         {
             Console.WriteLine("I");
+            OpenSerial();
+            serialPort.WriteLine("I");
+            CloseSerial();
         }
 
         public void ActivateMotor10()
         {
             Console.WriteLine("J");
+            OpenSerial();
+            serialPort.WriteLine("J");
+            CloseSerial();
         }
     }
 }
