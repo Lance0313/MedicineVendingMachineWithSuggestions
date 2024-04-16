@@ -121,8 +121,14 @@
   <data name="Advil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\images\Advil.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\images\Plus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="X" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Peso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Peso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medicol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Medicol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,11 +139,14 @@
   <data name="NIcka" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\NIcka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Bonamine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Bonamine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Insert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Total" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Total.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Gcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Gcash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\images\Minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,19 +154,40 @@
   <data name="Water" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\images\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fern-C" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Fern-C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Gcash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Neozep Forte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Neozep Forte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Biogesic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Biogesic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\images\Plus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imodium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Imodium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kremil S" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Kremil S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Total" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Total.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SampleQR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\SampleQR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Peso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Peso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ascof Forte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Ascof Forte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="X" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cetirizine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Cetirizine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\images\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neozep ND" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Neozep ND.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

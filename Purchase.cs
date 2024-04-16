@@ -58,37 +58,37 @@ namespace ThesisBeta
         private int PurchaseAscorbicQuantity = 0;
         private int PurchaseIbuprofenQuantity = 0;
         private int PurchaseKremilSQuantity = 0;
-        private const int BiogesicPrice = 68;
-        private const int NeozepPrice = 75;
-        private const int MefenamicPrice = 100;
-        private const int DiatabsPrice = 90;
-        private const int AdvilPrice = 60;
-        private const int CetirizinePrice = 70;
-        private const int BiofluPrice = 56;
-        private const int AscorbicPrice = 83;
-        private const int IbuprofenPrice = 62;
-        private const int KremilSPrice = 66;
+        private const int BiogesicPrice = 45;
+        private const int NeozepPrice = 65;
+        private const int MefenamicPrice = 190;
+        private const int DiatabsPrice = 130;
+        private const int AdvilPrice = 90;
+        private const int CetirizinePrice = 200;
+        private const int BiofluPrice = 45;
+        private const int AscorbicPrice = 85;
+        private const int IbuprofenPrice = 75;
+        private const int KremilSPrice = 110;
         private int GetQuantity(string productName)
         {
             switch (productName)
             {
                 case "Biogesic":
                     return Math.Max(0, PurchaseBiogesicQuantity);
-                case "Neozep":
+                case "Neozep Forte":
                     return Math.Max(0, PurchaseNeozepQuantity);
-                case "Mefenamic":
+                case "Imodium":
                     return Math.Max(0, PurchaseMefenamicQuantity);
-                case "Diatabs":
+                case "Medicol Advance 400":
                     return Math.Max(0, PurchaseDiatabsQuantity);
-                case "Advil":
+                case "Ascof Forte":
                     return Math.Max(0, PurchaseAdvilQuantity);
                 case "Cetirizine":
                     return Math.Max(0, PurchaseCetirizineQuantity);
-                case "Bioflu":
+                case "Bonamine":
                     return Math.Max(0, PurchaseBiofluQuantity);
-                case "Ascorbic":
+                case "Fern-C":
                     return Math.Max(0, PurchaseAscorbicQuantity);
-                case "Ibuprofen":
+                case "Neozep Non-Drowsy":
                     return Math.Max(0, PurchaseIbuprofenQuantity);
                 case "KremilS":
                     return Math.Max(0, PurchaseKremilSQuantity);
@@ -172,14 +172,14 @@ namespace ThesisBeta
         private void PurchaseAddAdvil_Click(object sender, EventArgs e)
         {
             PurchaseAdvilQuantity++;
-            UpdateLabel("Advil", PurchaseAdvilQuantity * AdvilPrice);
+            UpdateLabel("Ascof Forte", PurchaseAdvilQuantity * AdvilPrice);
             PurchaseMinusAdvil.Visible = true;
         }
 
         private void PurchaseMinusAdvil_Click(object sender, EventArgs e)
         {
             PurchaseAdvilQuantity--;
-            UpdateLabel("Advil", PurchaseAdvilQuantity * AdvilPrice);
+            UpdateLabel("Ascof Forte", PurchaseAdvilQuantity * AdvilPrice);
             PurchaseMinusAdvil.Visible = PurchaseAdvilQuantity > 0;
 
         }
@@ -187,7 +187,7 @@ namespace ThesisBeta
         private void PurchaseMinusMefenamic_Click(object sender, EventArgs e)
         {
             PurchaseMefenamicQuantity--;
-            UpdateLabel("Mefenamic", PurchaseMefenamicQuantity * MefenamicPrice);
+            UpdateLabel("Imodium", PurchaseMefenamicQuantity * MefenamicPrice);
             PurchaseMinusMefenamic.Enabled = PurchaseMefenamicQuantity > 0;
             PurchaseMinusMefenamic.Visible = PurchaseMefenamicQuantity > 0;
         }
@@ -195,7 +195,7 @@ namespace ThesisBeta
         private void PurchaseAddMefenamic_Click(object sender, EventArgs e)
         {
             PurchaseMefenamicQuantity++;
-            UpdateLabel("Mefenamic", PurchaseMefenamicQuantity * MefenamicPrice);
+            UpdateLabel("Imodium", PurchaseMefenamicQuantity * MefenamicPrice);
             PurchaseMinusMefenamic.Enabled = true;
             PurchaseMinusMefenamic.Visible = true;
         }
@@ -226,7 +226,7 @@ namespace ThesisBeta
         private void PurchaseAddIbuprofen_Click(object sender, EventArgs e)
         {
             PurchaseIbuprofenQuantity++;
-            UpdateLabel("Ibuprofen", PurchaseIbuprofenQuantity * IbuprofenPrice);
+            UpdateLabel("Neozep Non-Drowsy", PurchaseIbuprofenQuantity * IbuprofenPrice);
 
             PurchaseMinusIbuprofen.Visible = true;
         }
@@ -234,14 +234,14 @@ namespace ThesisBeta
         private void PurchaseMinusIbuprofen_Click(object sender, EventArgs e)
         {
             PurchaseIbuprofenQuantity--;
-            UpdateLabel("Ibuprofen", PurchaseIbuprofenQuantity * IbuprofenPrice);
+            UpdateLabel("Neozep Non-Drowsy", PurchaseIbuprofenQuantity * IbuprofenPrice);
             PurchaseMinusIbuprofen.Visible = PurchaseIbuprofenQuantity > 0;
         }
 
         private void PurchaseAddBioflu_Click(object sender, EventArgs e)
         {
             PurchaseBiofluQuantity++;
-            UpdateLabel("Bioflu", PurchaseBiofluQuantity * BiofluPrice);
+            UpdateLabel("Bonamine", PurchaseBiofluQuantity * BiofluPrice);
 
             PurchaseMinusBioflu.Visible = true;
         }
@@ -249,7 +249,7 @@ namespace ThesisBeta
         private void PurchaseMinusBioflu_Click(object sender, EventArgs e)
         {
             PurchaseBiofluQuantity--;
-            UpdateLabel("Bioflu", PurchaseBiofluQuantity * BiofluPrice);
+            UpdateLabel("Bonamine", PurchaseBiofluQuantity * BiofluPrice);
             PurchaseMinusBioflu.Visible = PurchaseBiofluQuantity > 0;
         }
 
@@ -271,7 +271,7 @@ namespace ThesisBeta
         private void PurchaseAddDiatabs_Click(object sender, EventArgs e)
         {
             PurchaseDiatabsQuantity++;
-            UpdateLabel("Diatabs", PurchaseDiatabsQuantity * DiatabsPrice);
+            UpdateLabel("Medicol Advance 400", PurchaseDiatabsQuantity * DiatabsPrice);
 
             PurchaseMinusDiatabs.Visible = true;
         }
@@ -279,14 +279,14 @@ namespace ThesisBeta
         private void PurchaseMinusDiatabs_Click(object sender, EventArgs e)
         {
             PurchaseDiatabsQuantity--;
-            UpdateLabel("Diatabs", PurchaseDiatabsQuantity * DiatabsPrice);
+            UpdateLabel("Medicol Advance 400", PurchaseDiatabsQuantity * DiatabsPrice);
             PurchaseMinusDiatabs.Visible = PurchaseDiatabsQuantity > 0;
         }
 
         private void PurchaseAddNeozep_Click(object sender, EventArgs e)
         {
             PurchaseNeozepQuantity++;
-            UpdateLabel("Neozep", PurchaseNeozepQuantity * NeozepPrice);
+            UpdateLabel("Neozep Forte", PurchaseNeozepQuantity * NeozepPrice);
 
             PurchaseMinusNeozep.Visible = true;
         }
@@ -294,14 +294,14 @@ namespace ThesisBeta
         private void PurchaseMinusNeozep_Click(object sender, EventArgs e)
         {
             PurchaseNeozepQuantity--;
-            UpdateLabel("Neozep", PurchaseNeozepQuantity * NeozepPrice);
+            UpdateLabel("Neozep Forte", PurchaseNeozepQuantity * NeozepPrice);
             PurchaseMinusNeozep.Visible = PurchaseNeozepQuantity > 0;
         }
 
         private void PurchaseAddAscorbic_Click(object sender, EventArgs e)
         {
             PurchaseAscorbicQuantity++;
-            UpdateLabel("Ascorbic", PurchaseAscorbicQuantity * AscorbicPrice);
+            UpdateLabel("Fern-C", PurchaseAscorbicQuantity * AscorbicPrice);
 
             PurchaseMinusAscorbic.Visible = true;
         }
@@ -309,7 +309,7 @@ namespace ThesisBeta
         private void PurchaseMinusAscorbic_Click(object sender, EventArgs e)
         {
             PurchaseAscorbicQuantity--;
-            UpdateLabel("Ascorbic", PurchaseAscorbicQuantity * AscorbicPrice);
+            UpdateLabel("Fern-C", PurchaseAscorbicQuantity * AscorbicPrice);
             PurchaseMinusAscorbic.Visible = PurchaseAscorbicQuantity > 0;
         }
 
@@ -326,6 +326,31 @@ namespace ThesisBeta
             PurchaseKremilSQuantity--;
             UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
             PurchaseMinusKremilS.Visible = PurchaseKremilSQuantity > 0;
+        }
+
+        private void PurchaseCartPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PurchaseCartText_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PurchaseTabPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

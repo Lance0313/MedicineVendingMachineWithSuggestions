@@ -295,6 +295,36 @@
   <ItemGroup>
     <None Include="resources\X.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Ascof Forte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Biogesic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Bonamine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Cetirizine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Fern-C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Imodium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Kremil S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Medicol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Neozep Forte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Neozep ND.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
