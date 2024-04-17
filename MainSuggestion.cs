@@ -23,33 +23,48 @@ namespace ThesisBeta
             InitializeComponent();
 
             this.userInput = userInput.ToLower();
-            DisplayDescription();
-            DisplayAvailable();
-            DisplayUnavailable();
-            DisplaySourceLink();
+            DisplayInformationFromDatabase();
         }
 
-        private void DisplayDescription()
+        private void DisplayInformationFromDatabase()
         {
-            string query = "SELECT description FROM Keywords WHERE keyword=@keyword;";
+            string closestKeyword = FindClosestKeyword(userInput);
+
+            if (string.IsNullOrEmpty(closestKeyword))
+            {
+                label1.Text = "No information available for the entered symptoms.";
+                availableText.Text = "No available medications information.";
+                unavailableText.Text = "No unavailable medications information.";
+                linkText.Text = "No source link available.";
+                return;
+            }
+
+            string query = "SELECT description, available_meds, unavailable_meds, source_link FROM Keywords WHERE keyword=@keyword;";
             string description = null;
+            string available = null;
+            string unavailable = null;
+            string sourceLink = null;
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@keyword", userInput);
+                    command.Parameters.AddWithValue("@keyword", closestKeyword);
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             description = reader["description"].ToString();
+                            available = reader["available_meds"].ToString();
+                            unavailable = reader["unavailable_meds"].ToString();
+                            sourceLink = reader["source_link"].ToString();
                         }
                     }
                 }
             }
 
+            // Display fetched information or appropriate messages
             if (!string.IsNullOrEmpty(description))
             {
                 // Replace "<br>" with newline character "\n"
@@ -60,28 +75,6 @@ namespace ThesisBeta
             {
                 label1.Text = "No information available for the entered symptoms.";
             }
-        }
-
-        private void DisplayAvailable()
-        {
-            string query = "SELECT available_meds FROM Keywords WHERE keyword=@keyword;";
-            string available = null;
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@keyword", userInput);
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            available = reader["available_meds"].ToString();
-                        }
-                    }
-                }
-            }
 
             if (!string.IsNullOrEmpty(available))
             {
@@ -90,28 +83,6 @@ namespace ThesisBeta
             else
             {
                 availableText.Text = "No available medications information.";
-            }
-        }
-
-        private void DisplayUnavailable()
-        {
-            string query = "SELECT unavailable_meds FROM Keywords WHERE keyword=@keyword;";
-            string unavailable = null;
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@keyword", userInput);
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            unavailable = reader["unavailable_meds"].ToString();
-                        }
-                    }
-                }
             }
 
             if (!string.IsNullOrEmpty(unavailable))
@@ -122,28 +93,6 @@ namespace ThesisBeta
             {
                 unavailableText.Text = "No unavailable medications information.";
             }
-        }
-
-        private void DisplaySourceLink()
-        {
-            string query = "SELECT source_link FROM Keywords WHERE keyword=@keyword;";
-            string sourceLink = null;
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@keyword", userInput);
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            sourceLink = reader["source_link"].ToString();
-                        }
-                    }
-                }
-            }
 
             if (!string.IsNullOrEmpty(sourceLink))
             {
@@ -153,6 +102,63 @@ namespace ThesisBeta
             {
                 linkText.Text = "No source link available.";
             }
+        }
+
+        private string FindClosestKeyword(string userInput)
+        {
+            string closestKeyword = null;
+            int minDistance = int.MaxValue;
+
+            string query = "SELECT keyword FROM Keywords;";
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string keyword = reader["keyword"].ToString();
+                            int distance = ComputeLevenshteinDistance(keyword, userInput);
+                            if (distance < minDistance)
+                            {
+                                minDistance = distance;
+                                closestKeyword = keyword;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return closestKeyword;
+        }
+
+        private int ComputeLevenshteinDistance(string s, string t)
+        {
+            int n = s.Length;
+            int m = t.Length;
+            int[,] d = new int[n + 1, m + 1];
+
+            if (n == 0)
+                return m;
+            if (m == 0)
+                return n;
+
+            for (int i = 0; i <= n; d[i, 0] = i++) ;
+            for (int j = 0; j <= m; d[0, j] = j++) ;
+
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= m; j++)
+                {
+                    int cost = (t[j - 1] == s[i - 1]) ? 0 : 1;
+                    d[i, j] = Math.Min(
+                        Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
+                        d[i - 1, j - 1] + cost);
+                }
+            }
+            return d[n, m];
         }
 
 
