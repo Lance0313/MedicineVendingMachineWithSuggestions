@@ -108,6 +108,7 @@
             this.BacktoStartButton.Text = "Back to Start";
             this.BacktoStartButton.TextColor = System.Drawing.Color.Black;
             this.BacktoStartButton.UseVisualStyleBackColor = true;
+            this.BacktoStartButton.Click += new System.EventHandler(this.BacktoStartButton_Click_1);
             // 
             // Thankyou
             // 

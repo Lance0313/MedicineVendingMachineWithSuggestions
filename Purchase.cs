@@ -104,7 +104,7 @@ namespace ThesisBeta
                     return Math.Min(3, Math.Max(0, item6));
                 case "Kremil S":
                     return Math.Min(3, Math.Max(0, item7));
-                case "Medicol":
+                case "Medicol Advance 400":
                     return Math.Min(3, Math.Max(0, item8));
                 case "Neozep Non Drowsy":
                     return Math.Min(3, Math.Max(0, item9));

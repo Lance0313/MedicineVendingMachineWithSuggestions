@@ -20,7 +20,7 @@ namespace ThesisBeta
             InitializeComponent();
 
 
-            for (int i = 0; i < Purchase.itemNames.Count; i++)
+        /*    for (int i = 0; i < Purchase.itemNames.Count; i++)
             {
                 string itemName = Purchase.itemNames[i];
                 int quantity = Purchase.quantities[i];
@@ -62,7 +62,7 @@ namespace ThesisBeta
                         Console.WriteLine($"No motor activation found for item: {itemName}");
                         break;
                 }
-            }
+            }*/
         }
         private void ActivateMotorBasedOnQuantity(MotorControl motorControl, int quantity, Action activateMotor)
         {
@@ -84,6 +84,13 @@ namespace ThesisBeta
             StartScreen startScreen = new StartScreen();
             startScreen.Visible = true;
 
+        }
+
+        private void BacktoStartButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            StartScreen startScreen1 = new StartScreen();
+            startScreen1.Visible = true;
         }
     }
 }
