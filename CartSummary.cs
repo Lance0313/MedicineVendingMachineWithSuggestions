@@ -102,6 +102,22 @@ namespace ThesisBeta
             PaymentOption paymentOption = new PaymentOption();
             paymentOption.Show();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CartSummary_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProceedButton_Click(object sender, EventArgs e)
+        {
+            PaymentOption paymentOption = new PaymentOption();
+            paymentOption.Show();
+        }
     }
 }
 

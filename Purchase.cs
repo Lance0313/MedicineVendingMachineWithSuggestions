@@ -83,7 +83,7 @@ namespace ThesisBeta
         {
             switch (productName)
             {
-                case "Ascof":
+                case "Ascof Forte":
                     return Math.Max(0, item1);
                 case "Biogesic":
                     return Math.Max(0, item2);
@@ -91,15 +91,15 @@ namespace ThesisBeta
                     return Math.Max(0, item3);
                 case "Cetirizine":
                     return Math.Max(0, item4);
-                case "Fern-C":
+                case "Fern C":
                     return Math.Max(0, item5);
                 case "Imodium":
                     return Math.Max(0, item6);
-                case "Kremil-S":
+                case "Kremil S":
                     return Math.Max(0, item7);
                 case "Medicol":
                     return Math.Max(0, item8);
-                case "Neozep Non-Drowsy":
+                case "Neozep Non Drowsy":
                     return Math.Max(0, item9);
                 case "Neozep Forte":
                     return Math.Max(0, item0);
@@ -223,7 +223,7 @@ namespace ThesisBeta
             //Call UpdateLabel
             UpdateLabel("Fern-C", item5 * item5Price);
             //Show Minus button
-            PurchaseMinusitem1.Visible = true;
+            PurchaseMinusitem5.Visible = true;
         }
 
         private void PurchaseMinusitem5_Click(object sender, EventArgs e)
@@ -233,135 +233,135 @@ namespace ThesisBeta
             //Call UpdateLabel
             UpdateLabel("Fern-C", item5 * item5Price);
             //Hide minus button when quantity value is 0
-            PurchaseMinusitem1.Visible = item5 > 0;
+            PurchaseMinusitem5.Visible = item5 > 0;
         }
 
         private void PurchaseMinusitem3_Click(object sender, EventArgs e)
         {
             item3--;
             UpdateLabel("Bonamine", item3 * item3Price);
-            PurchaseMinusitem6.Enabled = item3 > 0;
-            PurchaseMinusitem6.Visible = item3 > 0;
+            PurchaseMinusitem3.Enabled = item3 > 0;
+            PurchaseMinusitem3.Visible = item3 > 0;
         }
 
         private void PurchaseAdditem3_Click(object sender, EventArgs e)
         {
             item3++;
             UpdateLabel("Bonamine", item3 * item3Price);
-            PurchaseMinusitem6.Enabled = true;
-            PurchaseMinusitem6.Visible = true;
+            PurchaseMinusitem3.Enabled = true;
+            PurchaseMinusitem3.Visible = true;
         }
 
         private void PurchaseAdditem1_Click(object sender, EventArgs e)
         {
             item1++;
             UpdateLabel("Ascof Forte", item1 * item1Price);
-            PurchaseMinusitem2.Visible = true;
+            PurchaseMinusitem1.Visible = true;
         }
 
         private void PurchaseMinusitem1_Click(object sender, EventArgs e)
         {
             item1--;
             UpdateLabel("Ascof Forte", item1 * item1Price);
-            PurchaseMinusitem2.Visible = item1 > 0;
+            PurchaseMinusitem1.Visible = item1 > 0;
         }
 
         private void PurchaseMinusitem9_Click(object sender, EventArgs e)
         {
             item9--;
             UpdateLabel("Neozep Forte", item9 * item9Price);
-            PurchaseMinusitem0.Visible = item9 > 0;
+            PurchaseMinusitem9.Visible = item9 > 0;
         }
 
         private void PurchaseAdditem9_Click(object sender, EventArgs e)
         {
             item9++;
             UpdateLabel("Neozep Forte", item9 * item9Price);
-            PurchaseMinusitem0.Visible = true;
+            PurchaseMinusitem9.Visible = true;
         }
 
         private void PurchaseMinusitem7_Click(object sender, EventArgs e)
         {
             item7--;
             UpdateLabel("Kremil-S", item7 * item7Price);
-            PurchaseMinusitem3.Visible = item7 > 0;
+            PurchaseMinusitem7.Visible = item7 > 0;
         }
 
         private void PurchaseAdditem7_Click(object sender, EventArgs e)
         {
             item7++;
             UpdateLabel("Kremil-S", item7 * item7Price);
-            PurchaseMinusitem3.Visible = true;
+            PurchaseMinusitem7.Visible = true;
         }
 
         private void PurchaseMinusitem6_Click(object sender, EventArgs e)
         {
             item6--;
             UpdateLabel("Imodium", item6 * item6Price);
-            PurchaseMinusitem4.Visible = item6 > 0;
+            PurchaseMinusitem6.Visible = item6 > 0;
         }
 
         private void PurchaseAdditem6_Click(object sender, EventArgs e)
         {
             item6++;
             UpdateLabel("Imodium", item6 * item6Price);
-            PurchaseMinusitem4.Visible = true;
+            PurchaseMinusitem6.Visible = true;
         }
 
         private void PurchaseMinusitem4_Click(object sender, EventArgs e)
         {
             item4--;
             UpdateLabel("Cetirizine", item4 * item4Price);
-            PurchaseMinusitem8.Visible = item4 > 0;
+            PurchaseMinusitem4.Visible = item4 > 0;
         }
 
         private void PurchaseAdditem4_Click(object sender, EventArgs e)
         {
             item4++;
             UpdateLabel("Cetirizine", item4 * item4Price);
-            PurchaseMinusitem8.Visible = true;
+            PurchaseMinusitem4.Visible = true;
         }
 
         private void PurchaseMinusitem2_Click(object sender, EventArgs e)
         {
             item2--;
             UpdateLabel("Biogesic", item2 * item2Price);
-            PurchaseMinusitem9.Visible = item2 > 0;
+            PurchaseMinusitem2.Visible = item2 > 0;
         }
 
         private void PurchaseAdditem2_Click(object sender, EventArgs e)
         {
             item2++;
             UpdateLabel("Biogesic", item2 * item2Price);
-            PurchaseMinusitem9.Visible = true;
+            PurchaseMinusitem2.Visible = true;
         }
 
         private void PurchaseMinusitem8_Click(object sender, EventArgs e)
         {
             item8--;
             UpdateLabel("Medicol Advance 400", item8 * item8Price);
-            PurchaseMinusitem5.Visible = item8 > 0;
+            PurchaseMinusitem8.Visible = item8 > 0;
         }
 
         private void PurchaseAdditem8_Click(object sender, EventArgs e)
         {
             item8++;
             UpdateLabel("Medicol Advance 400", item8 * item8Price);
-            PurchaseMinusitem5.Visible = true;
+            PurchaseMinusitem8.Visible = true;
         }
 
         private void PurchaseMinusitem0_Click(object sender, EventArgs e)
         {
             item0--;
             UpdateLabel("Neozep Non-Drowsy", item0 * item0Price);
-            PurchaseMinusitem7.Visible = item0 > 0;
+            PurchaseMinusitem0.Visible = item0 > 0;
         }
 
         private void PurchaseAdditem0_Click(object sender, EventArgs e)
         {
             item0++;
             UpdateLabel("Neozep Non-Drowsy", item0 * item0Price);
-            PurchaseMinusitem7.Visible = true;
+            PurchaseMinusitem0.Visible = true;
         }
         //End of Add/Minus function
 

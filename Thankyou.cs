@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ThesisBeta
 {
-    public partial class Thankyou : UserControl
+    public partial class Thankyou : Form
     {
         public Thankyou()
         {
             InitializeComponent();
         }
+
     }
 }

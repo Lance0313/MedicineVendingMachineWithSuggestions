@@ -16,5 +16,18 @@ namespace ThesisBeta
         {
             InitializeComponent();
         }
+
+        private void Epayment_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            EcashPayment Epayment = new EcashPayment();
+            Epayment.Show();
+
+        }
+
+        private void CashPayment_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

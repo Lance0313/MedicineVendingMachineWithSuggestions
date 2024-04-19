@@ -124,8 +124,8 @@
   <data name="X" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Peso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Peso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Gcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Gcash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Medicol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Medicol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +139,23 @@
   <data name="NIcka" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\NIcka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Peso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Peso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bonamine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Bonamine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Insert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Gcash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo Epayment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Logo Epayment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neozep Forte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Neozep Forte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neozep ND" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Neozep ND.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\images\Minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -156,9 +165,6 @@
   </data>
   <data name="Fern-C" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Fern-C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Neozep Forte" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Neozep Forte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Biogesic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\Biogesic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,7 +193,7 @@
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\images\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Neozep ND" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\Neozep ND.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Peso Sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\Peso Sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

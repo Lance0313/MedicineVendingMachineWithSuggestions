@@ -42,9 +42,10 @@
             this.SPKLabel.BackColor = System.Drawing.Color.Transparent;
             this.SPKLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SPKLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.SPKLabel.Location = new System.Drawing.Point(110, 132);
+            this.SPKLabel.Location = new System.Drawing.Point(158, 162);
+            this.SPKLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SPKLabel.Name = "SPKLabel";
-            this.SPKLabel.Size = new System.Drawing.Size(606, 46);
+            this.SPKLabel.Size = new System.Drawing.Size(748, 58);
             this.SPKLabel.TabIndex = 2;
             this.SPKLabel.Text = "SMART  Pharmaceutical Kiosk ";
             this.SPKLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -55,9 +56,10 @@
             this.ThankyouLabel.BackColor = System.Drawing.Color.Transparent;
             this.ThankyouLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThankyouLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ThankyouLabel.Location = new System.Drawing.Point(152, 69);
+            this.ThankyouLabel.Location = new System.Drawing.Point(207, 86);
+            this.ThankyouLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ThankyouLabel.Name = "ThankyouLabel";
-            this.ThankyouLabel.Size = new System.Drawing.Size(518, 63);
+            this.ThankyouLabel.Size = new System.Drawing.Size(636, 76);
             this.ThankyouLabel.TabIndex = 3;
             this.ThankyouLabel.Text = "Thank you for using";
             this.ThankyouLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -68,11 +70,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(38, 187);
+            this.label1.Location = new System.Drawing.Point(297, 220);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(741, 29);
+            this.label1.Size = new System.Drawing.Size(482, 33);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Streamlined Over-the-Counter Medicine Dispensing Innovation\r\n";
+            this.label1.Text = "Don\'t forget to check your change";
             // 
             // StartScreenFooter
             // 
@@ -80,9 +83,10 @@
             this.StartScreenFooter.BackColor = System.Drawing.Color.Transparent;
             this.StartScreenFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartScreenFooter.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.StartScreenFooter.Location = new System.Drawing.Point(282, 429);
+            this.StartScreenFooter.Location = new System.Drawing.Point(360, 528);
+            this.StartScreenFooter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StartScreenFooter.Name = "StartScreenFooter";
-            this.StartScreenFooter.Size = new System.Drawing.Size(270, 20);
+            this.StartScreenFooter.Size = new System.Drawing.Size(331, 25);
             this.StartScreenFooter.TabIndex = 5;
             this.StartScreenFooter.Text = "All rights reserved. 2024 ©LMMN";
             // 
@@ -93,12 +97,13 @@
             this.BacktoStartButton.FlatAppearance.BorderSize = 0;
             this.BacktoStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BacktoStartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BacktoStartButton.Location = new System.Drawing.Point(309, 287);
+            this.BacktoStartButton.Location = new System.Drawing.Point(392, 350);
+            this.BacktoStartButton.Margin = new System.Windows.Forms.Padding(4);
             this.BacktoStartButton.Name = "BacktoStartButton";
             this.BacktoStartButton.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.BacktoStartButton.OnHoverButtonColor = System.Drawing.Color.Gold;
             this.BacktoStartButton.OnHoverTextColor = System.Drawing.Color.Black;
-            this.BacktoStartButton.Size = new System.Drawing.Size(208, 46);
+            this.BacktoStartButton.Size = new System.Drawing.Size(277, 57);
             this.BacktoStartButton.TabIndex = 6;
             this.BacktoStartButton.Text = "Back to Start";
             this.BacktoStartButton.TextColor = System.Drawing.Color.Black;
@@ -106,18 +111,21 @@
             // 
             // Thankyou
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1067, 591);
             this.Controls.Add(this.BacktoStartButton);
             this.Controls.Add(this.StartScreenFooter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ThankyouLabel);
             this.Controls.Add(this.SPKLabel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Thankyou";
-            this.Size = new System.Drawing.Size(800, 480);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
