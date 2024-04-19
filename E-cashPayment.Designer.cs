@@ -32,6 +32,7 @@
             this.ScantheQR = new System.Windows.Forms.Label();
             this.ECash = new System.Windows.Forms.Label();
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
+            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TotalAmountValue = new System.Windows.Forms.Label();
             this.TotalAmount = new System.Windows.Forms.Label();
@@ -94,6 +95,11 @@
             this.BackButton.TextColor = System.Drawing.Color.Black;
             this.BackButton.UseVisualStyleBackColor = true;
             // 
+            // elipseControl1
+            // 
+            this.elipseControl1.CornerRadius = 50;
+            this.elipseControl1.TargetControl = this.ECashPaymentPanel;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ThesisBeta.Properties.Resources.SampleQR;
@@ -149,6 +155,7 @@
         private System.Windows.Forms.Panel ECashPaymentPanel;
         private System.Windows.Forms.Label ScantheQR;
         private System.Windows.Forms.Label ECash;
+        private ElipseToolDemo.ElipseControl elipseControl1;
         private ePOSOne.btnProduct.RoundButton BackButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label TotalAmountValue;

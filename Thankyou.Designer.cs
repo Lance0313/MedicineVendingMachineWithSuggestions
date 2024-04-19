@@ -1,4 +1,4 @@
-namespace ThesisBeta
+﻿namespace ThesisBeta
 {
     partial class Thankyou
     {
@@ -28,14 +28,12 @@ namespace ThesisBeta
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Thankyou));
             this.SPKLabel = new System.Windows.Forms.Label();
             this.ThankyouLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.StartScreenFooter = new System.Windows.Forms.Label();
             this.BacktoStartButton = new ePOSOne.btnProduct.RoundButton();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.SuspendLayout();
             // 
             // SPKLabel
@@ -82,7 +80,7 @@ namespace ThesisBeta
             this.StartScreenFooter.BackColor = System.Drawing.Color.Transparent;
             this.StartScreenFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartScreenFooter.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.StartScreenFooter.Location = new System.Drawing.Point(272, 429);
+            this.StartScreenFooter.Location = new System.Drawing.Point(282, 429);
             this.StartScreenFooter.Name = "StartScreenFooter";
             this.StartScreenFooter.Size = new System.Drawing.Size(270, 20);
             this.StartScreenFooter.TabIndex = 5;
@@ -95,7 +93,7 @@ namespace ThesisBeta
             this.BacktoStartButton.FlatAppearance.BorderSize = 0;
             this.BacktoStartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BacktoStartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BacktoStartButton.Location = new System.Drawing.Point(294, 292);
+            this.BacktoStartButton.Location = new System.Drawing.Point(309, 287);
             this.BacktoStartButton.Name = "BacktoStartButton";
             this.BacktoStartButton.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.BacktoStartButton.OnHoverButtonColor = System.Drawing.Color.Gold;
@@ -105,11 +103,6 @@ namespace ThesisBeta
             this.BacktoStartButton.Text = "Back to Start";
             this.BacktoStartButton.TextColor = System.Drawing.Color.Black;
             this.BacktoStartButton.UseVisualStyleBackColor = true;
-            this.BacktoStartButton.Click += new System.EventHandler(this.BacktoStartButton_Click);
-            // 
-            // serialPort1
-            // 
-            this.serialPort1.PortName = "COM5";
             // 
             // Thankyou
             // 
@@ -117,16 +110,14 @@ namespace ThesisBeta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 480);
             this.Controls.Add(this.BacktoStartButton);
             this.Controls.Add(this.StartScreenFooter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ThankyouLabel);
             this.Controls.Add(this.SPKLabel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Thankyou";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Size = new System.Drawing.Size(800, 480);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +130,5 @@ namespace ThesisBeta
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label StartScreenFooter;
         private ePOSOne.btnProduct.RoundButton BacktoStartButton;
-        private System.IO.Ports.SerialPort serialPort1;
     }
 }

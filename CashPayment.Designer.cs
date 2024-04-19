@@ -1,4 +1,4 @@
-namespace ThesisBeta
+﻿namespace ThesisBeta
 {
     partial class CashPayment
     {
@@ -29,15 +29,15 @@ namespace ThesisBeta
         private void InitializeComponent()
         {
             this.CashPaymentPanel = new System.Windows.Forms.Panel();
-            this.InsertpictureBox = new System.Windows.Forms.PictureBox();
-            this.TotalpictureBox = new System.Windows.Forms.PictureBox();
             this.TotalInsertedAmount = new System.Windows.Forms.Label();
             this.TotalInserted = new System.Windows.Forms.Label();
             this.TotalAmountValue = new System.Windows.Forms.Label();
             this.TotalAmount = new System.Windows.Forms.Label();
             this.Cash = new System.Windows.Forms.Label();
-            this.CashPaymentProceed = new ePOSOne.btnProduct.RoundButton();
             this.BackButton = new ePOSOne.btnProduct.RoundButton();
+            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
+            this.InsertpictureBox = new System.Windows.Forms.PictureBox();
+            this.TotalpictureBox = new System.Windows.Forms.PictureBox();
             this.CashPaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InsertpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalpictureBox)).BeginInit();
@@ -58,26 +58,6 @@ namespace ThesisBeta
             this.CashPaymentPanel.Size = new System.Drawing.Size(698, 341);
             this.CashPaymentPanel.TabIndex = 6;
             // 
-            // InsertpictureBox
-            // 
-            this.InsertpictureBox.Image = global::ThesisBeta.Properties.Resources.Insert;
-            this.InsertpictureBox.Location = new System.Drawing.Point(415, 73);
-            this.InsertpictureBox.Name = "InsertpictureBox";
-            this.InsertpictureBox.Size = new System.Drawing.Size(175, 150);
-            this.InsertpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.InsertpictureBox.TabIndex = 10;
-            this.InsertpictureBox.TabStop = false;
-            // 
-            // TotalpictureBox
-            // 
-            this.TotalpictureBox.Image = global::ThesisBeta.Properties.Resources.Total;
-            this.TotalpictureBox.Location = new System.Drawing.Point(114, 87);
-            this.TotalpictureBox.Name = "TotalpictureBox";
-            this.TotalpictureBox.Size = new System.Drawing.Size(155, 127);
-            this.TotalpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.TotalpictureBox.TabIndex = 9;
-            this.TotalpictureBox.TabStop = false;
-            // 
             // TotalInsertedAmount
             // 
             this.TotalInsertedAmount.AutoSize = true;
@@ -89,7 +69,6 @@ namespace ThesisBeta
             this.TotalInsertedAmount.Size = new System.Drawing.Size(44, 20);
             this.TotalInsertedAmount.TabIndex = 8;
             this.TotalInsertedAmount.Text = "0.00";
-            this.TotalInsertedAmount.TextChanged += new System.EventHandler(this.InitializeEventListeners);
             // 
             // TotalInserted
             // 
@@ -111,9 +90,9 @@ namespace ThesisBeta
             this.TotalAmountValue.ForeColor = System.Drawing.Color.Black;
             this.TotalAmountValue.Location = new System.Drawing.Point(164, 288);
             this.TotalAmountValue.Name = "TotalAmountValue";
-            this.TotalAmountValue.Size = new System.Drawing.Size(19, 20);
+            this.TotalAmountValue.Size = new System.Drawing.Size(44, 20);
             this.TotalAmountValue.TabIndex = 6;
-            this.TotalAmountValue.Text = "0";
+            this.TotalAmountValue.Text = "0.00";
             // 
             // TotalAmount
             // 
@@ -139,25 +118,6 @@ namespace ThesisBeta
             this.Cash.TabIndex = 4;
             this.Cash.Text = "Payment Method: Cash Payment";
             // 
-            // CashPaymentProceed
-            // 
-            this.CashPaymentProceed.BorderColor = System.Drawing.Color.Transparent;
-            this.CashPaymentProceed.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.CashPaymentProceed.FlatAppearance.BorderSize = 0;
-            this.CashPaymentProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CashPaymentProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashPaymentProceed.Location = new System.Drawing.Point(668, 21);
-            this.CashPaymentProceed.Name = "CashPaymentProceed";
-            this.CashPaymentProceed.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.CashPaymentProceed.OnHoverButtonColor = System.Drawing.Color.Gold;
-            this.CashPaymentProceed.OnHoverTextColor = System.Drawing.Color.Black;
-            this.CashPaymentProceed.Size = new System.Drawing.Size(106, 46);
-            this.CashPaymentProceed.TabIndex = 8;
-            this.CashPaymentProceed.Text = "Proceed";
-            this.CashPaymentProceed.TextColor = System.Drawing.Color.Black;
-            this.CashPaymentProceed.UseVisualStyleBackColor = true;
-            this.CashPaymentProceed.Click += new System.EventHandler(this.CashPaymentProceed_Click);
-            // 
             // BackButton
             // 
             this.BackButton.BorderColor = System.Drawing.Color.Transparent;
@@ -175,20 +135,41 @@ namespace ThesisBeta
             this.BackButton.Text = "Back";
             this.BackButton.TextColor = System.Drawing.Color.Black;
             this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // elipseControl1
+            // 
+            this.elipseControl1.CornerRadius = 50;
+            this.elipseControl1.TargetControl = this.CashPaymentPanel;
+            // 
+            // InsertpictureBox
+            // 
+            this.InsertpictureBox.Image = global::ThesisBeta.Properties.Resources.Insert;
+            this.InsertpictureBox.Location = new System.Drawing.Point(415, 73);
+            this.InsertpictureBox.Name = "InsertpictureBox";
+            this.InsertpictureBox.Size = new System.Drawing.Size(175, 150);
+            this.InsertpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.InsertpictureBox.TabIndex = 10;
+            this.InsertpictureBox.TabStop = false;
+            // 
+            // TotalpictureBox
+            // 
+            this.TotalpictureBox.Image = global::ThesisBeta.Properties.Resources.Total;
+            this.TotalpictureBox.Location = new System.Drawing.Point(114, 87);
+            this.TotalpictureBox.Name = "TotalpictureBox";
+            this.TotalpictureBox.Size = new System.Drawing.Size(155, 127);
+            this.TotalpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TotalpictureBox.TabIndex = 9;
+            this.TotalpictureBox.TabStop = false;
             // 
             // CashPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
-            this.ClientSize = new System.Drawing.Size(800, 480);
-            this.Controls.Add(this.CashPaymentProceed);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CashPaymentPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashPayment";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Size = new System.Drawing.Size(800, 480);
             this.CashPaymentPanel.ResumeLayout(false);
             this.CashPaymentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InsertpictureBox)).EndInit();
@@ -206,8 +187,8 @@ namespace ThesisBeta
         private System.Windows.Forms.Label TotalInserted;
         private System.Windows.Forms.Label TotalAmountValue;
         private System.Windows.Forms.Label TotalAmount;
+        private ElipseToolDemo.ElipseControl elipseControl1;
         private System.Windows.Forms.PictureBox TotalpictureBox;
         private System.Windows.Forms.PictureBox InsertpictureBox;
-        private ePOSOne.btnProduct.RoundButton CashPaymentProceed;
     }
 }
