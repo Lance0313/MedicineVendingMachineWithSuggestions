@@ -53,5 +53,34 @@ namespace ThesisBeta
             return qrCodeBitmap;
         }
         //End of E-payment QR Code Generation
+
+        private void LMMNAmountReceived_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(LMMNAmountReceived.Text.Trim(), out int amountInserted))
+            {
+                if (Purchase.totalPrice <= amountInserted)
+                {
+                    EcashProceed.Visible = true;
+                }
+                else
+                {
+                    EcashProceed.Visible = false;
+                }
+            }
+            else
+            {
+                EcashProceed.Visible = false;
+            }
+        }
+        private void InitializeEventListeners(object sender, EventArgs e)
+        {
+            LMMNAmountReceived.TextChanged += LMMNAmountReceived_TextChanged;
+        }
+
+        private void EcashProceed_Click(object sender, EventArgs e)
+        {
+            Thankyou thankyou = new Thankyou();
+            thankyou.Show();
+        }
     }
 }
