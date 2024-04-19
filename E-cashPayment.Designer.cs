@@ -161,6 +161,7 @@
             this.BackButton.Text = "Back";
             this.BackButton.TextColor = System.Drawing.Color.Black;
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // elipseControl1
             // 

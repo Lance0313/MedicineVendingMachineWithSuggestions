@@ -18,44 +18,6 @@ namespace ThesisBeta
         public static List<string> itemNames;
         public static List<int> quantities;
         public static List<float> prices;
-
-        public Purchase()
-        {
-            InitializeComponent();
-            //Hide minus button
-            PurchaseCartPanel.Visible = false;
-            PurchaseMinusitem6.Visible = false;
-            PurchaseMinusitem1.Visible = false;
-            PurchaseMinusitem2.Visible = false;
-            PurchaseMinusitem3.Visible = false;
-            PurchaseMinusitem0.Visible = false;
-            PurchaseMinusitem4.Visible = false;
-            PurchaseMinusitem9.Visible = false;
-            PurchaseMinusitem8.Visible = false;
-            PurchaseMinusitem7.Visible = false;
-            PurchaseMinusitem5.Visible = false;
-            //End of hide minus button
-        }
-
-        //Toggling cart panel visibility
-        private void PurchaseCartButton_Click(object sender, EventArgs e)
-        {
-            if (isPanelVisible)
-            {
-                //Sets to false if it was true
-                PurchaseCartPanel.Visible = false;
-            }
-            else
-            {
-                //Sets to true if it was false
-                PurchaseCartPanel.Visible = true;
-            }
-            //Toggles the visibility
-            isPanelVisible = !isPanelVisible;
-        }
-        //End of toggling cart panel visibility
-
-        //Variables
         private int item1 = 0;
         private int item2 = 0;
         private int item3 = 0;
@@ -76,7 +38,52 @@ namespace ThesisBeta
         private const int item8Price = 85;
         private const int item9Price = 75;
         private const int item0Price = 110;
-        //End of variables
+
+        public Purchase()
+        {
+            InitializeComponent();
+            //Hide components
+            PurchaseCartPanel.Visible = false;
+            PurchaseMinusitem6.Visible = false;
+            PurchaseMinusitem1.Visible = false;
+            PurchaseMinusitem2.Visible = false;
+            PurchaseMinusitem3.Visible = false;
+            PurchaseMinusitem0.Visible = false;
+            PurchaseMinusitem4.Visible = false;
+            PurchaseMinusitem9.Visible = false;
+            PurchaseMinusitem8.Visible = false;
+            PurchaseMinusitem7.Visible = false;
+            PurchaseMinusitem5.Visible = false;
+            item1Quantity.Visible = false;
+            item2Quantity.Visible = false;
+            item3Quantity.Visible = false;
+            item4Quantity.Visible = false;
+            item5Quantity.Visible = false;
+            item6Quantity.Visible = false;
+            item7Quantity.Visible = false;
+            item8Quantity.Visible = false;
+            item9Quantity.Visible = false;
+            item0Quantity.Visible = false;
+            //End of hide components
+        }
+
+        //Toggling cart panel visibility
+        private void PurchaseCartButton_Click(object sender, EventArgs e)
+        {
+            if (isPanelVisible)
+            {
+                //Sets to false if it was true
+                PurchaseCartPanel.Visible = false;
+            }
+            else
+            {
+                //Sets to true if it was false
+                PurchaseCartPanel.Visible = true;
+            }
+            //Toggles the visibility
+            isPanelVisible = !isPanelVisible;
+        }
+        //End of toggling cart panel visibility
 
         //Get Quantity of products
         private int GetQuantity(string productName)
@@ -84,25 +91,25 @@ namespace ThesisBeta
             switch (productName)
             {
                 case "Ascof Forte":
-                    return Math.Max(0, item1);
+                    return Math.Min(3, Math.Max(0, item1));
                 case "Biogesic":
-                    return Math.Max(0, item2);
+                    return Math.Min(3, Math.Max(0, item2));
                 case "Bonamine":
-                    return Math.Max(0, item3);
+                    return Math.Min(3, Math.Max(0, item3));
                 case "Cetirizine":
-                    return Math.Max(0, item4);
+                    return Math.Min(3, Math.Max(0, item4));
                 case "Fern C":
-                    return Math.Max(0, item5);
+                    return Math.Min(3, Math.Max(0, item5));
                 case "Imodium":
-                    return Math.Max(0, item6);
+                    return Math.Min(3, Math.Max(0, item6));
                 case "Kremil S":
-                    return Math.Max(0, item7);
+                    return Math.Min(3, Math.Max(0, item7));
                 case "Medicol":
-                    return Math.Max(0, item8);
+                    return Math.Min(3, Math.Max(0, item8));
                 case "Neozep Non Drowsy":
-                    return Math.Max(0, item9);
+                    return Math.Min(3, Math.Max(0, item9));
                 case "Neozep Forte":
-                    return Math.Max(0, item0);
+                    return Math.Min(3, Math.Max(0, item0));
                 default:
                     return 0;
             }
@@ -221,9 +228,13 @@ namespace ThesisBeta
             //Add quantity
             item5++;
             //Call UpdateLabel
-            UpdateLabel("Fern-C", item5 * item5Price);
+            UpdateLabel("Fern C", item5 * item5Price);
             //Show Minus button
             PurchaseMinusitem5.Visible = true;
+            //Show Quantity Label 
+            item5Quantity.Visible = true;
+            //Update quantity label
+            item5Quantity.Text = item5.ToString();
         }
 
         private void PurchaseMinusitem5_Click(object sender, EventArgs e)
@@ -231,9 +242,13 @@ namespace ThesisBeta
             //Substract quantity 
             item5--;
             //Call UpdateLabel
-            UpdateLabel("Fern-C", item5 * item5Price);
+            UpdateLabel("Fern C", item5 * item5Price);
             //Hide minus button when quantity value is 0
             PurchaseMinusitem5.Visible = item5 > 0;
+            //Hide quantity label when quantity value is 0
+            item5Quantity.Visible = item5 > 0;
+            //Update quantity label
+            item5Quantity.Text = item5.ToString();
         }
 
         private void PurchaseMinusitem3_Click(object sender, EventArgs e)
@@ -242,6 +257,8 @@ namespace ThesisBeta
             UpdateLabel("Bonamine", item3 * item3Price);
             PurchaseMinusitem3.Enabled = item3 > 0;
             PurchaseMinusitem3.Visible = item3 > 0;
+            item3Quantity.Visible = item3 > 0;
+            item3Quantity.Text = item3.ToString();
         }
 
         private void PurchaseAdditem3_Click(object sender, EventArgs e)
@@ -250,6 +267,8 @@ namespace ThesisBeta
             UpdateLabel("Bonamine", item3 * item3Price);
             PurchaseMinusitem3.Enabled = true;
             PurchaseMinusitem3.Visible = true;
+            item3Quantity.Visible = true;
+            item3Quantity.Text = item3.ToString();
         }
 
         private void PurchaseAdditem1_Click(object sender, EventArgs e)
@@ -257,6 +276,8 @@ namespace ThesisBeta
             item1++;
             UpdateLabel("Ascof Forte", item1 * item1Price);
             PurchaseMinusitem1.Visible = true;
+            item1Quantity.Visible = true;
+            item1Quantity.Text = item1.ToString();
         }
 
         private void PurchaseMinusitem1_Click(object sender, EventArgs e)
@@ -264,6 +285,8 @@ namespace ThesisBeta
             item1--;
             UpdateLabel("Ascof Forte", item1 * item1Price);
             PurchaseMinusitem1.Visible = item1 > 0;
+            item1Quantity.Visible = item1 > 0;
+            item1Quantity.Text = item1.ToString();
         }
 
         private void PurchaseMinusitem9_Click(object sender, EventArgs e)
@@ -271,6 +294,8 @@ namespace ThesisBeta
             item9--;
             UpdateLabel("Neozep Forte", item9 * item9Price);
             PurchaseMinusitem9.Visible = item9 > 0;
+            item9Quantity.Visible = item9 > 0;
+            item9Quantity.Text = item9.ToString();
         }
 
         private void PurchaseAdditem9_Click(object sender, EventArgs e)
@@ -278,27 +303,36 @@ namespace ThesisBeta
             item9++;
             UpdateLabel("Neozep Forte", item9 * item9Price);
             PurchaseMinusitem9.Visible = true;
+            item9Quantity.Visible = true;
+            item9Quantity.Text = item9.ToString();
         }
 
         private void PurchaseMinusitem7_Click(object sender, EventArgs e)
         {
             item7--;
-            UpdateLabel("Kremil-S", item7 * item7Price);
+            UpdateLabel("Kremil S", item7 * item7Price);
             PurchaseMinusitem7.Visible = item7 > 0;
+            item7Quantity.Visible = item7 > 0;
+            item7Quantity.Text = item7.ToString();
         }
 
         private void PurchaseAdditem7_Click(object sender, EventArgs e)
         {
             item7++;
-            UpdateLabel("Kremil-S", item7 * item7Price);
+            UpdateLabel("Kremil S", item7 * item7Price);
             PurchaseMinusitem7.Visible = true;
+            item7Quantity.Visible = true;
+            item7Quantity.Text = item7.ToString();
         }
+
 
         private void PurchaseMinusitem6_Click(object sender, EventArgs e)
         {
             item6--;
             UpdateLabel("Imodium", item6 * item6Price);
             PurchaseMinusitem6.Visible = item6 > 0;
+            item6Quantity.Visible = item6 > 0;
+            item6Quantity.Text = item6.ToString();
         }
 
         private void PurchaseAdditem6_Click(object sender, EventArgs e)
@@ -306,6 +340,8 @@ namespace ThesisBeta
             item6++;
             UpdateLabel("Imodium", item6 * item6Price);
             PurchaseMinusitem6.Visible = true;
+            item6Quantity.Visible = true;
+            item6Quantity.Text = item6.ToString();
         }
 
         private void PurchaseMinusitem4_Click(object sender, EventArgs e)
@@ -313,6 +349,8 @@ namespace ThesisBeta
             item4--;
             UpdateLabel("Cetirizine", item4 * item4Price);
             PurchaseMinusitem4.Visible = item4 > 0;
+            item4Quantity.Visible = item4 > 0;
+            item4Quantity.Text = item4.ToString();
         }
 
         private void PurchaseAdditem4_Click(object sender, EventArgs e)
@@ -320,6 +358,8 @@ namespace ThesisBeta
             item4++;
             UpdateLabel("Cetirizine", item4 * item4Price);
             PurchaseMinusitem4.Visible = true;
+            item4Quantity.Visible = true;
+            item4Quantity.Text = item4.ToString();
         }
 
         private void PurchaseMinusitem2_Click(object sender, EventArgs e)
@@ -327,6 +367,8 @@ namespace ThesisBeta
             item2--;
             UpdateLabel("Biogesic", item2 * item2Price);
             PurchaseMinusitem2.Visible = item2 > 0;
+            item2Quantity.Visible = item2 > 0;
+            item2Quantity.Text = item2.ToString();
         }
 
         private void PurchaseAdditem2_Click(object sender, EventArgs e)
@@ -334,6 +376,8 @@ namespace ThesisBeta
             item2++;
             UpdateLabel("Biogesic", item2 * item2Price);
             PurchaseMinusitem2.Visible = true;
+            item2Quantity.Visible = true;
+            item2Quantity.Text = item2.ToString();
         }
 
         private void PurchaseMinusitem8_Click(object sender, EventArgs e)
@@ -341,6 +385,8 @@ namespace ThesisBeta
             item8--;
             UpdateLabel("Medicol Advance 400", item8 * item8Price);
             PurchaseMinusitem8.Visible = item8 > 0;
+            item8Quantity.Visible = item8 > 0;
+            item8Quantity.Text = item8.ToString();
         }
 
         private void PurchaseAdditem8_Click(object sender, EventArgs e)
@@ -348,6 +394,8 @@ namespace ThesisBeta
             item8++;
             UpdateLabel("Medicol Advance 400", item8 * item8Price);
             PurchaseMinusitem8.Visible = true;
+            item8Quantity.Visible = true;
+            item8Quantity.Text = item8.ToString();
         }
 
         private void PurchaseMinusitem0_Click(object sender, EventArgs e)
@@ -355,6 +403,8 @@ namespace ThesisBeta
             item0--;
             UpdateLabel("Neozep Non-Drowsy", item0 * item0Price);
             PurchaseMinusitem0.Visible = item0 > 0;
+            item0Quantity.Visible = item0 > 0;
+            item0Quantity.Text = item0.ToString();
         }
 
         private void PurchaseAdditem0_Click(object sender, EventArgs e)
@@ -362,6 +412,8 @@ namespace ThesisBeta
             item0++;
             UpdateLabel("Neozep Non-Drowsy", item0 * item0Price);
             PurchaseMinusitem0.Visible = true;
+            item0Quantity.Visible = true;
+            item0Quantity.Text = item0.ToString();
         }
         //End of Add/Minus function
 
@@ -371,5 +423,6 @@ namespace ThesisBeta
             StartScreen startScreen = new StartScreen();
             startScreen.Show();
         }
+
     }
 }

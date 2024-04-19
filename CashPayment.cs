@@ -29,7 +29,7 @@ namespace ThesisBeta
                 MessageBox.Show("Error opening serial port: " + ex.Message);
             }
             TotalAmountValue.Text = "Php " + Purchase.totalPrice.ToString();
-            CashPaymentProceed.Visible = true;
+            CashPaymentProceed.Visible = false;
         }
 
         private void InitializeSerialPort()
@@ -73,7 +73,13 @@ namespace ThesisBeta
 
         private void CashPaymentProceed_Click(object sender, EventArgs e)
         {
-            
+            Thankyou thankyou = new Thankyou();
+            thankyou.Show();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

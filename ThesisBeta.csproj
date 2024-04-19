@@ -139,6 +139,7 @@
     <Compile Include="MainSuggestion.Designer.cs">
       <DependentUpon>MainSuggestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="MotorControl.cs" />
     <Compile Include="PaymentOption.cs">
       <SubType>Form</SubType>
     </Compile>

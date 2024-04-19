@@ -28,6 +28,8 @@ namespace ThesisBeta
         private void CashPayment_Click(object sender, EventArgs e)
         {
             this.Close();
+            CashPayment CashPayment = new CashPayment();
+            CashPayment.Show();
         }
     }
 }

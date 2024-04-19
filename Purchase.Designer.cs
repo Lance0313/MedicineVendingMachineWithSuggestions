@@ -32,13 +32,13 @@
             this.PurchaseTabs = new System.Windows.Forms.Panel();
             this.PurchaseCartButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PurchaseProceed = new ePOSOne.btnProduct.RoundButton();
-            this.BackButton = new ePOSOne.btnProduct.RoundButton();
             this.PurchaseCartPanel = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PurchaseCartText = new System.Windows.Forms.Panel();
             this.PurchaseTabPanel = new System.Windows.Forms.Panel();
+            this.item2Quantity = new System.Windows.Forms.Label();
+            this.item1Quantity = new System.Windows.Forms.Label();
             this.PurchaseMinusitem7 = new System.Windows.Forms.PictureBox();
             this.PurchaseAdditem7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -89,6 +89,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.item3Quantity = new System.Windows.Forms.Label();
+            this.item4Quantity = new System.Windows.Forms.Label();
+            this.item5Quantity = new System.Windows.Forms.Label();
+            this.item6Quantity = new System.Windows.Forms.Label();
+            this.item7Quantity = new System.Windows.Forms.Label();
+            this.item8Quantity = new System.Windows.Forms.Label();
+            this.item9Quantity = new System.Windows.Forms.Label();
+            this.item0Quantity = new System.Windows.Forms.Label();
+            this.BackButton = new ePOSOne.btnProduct.RoundButton();
+            this.PurchaseProceed = new ePOSOne.btnProduct.RoundButton();
             this.PurchaseTabs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseCartButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,46 +171,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // PurchaseProceed
-            // 
-            this.PurchaseProceed.BorderColor = System.Drawing.Color.Transparent;
-            this.PurchaseProceed.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.PurchaseProceed.FlatAppearance.BorderSize = 0;
-            this.PurchaseProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PurchaseProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchaseProceed.Location = new System.Drawing.Point(915, 12);
-            this.PurchaseProceed.Margin = new System.Windows.Forms.Padding(4);
-            this.PurchaseProceed.Name = "PurchaseProceed";
-            this.PurchaseProceed.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.PurchaseProceed.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.PurchaseProceed.OnHoverTextColor = System.Drawing.Color.Black;
-            this.PurchaseProceed.Size = new System.Drawing.Size(140, 44);
-            this.PurchaseProceed.TabIndex = 4;
-            this.PurchaseProceed.Text = "Proceed";
-            this.PurchaseProceed.TextColor = System.Drawing.Color.Black;
-            this.PurchaseProceed.UseVisualStyleBackColor = true;
-            this.PurchaseProceed.Click += new System.EventHandler(this.PurchaseProceed_Click);
-            // 
-            // BackButton
-            // 
-            this.BackButton.BorderColor = System.Drawing.Color.Transparent;
-            this.BackButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.BackButton.FlatAppearance.BorderSize = 0;
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(16, 466);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(4);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.BackButton.OnHoverButtonColor = System.Drawing.Color.Gold;
-            this.BackButton.OnHoverTextColor = System.Drawing.Color.Black;
-            this.BackButton.Size = new System.Drawing.Size(140, 44);
-            this.BackButton.TabIndex = 20;
-            this.BackButton.Text = "Back";
-            this.BackButton.TextColor = System.Drawing.Color.Black;
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
             // PurchaseCartPanel
             // 
             this.PurchaseCartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
@@ -247,6 +217,16 @@
             // PurchaseTabPanel
             // 
             this.PurchaseTabPanel.Controls.Add(this.PurchaseCartPanel);
+            this.PurchaseTabPanel.Controls.Add(this.item0Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item9Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item8Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item7Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item6Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item5Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item4Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item3Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item2Quantity);
+            this.PurchaseTabPanel.Controls.Add(this.item1Quantity);
             this.PurchaseTabPanel.Controls.Add(this.PurchaseMinusitem7);
             this.PurchaseTabPanel.Controls.Add(this.PurchaseAdditem7);
             this.PurchaseTabPanel.Controls.Add(this.label11);
@@ -304,6 +284,24 @@
             this.PurchaseTabPanel.Name = "PurchaseTabPanel";
             this.PurchaseTabPanel.Size = new System.Drawing.Size(1067, 526);
             this.PurchaseTabPanel.TabIndex = 0;
+            // 
+            // item2Quantity
+            // 
+            this.item2Quantity.AutoSize = true;
+            this.item2Quantity.Location = new System.Drawing.Point(280, 29);
+            this.item2Quantity.Name = "item2Quantity";
+            this.item2Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item2Quantity.TabIndex = 128;
+            this.item2Quantity.Text = "item2quan";
+            // 
+            // item1Quantity
+            // 
+            this.item1Quantity.AutoSize = true;
+            this.item1Quantity.Location = new System.Drawing.Point(70, 29);
+            this.item1Quantity.Name = "item1Quantity";
+            this.item1Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item1Quantity.TabIndex = 127;
+            this.item1Quantity.Text = "item1quan";
             // 
             // PurchaseMinusitem7
             // 
@@ -882,6 +880,118 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // item3Quantity
+            // 
+            this.item3Quantity.AutoSize = true;
+            this.item3Quantity.Location = new System.Drawing.Point(492, 29);
+            this.item3Quantity.Name = "item3Quantity";
+            this.item3Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item3Quantity.TabIndex = 129;
+            this.item3Quantity.Text = "item3quan";
+            // 
+            // item4Quantity
+            // 
+            this.item4Quantity.AutoSize = true;
+            this.item4Quantity.Location = new System.Drawing.Point(708, 29);
+            this.item4Quantity.Name = "item4Quantity";
+            this.item4Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item4Quantity.TabIndex = 130;
+            this.item4Quantity.Text = "item4quan";
+            // 
+            // item5Quantity
+            // 
+            this.item5Quantity.AutoSize = true;
+            this.item5Quantity.Location = new System.Drawing.Point(921, 29);
+            this.item5Quantity.Name = "item5Quantity";
+            this.item5Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item5Quantity.TabIndex = 131;
+            this.item5Quantity.Text = "item5quan";
+            // 
+            // item6Quantity
+            // 
+            this.item6Quantity.AutoSize = true;
+            this.item6Quantity.Location = new System.Drawing.Point(70, 257);
+            this.item6Quantity.Name = "item6Quantity";
+            this.item6Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item6Quantity.TabIndex = 132;
+            this.item6Quantity.Text = "item6quan";
+            // 
+            // item7Quantity
+            // 
+            this.item7Quantity.AutoSize = true;
+            this.item7Quantity.Location = new System.Drawing.Point(280, 257);
+            this.item7Quantity.Name = "item7Quantity";
+            this.item7Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item7Quantity.TabIndex = 133;
+            this.item7Quantity.Text = "item7quan";
+            // 
+            // item8Quantity
+            // 
+            this.item8Quantity.AutoSize = true;
+            this.item8Quantity.Location = new System.Drawing.Point(499, 255);
+            this.item8Quantity.Name = "item8Quantity";
+            this.item8Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item8Quantity.TabIndex = 134;
+            this.item8Quantity.Text = "item8quan";
+            // 
+            // item9Quantity
+            // 
+            this.item9Quantity.AutoSize = true;
+            this.item9Quantity.Location = new System.Drawing.Point(707, 255);
+            this.item9Quantity.Name = "item9Quantity";
+            this.item9Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item9Quantity.TabIndex = 135;
+            this.item9Quantity.Text = "item9quan";
+            // 
+            // item0Quantity
+            // 
+            this.item0Quantity.AutoSize = true;
+            this.item0Quantity.Location = new System.Drawing.Point(921, 255);
+            this.item0Quantity.Name = "item0Quantity";
+            this.item0Quantity.Size = new System.Drawing.Size(69, 16);
+            this.item0Quantity.TabIndex = 136;
+            this.item0Quantity.Text = "item0quan";
+            // 
+            // BackButton
+            // 
+            this.BackButton.BorderColor = System.Drawing.Color.Transparent;
+            this.BackButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Location = new System.Drawing.Point(16, 466);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.BackButton.OnHoverButtonColor = System.Drawing.Color.Gold;
+            this.BackButton.OnHoverTextColor = System.Drawing.Color.Black;
+            this.BackButton.Size = new System.Drawing.Size(140, 44);
+            this.BackButton.TabIndex = 20;
+            this.BackButton.Text = "Back";
+            this.BackButton.TextColor = System.Drawing.Color.Black;
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // PurchaseProceed
+            // 
+            this.PurchaseProceed.BorderColor = System.Drawing.Color.Transparent;
+            this.PurchaseProceed.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.PurchaseProceed.FlatAppearance.BorderSize = 0;
+            this.PurchaseProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PurchaseProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseProceed.Location = new System.Drawing.Point(915, 12);
+            this.PurchaseProceed.Margin = new System.Windows.Forms.Padding(4);
+            this.PurchaseProceed.Name = "PurchaseProceed";
+            this.PurchaseProceed.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.PurchaseProceed.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.PurchaseProceed.OnHoverTextColor = System.Drawing.Color.Black;
+            this.PurchaseProceed.Size = new System.Drawing.Size(140, 44);
+            this.PurchaseProceed.TabIndex = 4;
+            this.PurchaseProceed.Text = "Proceed";
+            this.PurchaseProceed.TextColor = System.Drawing.Color.Black;
+            this.PurchaseProceed.UseVisualStyleBackColor = true;
+            this.PurchaseProceed.Click += new System.EventHandler(this.PurchaseProceed_Click);
+            // 
             // Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -999,5 +1109,15 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel PurchaseCartText;
         private ePOSOne.btnProduct.RoundButton BackButton;
+        private System.Windows.Forms.Label item2Quantity;
+        private System.Windows.Forms.Label item1Quantity;
+        private System.Windows.Forms.Label item0Quantity;
+        private System.Windows.Forms.Label item9Quantity;
+        private System.Windows.Forms.Label item8Quantity;
+        private System.Windows.Forms.Label item7Quantity;
+        private System.Windows.Forms.Label item6Quantity;
+        private System.Windows.Forms.Label item5Quantity;
+        private System.Windows.Forms.Label item4Quantity;
+        private System.Windows.Forms.Label item3Quantity;
     }
 }
