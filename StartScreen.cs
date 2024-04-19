@@ -33,7 +33,7 @@ namespace ThesisBeta
             purchase.Show();
 
             // Close Form1
-            this.Hide();
+            this.Visible = false;
         }
 
         private void StartScreenSuggestion_Click(object sender, EventArgs e)

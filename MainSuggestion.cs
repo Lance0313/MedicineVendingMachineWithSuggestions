@@ -161,7 +161,7 @@ namespace ThesisBeta
             Purchase purchase = new Purchase();
             purchase.Show();
 
-            this.Hide();
+            this.Visible = false;
         }
 
         private void BackButton_Click(object sender, EventArgs e)

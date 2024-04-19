@@ -70,7 +70,7 @@ namespace ThesisBeta
             for (int i = 0; i < quantity; i++)
             {
                 activateMotor();
-                Thread.Sleep(1500);
+                Thread.Sleep(700);
             }
         }
 

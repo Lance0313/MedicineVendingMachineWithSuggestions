@@ -69,18 +69,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 195);
+            this.textBox1.Location = new System.Drawing.Point(151, 240);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(564, 20);
+            this.textBox1.Size = new System.Drawing.Size(751, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // q
             // 
             this.q.BackColor = System.Drawing.Color.White;
-            this.q.Location = new System.Drawing.Point(126, 234);
+            this.q.Location = new System.Drawing.Point(168, 288);
+            this.q.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.q.Name = "q";
-            this.q.Size = new System.Drawing.Size(54, 37);
+            this.q.Size = new System.Drawing.Size(72, 46);
             this.q.TabIndex = 2;
             this.q.Text = "q";
             this.q.UseVisualStyleBackColor = false;
@@ -89,9 +91,10 @@
             // w
             // 
             this.w.BackColor = System.Drawing.Color.White;
-            this.w.Location = new System.Drawing.Point(180, 234);
+            this.w.Location = new System.Drawing.Point(240, 288);
+            this.w.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.w.Name = "w";
-            this.w.Size = new System.Drawing.Size(54, 37);
+            this.w.Size = new System.Drawing.Size(72, 46);
             this.w.TabIndex = 3;
             this.w.Text = "w";
             this.w.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@
             // e
             // 
             this.e.BackColor = System.Drawing.Color.White;
-            this.e.Location = new System.Drawing.Point(234, 234);
+            this.e.Location = new System.Drawing.Point(312, 288);
+            this.e.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.e.Name = "e";
-            this.e.Size = new System.Drawing.Size(54, 37);
+            this.e.Size = new System.Drawing.Size(72, 46);
             this.e.TabIndex = 4;
             this.e.Text = "e";
             this.e.UseVisualStyleBackColor = false;
@@ -111,9 +115,10 @@
             // r
             // 
             this.r.BackColor = System.Drawing.Color.White;
-            this.r.Location = new System.Drawing.Point(288, 234);
+            this.r.Location = new System.Drawing.Point(384, 288);
+            this.r.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.r.Name = "r";
-            this.r.Size = new System.Drawing.Size(54, 37);
+            this.r.Size = new System.Drawing.Size(72, 46);
             this.r.TabIndex = 5;
             this.r.Text = "r";
             this.r.UseVisualStyleBackColor = false;
@@ -122,9 +127,10 @@
             // t
             // 
             this.t.BackColor = System.Drawing.Color.White;
-            this.t.Location = new System.Drawing.Point(342, 234);
+            this.t.Location = new System.Drawing.Point(456, 288);
+            this.t.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.t.Name = "t";
-            this.t.Size = new System.Drawing.Size(54, 37);
+            this.t.Size = new System.Drawing.Size(72, 46);
             this.t.TabIndex = 6;
             this.t.Text = "t";
             this.t.UseVisualStyleBackColor = false;
@@ -133,9 +139,10 @@
             // u
             // 
             this.u.BackColor = System.Drawing.Color.White;
-            this.u.Location = new System.Drawing.Point(450, 234);
+            this.u.Location = new System.Drawing.Point(600, 288);
+            this.u.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.u.Name = "u";
-            this.u.Size = new System.Drawing.Size(54, 37);
+            this.u.Size = new System.Drawing.Size(72, 46);
             this.u.TabIndex = 7;
             this.u.Text = "u";
             this.u.UseVisualStyleBackColor = false;
@@ -144,9 +151,10 @@
             // y
             // 
             this.y.BackColor = System.Drawing.Color.White;
-            this.y.Location = new System.Drawing.Point(396, 234);
+            this.y.Location = new System.Drawing.Point(528, 288);
+            this.y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.y.Name = "y";
-            this.y.Size = new System.Drawing.Size(54, 37);
+            this.y.Size = new System.Drawing.Size(72, 46);
             this.y.TabIndex = 8;
             this.y.Text = "y";
             this.y.UseVisualStyleBackColor = false;
@@ -155,9 +163,10 @@
             // p
             // 
             this.p.BackColor = System.Drawing.Color.White;
-            this.p.Location = new System.Drawing.Point(612, 234);
+            this.p.Location = new System.Drawing.Point(816, 288);
+            this.p.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.p.Name = "p";
-            this.p.Size = new System.Drawing.Size(54, 37);
+            this.p.Size = new System.Drawing.Size(72, 46);
             this.p.TabIndex = 9;
             this.p.Text = "p";
             this.p.UseVisualStyleBackColor = false;
@@ -166,9 +175,10 @@
             // a
             // 
             this.a.BackColor = System.Drawing.Color.White;
-            this.a.Location = new System.Drawing.Point(162, 277);
+            this.a.Location = new System.Drawing.Point(216, 341);
+            this.a.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(54, 37);
+            this.a.Size = new System.Drawing.Size(72, 46);
             this.a.TabIndex = 10;
             this.a.Text = "a";
             this.a.UseVisualStyleBackColor = false;
@@ -177,9 +187,10 @@
             // i
             // 
             this.i.BackColor = System.Drawing.Color.White;
-            this.i.Location = new System.Drawing.Point(504, 234);
+            this.i.Location = new System.Drawing.Point(672, 288);
+            this.i.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.i.Name = "i";
-            this.i.Size = new System.Drawing.Size(54, 37);
+            this.i.Size = new System.Drawing.Size(72, 46);
             this.i.TabIndex = 11;
             this.i.Text = "i";
             this.i.UseVisualStyleBackColor = false;
@@ -188,9 +199,10 @@
             // o
             // 
             this.o.BackColor = System.Drawing.Color.White;
-            this.o.Location = new System.Drawing.Point(558, 234);
+            this.o.Location = new System.Drawing.Point(744, 288);
+            this.o.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.o.Name = "o";
-            this.o.Size = new System.Drawing.Size(54, 37);
+            this.o.Size = new System.Drawing.Size(72, 46);
             this.o.TabIndex = 12;
             this.o.Text = "o";
             this.o.UseVisualStyleBackColor = false;
@@ -199,9 +211,10 @@
             // d
             // 
             this.d.BackColor = System.Drawing.Color.White;
-            this.d.Location = new System.Drawing.Point(270, 277);
+            this.d.Location = new System.Drawing.Point(360, 341);
+            this.d.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(54, 37);
+            this.d.Size = new System.Drawing.Size(72, 46);
             this.d.TabIndex = 13;
             this.d.Text = "d";
             this.d.UseVisualStyleBackColor = false;
@@ -210,9 +223,10 @@
             // s
             // 
             this.s.BackColor = System.Drawing.Color.White;
-            this.s.Location = new System.Drawing.Point(216, 277);
+            this.s.Location = new System.Drawing.Point(288, 341);
+            this.s.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(54, 37);
+            this.s.Size = new System.Drawing.Size(72, 46);
             this.s.TabIndex = 14;
             this.s.Text = "s";
             this.s.UseVisualStyleBackColor = false;
@@ -221,9 +235,10 @@
             // n
             // 
             this.n.BackColor = System.Drawing.Color.White;
-            this.n.Location = new System.Drawing.Point(458, 320);
+            this.n.Location = new System.Drawing.Point(611, 394);
+            this.n.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.n.Name = "n";
-            this.n.Size = new System.Drawing.Size(54, 37);
+            this.n.Size = new System.Drawing.Size(72, 46);
             this.n.TabIndex = 27;
             this.n.Text = "n";
             this.n.UseVisualStyleBackColor = false;
@@ -232,9 +247,10 @@
             // m
             // 
             this.m.BackColor = System.Drawing.Color.White;
-            this.m.Location = new System.Drawing.Point(512, 320);
+            this.m.Location = new System.Drawing.Point(683, 394);
+            this.m.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.m.Name = "m";
-            this.m.Size = new System.Drawing.Size(54, 37);
+            this.m.Size = new System.Drawing.Size(72, 46);
             this.m.TabIndex = 26;
             this.m.Text = "m";
             this.m.UseVisualStyleBackColor = false;
@@ -243,9 +259,10 @@
             // c
             // 
             this.c.BackColor = System.Drawing.Color.White;
-            this.c.Location = new System.Drawing.Point(296, 320);
+            this.c.Location = new System.Drawing.Point(395, 394);
+            this.c.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(54, 37);
+            this.c.Size = new System.Drawing.Size(72, 46);
             this.c.TabIndex = 25;
             this.c.Text = "c";
             this.c.UseVisualStyleBackColor = false;
@@ -254,9 +271,10 @@
             // x
             // 
             this.x.BackColor = System.Drawing.Color.White;
-            this.x.Location = new System.Drawing.Point(242, 320);
+            this.x.Location = new System.Drawing.Point(323, 394);
+            this.x.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.x.Name = "x";
-            this.x.Size = new System.Drawing.Size(54, 37);
+            this.x.Size = new System.Drawing.Size(72, 46);
             this.x.TabIndex = 24;
             this.x.Text = "x";
             this.x.UseVisualStyleBackColor = false;
@@ -265,9 +283,10 @@
             // b
             // 
             this.b.BackColor = System.Drawing.Color.White;
-            this.b.Location = new System.Drawing.Point(404, 320);
+            this.b.Location = new System.Drawing.Point(539, 394);
+            this.b.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(54, 37);
+            this.b.Size = new System.Drawing.Size(72, 46);
             this.b.TabIndex = 23;
             this.b.Text = "b";
             this.b.UseVisualStyleBackColor = false;
@@ -276,9 +295,10 @@
             // v
             // 
             this.v.BackColor = System.Drawing.Color.White;
-            this.v.Location = new System.Drawing.Point(350, 320);
+            this.v.Location = new System.Drawing.Point(467, 394);
+            this.v.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.v.Name = "v";
-            this.v.Size = new System.Drawing.Size(54, 37);
+            this.v.Size = new System.Drawing.Size(72, 46);
             this.v.TabIndex = 22;
             this.v.Text = "v";
             this.v.UseVisualStyleBackColor = false;
@@ -287,9 +307,10 @@
             // l
             // 
             this.l.BackColor = System.Drawing.Color.White;
-            this.l.Location = new System.Drawing.Point(594, 277);
+            this.l.Location = new System.Drawing.Point(792, 341);
+            this.l.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.l.Name = "l";
-            this.l.Size = new System.Drawing.Size(54, 37);
+            this.l.Size = new System.Drawing.Size(72, 46);
             this.l.TabIndex = 21;
             this.l.Text = "l";
             this.l.UseVisualStyleBackColor = false;
@@ -298,9 +319,10 @@
             // z
             // 
             this.z.BackColor = System.Drawing.Color.White;
-            this.z.Location = new System.Drawing.Point(188, 320);
+            this.z.Location = new System.Drawing.Point(251, 394);
+            this.z.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(54, 37);
+            this.z.Size = new System.Drawing.Size(72, 46);
             this.z.TabIndex = 20;
             this.z.Text = "z";
             this.z.UseVisualStyleBackColor = false;
@@ -309,9 +331,10 @@
             // k
             // 
             this.k.BackColor = System.Drawing.Color.White;
-            this.k.Location = new System.Drawing.Point(540, 277);
+            this.k.Location = new System.Drawing.Point(720, 341);
+            this.k.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.k.Name = "k";
-            this.k.Size = new System.Drawing.Size(54, 37);
+            this.k.Size = new System.Drawing.Size(72, 46);
             this.k.TabIndex = 19;
             this.k.Text = "k";
             this.k.UseVisualStyleBackColor = false;
@@ -320,9 +343,10 @@
             // j
             // 
             this.j.BackColor = System.Drawing.Color.White;
-            this.j.Location = new System.Drawing.Point(486, 277);
+            this.j.Location = new System.Drawing.Point(648, 341);
+            this.j.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.j.Name = "j";
-            this.j.Size = new System.Drawing.Size(54, 37);
+            this.j.Size = new System.Drawing.Size(72, 46);
             this.j.TabIndex = 18;
             this.j.Text = "j";
             this.j.UseVisualStyleBackColor = false;
@@ -331,9 +355,10 @@
             // h
             // 
             this.h.BackColor = System.Drawing.Color.White;
-            this.h.Location = new System.Drawing.Point(432, 277);
+            this.h.Location = new System.Drawing.Point(576, 341);
+            this.h.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.h.Name = "h";
-            this.h.Size = new System.Drawing.Size(54, 37);
+            this.h.Size = new System.Drawing.Size(72, 46);
             this.h.TabIndex = 17;
             this.h.Text = "h";
             this.h.UseVisualStyleBackColor = false;
@@ -342,9 +367,10 @@
             // g
             // 
             this.g.BackColor = System.Drawing.Color.White;
-            this.g.Location = new System.Drawing.Point(378, 277);
+            this.g.Location = new System.Drawing.Point(504, 341);
+            this.g.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.g.Name = "g";
-            this.g.Size = new System.Drawing.Size(54, 37);
+            this.g.Size = new System.Drawing.Size(72, 46);
             this.g.TabIndex = 16;
             this.g.Text = "g";
             this.g.UseVisualStyleBackColor = false;
@@ -353,9 +379,10 @@
             // f
             // 
             this.f.BackColor = System.Drawing.Color.White;
-            this.f.Location = new System.Drawing.Point(324, 277);
+            this.f.Location = new System.Drawing.Point(432, 341);
+            this.f.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.f.Name = "f";
-            this.f.Size = new System.Drawing.Size(54, 37);
+            this.f.Size = new System.Drawing.Size(72, 46);
             this.f.TabIndex = 15;
             this.f.Text = "f";
             this.f.UseVisualStyleBackColor = false;
@@ -364,9 +391,10 @@
             // enter
             // 
             this.enter.BackColor = System.Drawing.Color.White;
-            this.enter.Location = new System.Drawing.Point(489, 363);
+            this.enter.Location = new System.Drawing.Point(652, 447);
+            this.enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enter.Name = "enter";
-            this.enter.Size = new System.Drawing.Size(95, 37);
+            this.enter.Size = new System.Drawing.Size(127, 46);
             this.enter.TabIndex = 31;
             this.enter.Text = "Enter";
             this.enter.UseVisualStyleBackColor = false;
@@ -375,9 +403,10 @@
             // back
             // 
             this.back.BackColor = System.Drawing.Color.White;
-            this.back.Location = new System.Drawing.Point(566, 320);
+            this.back.Location = new System.Drawing.Point(755, 394);
+            this.back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(54, 37);
+            this.back.Size = new System.Drawing.Size(72, 46);
             this.back.TabIndex = 30;
             this.back.Text = "⌫";
             this.back.UseVisualStyleBackColor = false;
@@ -386,9 +415,10 @@
             // space
             // 
             this.space.BackColor = System.Drawing.Color.White;
-            this.space.Location = new System.Drawing.Point(299, 363);
+            this.space.Location = new System.Drawing.Point(399, 447);
+            this.space.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.space.Name = "space";
-            this.space.Size = new System.Drawing.Size(189, 37);
+            this.space.Size = new System.Drawing.Size(252, 46);
             this.space.TabIndex = 29;
             this.space.Text = "Space";
             this.space.UseVisualStyleBackColor = false;
@@ -397,9 +427,10 @@
             // capsLock
             // 
             this.capsLock.BackColor = System.Drawing.Color.White;
-            this.capsLock.Location = new System.Drawing.Point(202, 363);
+            this.capsLock.Location = new System.Drawing.Point(269, 447);
+            this.capsLock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.capsLock.Name = "capsLock";
-            this.capsLock.Size = new System.Drawing.Size(97, 37);
+            this.capsLock.Size = new System.Drawing.Size(129, 46);
             this.capsLock.TabIndex = 28;
             this.capsLock.Text = "Caps Lock";
             this.capsLock.UseVisualStyleBackColor = false;
@@ -416,12 +447,13 @@
             this.enterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterButton.ForeColor = System.Drawing.Color.Black;
-            this.enterButton.Location = new System.Drawing.Point(580, 21);
+            this.enterButton.Location = new System.Drawing.Point(773, 26);
+            this.enterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enterButton.Name = "enterButton";
             this.enterButton.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.enterButton.OnHoverButtonColor = System.Drawing.Color.Gold;
             this.enterButton.OnHoverTextColor = System.Drawing.Color.Black;
-            this.enterButton.Size = new System.Drawing.Size(208, 46);
+            this.enterButton.Size = new System.Drawing.Size(277, 57);
             this.enterButton.TabIndex = 33;
             this.enterButton.Text = "Enter";
             this.enterButton.TextColor = System.Drawing.Color.Black;
@@ -435,12 +467,13 @@
             this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(13, 21);
+            this.BackButton.Location = new System.Drawing.Point(17, 26);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackButton.Name = "BackButton";
             this.BackButton.OnHoverBorderColor = System.Drawing.Color.Gold;
             this.BackButton.OnHoverButtonColor = System.Drawing.Color.Gold;
             this.BackButton.OnHoverTextColor = System.Drawing.Color.Black;
-            this.BackButton.Size = new System.Drawing.Size(106, 46);
+            this.BackButton.Size = new System.Drawing.Size(141, 57);
             this.BackButton.TabIndex = 32;
             this.BackButton.Text = "Back";
             this.BackButton.TextColor = System.Drawing.Color.Black;
@@ -450,9 +483,11 @@
             // suggestionsListBox
             // 
             this.suggestionsListBox.FormattingEnabled = true;
-            this.suggestionsListBox.Location = new System.Drawing.Point(113, 211);
+            this.suggestionsListBox.ItemHeight = 16;
+            this.suggestionsListBox.Location = new System.Drawing.Point(151, 260);
+            this.suggestionsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.suggestionsListBox.Name = "suggestionsListBox";
-            this.suggestionsListBox.Size = new System.Drawing.Size(564, 17);
+            this.suggestionsListBox.Size = new System.Drawing.Size(751, 20);
             this.suggestionsListBox.TabIndex = 34;
             // 
             // SuggestionLabel
@@ -461,9 +496,10 @@
             this.SuggestionLabel.BackColor = System.Drawing.Color.Transparent;
             this.SuggestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuggestionLabel.ForeColor = System.Drawing.Color.White;
-            this.SuggestionLabel.Location = new System.Drawing.Point(105, 106);
+            this.SuggestionLabel.Location = new System.Drawing.Point(140, 130);
+            this.SuggestionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SuggestionLabel.Name = "SuggestionLabel";
-            this.SuggestionLabel.Size = new System.Drawing.Size(263, 46);
+            this.SuggestionLabel.Size = new System.Drawing.Size(327, 58);
             this.SuggestionLabel.TabIndex = 35;
             this.SuggestionLabel.Text = "Suggestions.";
             this.SuggestionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -474,9 +510,10 @@
             this.SuggestionDescLabel.BackColor = System.Drawing.Color.Transparent;
             this.SuggestionDescLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuggestionDescLabel.ForeColor = System.Drawing.Color.White;
-            this.SuggestionDescLabel.Location = new System.Drawing.Point(109, 152);
+            this.SuggestionDescLabel.Location = new System.Drawing.Point(145, 187);
+            this.SuggestionDescLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SuggestionDescLabel.Name = "SuggestionDescLabel";
-            this.SuggestionDescLabel.Size = new System.Drawing.Size(571, 40);
+            this.SuggestionDescLabel.Size = new System.Drawing.Size(693, 50);
             this.SuggestionDescLabel.TabIndex = 36;
             this.SuggestionDescLabel.Text = "Please enter a keyword describing your symptoms so I can provide you\r\nsuggestions" +
     " based on your current conditions.";
@@ -488,19 +525,20 @@
             this.WelcomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeLabel.ForeColor = System.Drawing.Color.White;
-            this.WelcomeLabel.Location = new System.Drawing.Point(108, 85);
+            this.WelcomeLabel.Location = new System.Drawing.Point(144, 105);
+            this.WelcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(126, 25);
+            this.WelcomeLabel.Size = new System.Drawing.Size(158, 29);
             this.WelcomeLabel.TabIndex = 37;
             this.WelcomeLabel.Text = "Welcome to";
             this.WelcomeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // SuggestionQuery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 591);
             this.Controls.Add(this.q);
             this.Controls.Add(this.w);
             this.Controls.Add(this.e);
@@ -538,7 +576,10 @@
             this.Controls.Add(this.s);
             this.Controls.Add(this.f);
             this.Controls.Add(this.c);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SuggestionQuery";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestSuggestionQuery";
             this.Load += new System.EventHandler(this.SuggestionQuery_Load);
             this.ResumeLayout(false);
