@@ -133,11 +133,11 @@
     <Compile Include="MainSuggestion.Designer.cs">
       <DependentUpon>MainSuggestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Products1.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="PaymentOption.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Products1.Designer.cs">
-      <DependentUpon>Products1.cs</DependentUpon>
+    <Compile Include="PaymentOption.Designer.cs">
+      <DependentUpon>PaymentOption.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -161,12 +161,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PaymentMethod.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PaymentMethod.Designer.cs">
-      <DependentUpon>PaymentMethod.cs</DependentUpon>
-    </Compile>
     <Compile Include="CashPayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,7 +174,7 @@
       <DependentUpon>E-cashPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="CartSummary.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CartSummary.Designer.cs">
       <DependentUpon>CartSummary.cs</DependentUpon>
@@ -215,6 +209,9 @@
     <EmbeddedResource Include="MainSuggestion.resx">
       <DependentUpon>MainSuggestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentOption.resx">
+      <DependentUpon>PaymentOption.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,9 +222,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PaymentMethod.resx">
-      <DependentUpon>PaymentMethod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SuggestionQuery.resx">
       <DependentUpon>SuggestionQuery.cs</DependentUpon>

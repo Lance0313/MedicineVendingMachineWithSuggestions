@@ -7,120 +7,138 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ThesisBeta
 {
     public partial class Purchase : Form
     {
         private bool isPanelVisible = false;
+        public static int totalPrice;
+        public static List<string> itemNames;
+        public static List<int> quantities;
+        public static List<float> prices;
+
         public Purchase()
         {
             InitializeComponent();
+            //Hide minus button
             PurchaseCartPanel.Visible = false;
-            PurchaseMinusMefenamic.Visible = false;
-            PurchaseMinusAdvil.Visible = false;
-            PurchaseMinusBiogesic.Visible = false;
-            PurchaseMinusBioflu.Visible = false;
-            PurchaseMinusIbuprofen.Visible = false;
-            PurchaseMinusCetirizine.Visible = false;
-            PurchaseMinusNeozep.Visible = false;
-            PurchaseMinusDiatabs.Visible = false;
-            PurchaseMinusKremilS.Visible = false;
-            PurchaseMinusAscorbic.Visible = false;
-
-
+            PurchaseMinusitem6.Visible = false;
+            PurchaseMinusitem1.Visible = false;
+            PurchaseMinusitem2.Visible = false;
+            PurchaseMinusitem3.Visible = false;
+            PurchaseMinusitem0.Visible = false;
+            PurchaseMinusitem4.Visible = false;
+            PurchaseMinusitem9.Visible = false;
+            PurchaseMinusitem8.Visible = false;
+            PurchaseMinusitem7.Visible = false;
+            PurchaseMinusitem5.Visible = false;
+            //End of hide minus button
         }
 
+        //Toggling cart panel visibility
         private void PurchaseCartButton_Click(object sender, EventArgs e)
         {
             if (isPanelVisible)
             {
-                // If panel is currently visible, hide it
+                //Sets to false if it was true
                 PurchaseCartPanel.Visible = false;
             }
             else
             {
-                // If panel is currently hidden, show it
+                //Sets to true if it was false
                 PurchaseCartPanel.Visible = true;
             }
-
-            // Toggle the visibility state
+            //Toggles the visibility
             isPanelVisible = !isPanelVisible;
-
         }
-        private int PurchaseBiogesicQuantity = 0;
-        private int PurchaseNeozepQuantity = 0;
-        private int PurchaseMefenamicQuantity = 0;
-        private int PurchaseDiatabsQuantity = 0;
-        private int PurchaseAdvilQuantity = 0;
-        private int PurchaseCetirizineQuantity = 0;
-        private int PurchaseBiofluQuantity = 0;
-        private int PurchaseAscorbicQuantity = 0;
-        private int PurchaseIbuprofenQuantity = 0;
-        private int PurchaseKremilSQuantity = 0;
-        private const int BiogesicPrice = 45;
-        private const int NeozepPrice = 65;
-        private const int MefenamicPrice = 190;
-        private const int DiatabsPrice = 130;
-        private const int AdvilPrice = 90;
-        private const int CetirizinePrice = 200;
-        private const int BiofluPrice = 45;
-        private const int AscorbicPrice = 85;
-        private const int IbuprofenPrice = 75;
-        private const int KremilSPrice = 110;
+        //End of toggling cart panel visibility
+
+        //Variables
+        private int item1 = 0;
+        private int item2 = 0;
+        private int item3 = 0;
+        private int item4 = 0;
+        private int item5 = 0;
+        private int item6 = 0;
+        private int item7 = 0;
+        private int item8 = 0;
+        private int item9 = 0;
+        private int item0 = 0;
+        private const int item1Price = 45;
+        private const int item2Price = 65;
+        private const int item3Price = 190;
+        private const int item4Price = 130;
+        private const int item5Price = 90;
+        private const int item6Price = 200;
+        private const int item7Price = 45;
+        private const int item8Price = 85;
+        private const int item9Price = 75;
+        private const int item0Price = 110;
+        //End of variables
+
+        //Get Quantity of products
         private int GetQuantity(string productName)
         {
             switch (productName)
             {
+                case "Ascof":
+                    return Math.Max(0, item1);
                 case "Biogesic":
-                    return Math.Max(0, PurchaseBiogesicQuantity);
-                case "Neozep Forte":
-                    return Math.Max(0, PurchaseNeozepQuantity);
-                case "Imodium":
-                    return Math.Max(0, PurchaseMefenamicQuantity);
-                case "Medicol Advance 400":
-                    return Math.Max(0, PurchaseDiatabsQuantity);
-                case "Ascof Forte":
-                    return Math.Max(0, PurchaseAdvilQuantity);
-                case "Cetirizine":
-                    return Math.Max(0, PurchaseCetirizineQuantity);
+                    return Math.Max(0, item2);
                 case "Bonamine":
-                    return Math.Max(0, PurchaseBiofluQuantity);
+                    return Math.Max(0, item3);
+                case "Cetirizine":
+                    return Math.Max(0, item4);
                 case "Fern-C":
-                    return Math.Max(0, PurchaseAscorbicQuantity);
+                    return Math.Max(0, item5);
+                case "Imodium":
+                    return Math.Max(0, item6);
+                case "Kremil-S":
+                    return Math.Max(0, item7);
+                case "Medicol":
+                    return Math.Max(0, item8);
                 case "Neozep Non-Drowsy":
-                    return Math.Max(0, PurchaseIbuprofenQuantity);
-                case "KremilS":
-                    return Math.Max(0, PurchaseKremilSQuantity);
+                    return Math.Max(0, item9);
+                case "Neozep Forte":
+                    return Math.Max(0, item0);
                 default:
                     return 0;
             }
         }
-        private int CalculateTotalPrice()
+        //End of get quantity of products
+
+        //Calculate TotalPrice
+        public int CalculateTotalPrice()
         {
-            int total = PurchaseBiogesicQuantity * BiogesicPrice +
-                        PurchaseNeozepQuantity * NeozepPrice +
-                        PurchaseMefenamicQuantity * MefenamicPrice +
-                        PurchaseDiatabsQuantity * DiatabsPrice +
-                        PurchaseAdvilQuantity * AdvilPrice +
-                        PurchaseCetirizineQuantity * CetirizinePrice +
-                        PurchaseBiofluQuantity * BiofluPrice +
-                        PurchaseAscorbicQuantity * AscorbicPrice +
-                        PurchaseIbuprofenQuantity * IbuprofenPrice +
-                        PurchaseKremilSQuantity * KremilSPrice;
+            int total = item1 * item1Price +
+                        item2 * item2Price +
+                        item3 * item3Price +
+                        item4 * item4Price +
+                        item5 * item5Price +
+                        item6 * item6Price +
+                        item7 * item7Price +
+                        item8 * item8Price +
+                        item9 * item9Price +
+                        item0 * item0Price;
             return total;
         }
+        //End of calculating total price
 
+        //Update cart text function
         private void UpdateLabel(string productName, int totalPrice)
         {
             //Ensures non-negative
             totalPrice = Math.Max(0, totalPrice);
+
             // Check if a label for the product already exists
             int quantity = GetQuantity(productName);
 
+            // Remove the label if it exists
             if (quantity == 0)
             {
-                // Remove the label if it exists
+                //Look for children of PurchaseCartText that is a label
                 Label existingLabel = PurchaseCartText.Controls.OfType<Label>().FirstOrDefault(lbl => lbl.Name == productName + "Label");
                 if (existingLabel != null)
                 {
@@ -131,32 +149,58 @@ namespace ThesisBeta
             {
                 // Check if a label for the product already exists
                 Label existingLabel = PurchaseCartText.Controls.OfType<Label>().FirstOrDefault(lbl => lbl.Name == productName + "Label");
-
                 if (existingLabel != null)
                 {
                     // Update the existing label with new information
-                    existingLabel.Text = $"{productName}: {quantity} - \u20B1{totalPrice}";
+                    existingLabel.Text = $"{productName} - {quantity} - \u20B1{totalPrice}";
                 }
                 else
                 {
                     // Create and configure the label
                     Label newLabel = new Label();
                     newLabel.Name = productName + "Label";
-                    newLabel.Text = $"{productName}: {quantity} - \u20B1{totalPrice}";
+                    newLabel.Text = $"{productName} - {quantity} - \u20B1{totalPrice}";
                     newLabel.AutoSize = true;
 
                     // Calculate Y-position for the label
                     int newY = PurchaseCartText.Controls.Count * newLabel.Height;
-
-                    // Set the location of the label
-                    newLabel.Location = new System.Drawing.Point(0, newY);
-
-                    // Add the label to the panel
+                    newLabel.Location = new Point(0, newY);
                     PurchaseCartText.Controls.Add(newLabel);
                 }
             }
         }
+        //End of update cart text function
 
+        //Get contents of the panel
+        public void GetPanelContents()
+        {
+            List<string> itemNames_ = new List<string>();
+            List<int> quantities_ = new List<int>();
+            List<float> prices_ = new List<float>();
+
+            foreach (Control control in PurchaseCartText.Controls)
+            {
+                string[] parts = control.Text.Split('-');
+
+                if (parts.Length >= 3)
+                {
+                    string itemName = parts[0].Trim();
+                    Console.WriteLine(parts[1]);
+                    int quantity = int.Parse(parts[1].Trim());
+                    float price = float.Parse(parts[2].Trim().Replace("₱", string.Empty));
+                    Console.WriteLine(price);
+
+                    // Add item name, quantity, and price to their respective lists
+                    itemNames_.Add(itemName);
+                    quantities_.Add(quantity);
+                    prices_.Add(price);
+                }
+            }
+            itemNames = itemNames_;
+            quantities = quantities_;
+            prices = prices_;
+        }
+        //Proceed
         private void PurchaseProceed_Click(object sender, EventArgs e)
         {
             if (PurchaseCartText.Controls.Count == 0)
@@ -164,193 +208,168 @@ namespace ThesisBeta
                 MessageBox.Show("Please add items to the order before checking out.");
                 return;
             }
-            int totalPrice = CalculateTotalPrice();
-            this.Hide();
-
+            totalPrice = CalculateTotalPrice();
+            GetPanelContents();
+            CartSummary cartSummary = new CartSummary();
+            cartSummary.Show();
         }
 
-        private void PurchaseAddAdvil_Click(object sender, EventArgs e)
+
+        //Start of Add/Minus Function
+        private void PurchaseAdditem5_Click(object sender, EventArgs e)
         {
-            PurchaseAdvilQuantity++;
-            UpdateLabel("Ascof Forte", PurchaseAdvilQuantity * AdvilPrice);
-            PurchaseMinusAdvil.Visible = true;
+            //Add quantity
+            item5++;
+            //Call UpdateLabel
+            UpdateLabel("Fern-C", item5 * item5Price);
+            //Show Minus button
+            PurchaseMinusitem1.Visible = true;
         }
 
-        private void PurchaseMinusAdvil_Click(object sender, EventArgs e)
+        private void PurchaseMinusitem5_Click(object sender, EventArgs e)
         {
-            PurchaseAdvilQuantity--;
-            UpdateLabel("Ascof Forte", PurchaseAdvilQuantity * AdvilPrice);
-            PurchaseMinusAdvil.Visible = PurchaseAdvilQuantity > 0;
-
+            //Substract quantity 
+            item5--;
+            //Call UpdateLabel
+            UpdateLabel("Fern-C", item5 * item5Price);
+            //Hide minus button when quantity value is 0
+            PurchaseMinusitem1.Visible = item5 > 0;
         }
 
-        private void PurchaseMinusMefenamic_Click(object sender, EventArgs e)
+        private void PurchaseMinusitem3_Click(object sender, EventArgs e)
         {
-            PurchaseMefenamicQuantity--;
-            UpdateLabel("Imodium", PurchaseMefenamicQuantity * MefenamicPrice);
-            PurchaseMinusMefenamic.Enabled = PurchaseMefenamicQuantity > 0;
-            PurchaseMinusMefenamic.Visible = PurchaseMefenamicQuantity > 0;
+            item3--;
+            UpdateLabel("Bonamine", item3 * item3Price);
+            PurchaseMinusitem6.Enabled = item3 > 0;
+            PurchaseMinusitem6.Visible = item3 > 0;
         }
 
-        private void PurchaseAddMefenamic_Click(object sender, EventArgs e)
+        private void PurchaseAdditem3_Click(object sender, EventArgs e)
         {
-            PurchaseMefenamicQuantity++;
-            UpdateLabel("Imodium", PurchaseMefenamicQuantity * MefenamicPrice);
-            PurchaseMinusMefenamic.Enabled = true;
-            PurchaseMinusMefenamic.Visible = true;
+            item3++;
+            UpdateLabel("Bonamine", item3 * item3Price);
+            PurchaseMinusitem6.Enabled = true;
+            PurchaseMinusitem6.Visible = true;
         }
 
-        private void PurchaseAddBiogesic_Click(object sender, EventArgs e)
+        private void PurchaseAdditem1_Click(object sender, EventArgs e)
         {
-            PurchaseBiogesicQuantity++;
-            UpdateLabel("Biogesic", PurchaseBiogesicQuantity * BiogesicPrice);
-            
-            PurchaseMinusBiogesic.Visible = true;
+            item1++;
+            UpdateLabel("Ascof Forte", item1 * item1Price);
+            PurchaseMinusitem2.Visible = true;
         }
 
-        private void PurchaseMinusBiogesic_Click(object sender, EventArgs e)
+        private void PurchaseMinusitem1_Click(object sender, EventArgs e)
         {
-            PurchaseBiogesicQuantity--;
-            UpdateLabel("Biogesic", PurchaseBiogesicQuantity * BiogesicPrice);
-            PurchaseMinusBiogesic.Visible = PurchaseBiogesicQuantity > 0;
+            item1--;
+            UpdateLabel("Ascof Forte", item1 * item1Price);
+            PurchaseMinusitem2.Visible = item1 > 0;
         }
+
+        private void PurchaseMinusitem9_Click(object sender, EventArgs e)
+        {
+            item9--;
+            UpdateLabel("Neozep Forte", item9 * item9Price);
+            PurchaseMinusitem0.Visible = item9 > 0;
+        }
+
+        private void PurchaseAdditem9_Click(object sender, EventArgs e)
+        {
+            item9++;
+            UpdateLabel("Neozep Forte", item9 * item9Price);
+            PurchaseMinusitem0.Visible = true;
+        }
+
+        private void PurchaseMinusitem7_Click(object sender, EventArgs e)
+        {
+            item7--;
+            UpdateLabel("Kremil-S", item7 * item7Price);
+            PurchaseMinusitem3.Visible = item7 > 0;
+        }
+
+        private void PurchaseAdditem7_Click(object sender, EventArgs e)
+        {
+            item7++;
+            UpdateLabel("Kremil-S", item7 * item7Price);
+            PurchaseMinusitem3.Visible = true;
+        }
+
+        private void PurchaseMinusitem6_Click(object sender, EventArgs e)
+        {
+            item6--;
+            UpdateLabel("Imodium", item6 * item6Price);
+            PurchaseMinusitem4.Visible = item6 > 0;
+        }
+
+        private void PurchaseAdditem6_Click(object sender, EventArgs e)
+        {
+            item6++;
+            UpdateLabel("Imodium", item6 * item6Price);
+            PurchaseMinusitem4.Visible = true;
+        }
+
+        private void PurchaseMinusitem4_Click(object sender, EventArgs e)
+        {
+            item4--;
+            UpdateLabel("Cetirizine", item4 * item4Price);
+            PurchaseMinusitem8.Visible = item4 > 0;
+        }
+
+        private void PurchaseAdditem4_Click(object sender, EventArgs e)
+        {
+            item4++;
+            UpdateLabel("Cetirizine", item4 * item4Price);
+            PurchaseMinusitem8.Visible = true;
+        }
+
+        private void PurchaseMinusitem2_Click(object sender, EventArgs e)
+        {
+            item2--;
+            UpdateLabel("Biogesic", item2 * item2Price);
+            PurchaseMinusitem9.Visible = item2 > 0;
+        }
+
+        private void PurchaseAdditem2_Click(object sender, EventArgs e)
+        {
+            item2++;
+            UpdateLabel("Biogesic", item2 * item2Price);
+            PurchaseMinusitem9.Visible = true;
+        }
+
+        private void PurchaseMinusitem8_Click(object sender, EventArgs e)
+        {
+            item8--;
+            UpdateLabel("Medicol Advance 400", item8 * item8Price);
+            PurchaseMinusitem5.Visible = item8 > 0;
+        }
+
+        private void PurchaseAdditem8_Click(object sender, EventArgs e)
+        {
+            item8++;
+            UpdateLabel("Medicol Advance 400", item8 * item8Price);
+            PurchaseMinusitem5.Visible = true;
+        }
+
+        private void PurchaseMinusitem0_Click(object sender, EventArgs e)
+        {
+            item0--;
+            UpdateLabel("Neozep Non-Drowsy", item0 * item0Price);
+            PurchaseMinusitem7.Visible = item0 > 0;
+        }
+
+        private void PurchaseAdditem0_Click(object sender, EventArgs e)
+        {
+            item0++;
+            UpdateLabel("Neozep Non-Drowsy", item0 * item0Price);
+            PurchaseMinusitem7.Visible = true;
+        }
+        //End of Add/Minus function
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            this.Close();
             StartScreen startScreen = new StartScreen();
             startScreen.Show();
-
-            this.Hide();
-        }
-
-        private void PurchaseAddIbuprofen_Click(object sender, EventArgs e)
-        {
-            PurchaseIbuprofenQuantity++;
-            UpdateLabel("Neozep Non-Drowsy", PurchaseIbuprofenQuantity * IbuprofenPrice);
-
-            PurchaseMinusIbuprofen.Visible = true;
-        }
-
-        private void PurchaseMinusIbuprofen_Click(object sender, EventArgs e)
-        {
-            PurchaseIbuprofenQuantity--;
-            UpdateLabel("Neozep Non-Drowsy", PurchaseIbuprofenQuantity * IbuprofenPrice);
-            PurchaseMinusIbuprofen.Visible = PurchaseIbuprofenQuantity > 0;
-        }
-
-        private void PurchaseAddBioflu_Click(object sender, EventArgs e)
-        {
-            PurchaseBiofluQuantity++;
-            UpdateLabel("Bonamine", PurchaseBiofluQuantity * BiofluPrice);
-
-            PurchaseMinusBioflu.Visible = true;
-        }
-
-        private void PurchaseMinusBioflu_Click(object sender, EventArgs e)
-        {
-            PurchaseBiofluQuantity--;
-            UpdateLabel("Bonamine", PurchaseBiofluQuantity * BiofluPrice);
-            PurchaseMinusBioflu.Visible = PurchaseBiofluQuantity > 0;
-        }
-
-        private void PurchaseAddCetirizine_Click(object sender, EventArgs e)
-        {
-            PurchaseCetirizineQuantity++;
-            UpdateLabel("Cetirizine", PurchaseCetirizineQuantity * CetirizinePrice);
-
-            PurchaseMinusCetirizine.Visible = true;
-        }
-
-        private void PurchaseMinusCetirizine_Click(object sender, EventArgs e)
-        {
-            PurchaseCetirizineQuantity--;
-            UpdateLabel("Cetirizine", PurchaseCetirizineQuantity * CetirizinePrice);
-            PurchaseMinusCetirizine.Visible = PurchaseCetirizineQuantity > 0;
-        }
-
-        private void PurchaseAddDiatabs_Click(object sender, EventArgs e)
-        {
-            PurchaseDiatabsQuantity++;
-            UpdateLabel("Medicol Advance 400", PurchaseDiatabsQuantity * DiatabsPrice);
-
-            PurchaseMinusDiatabs.Visible = true;
-        }
-
-        private void PurchaseMinusDiatabs_Click(object sender, EventArgs e)
-        {
-            PurchaseDiatabsQuantity--;
-            UpdateLabel("Medicol Advance 400", PurchaseDiatabsQuantity * DiatabsPrice);
-            PurchaseMinusDiatabs.Visible = PurchaseDiatabsQuantity > 0;
-        }
-
-        private void PurchaseAddNeozep_Click(object sender, EventArgs e)
-        {
-            PurchaseNeozepQuantity++;
-            UpdateLabel("Neozep Forte", PurchaseNeozepQuantity * NeozepPrice);
-
-            PurchaseMinusNeozep.Visible = true;
-        }
-
-        private void PurchaseMinusNeozep_Click(object sender, EventArgs e)
-        {
-            PurchaseNeozepQuantity--;
-            UpdateLabel("Neozep Forte", PurchaseNeozepQuantity * NeozepPrice);
-            PurchaseMinusNeozep.Visible = PurchaseNeozepQuantity > 0;
-        }
-
-        private void PurchaseAddAscorbic_Click(object sender, EventArgs e)
-        {
-            PurchaseAscorbicQuantity++;
-            UpdateLabel("Fern-C", PurchaseAscorbicQuantity * AscorbicPrice);
-
-            PurchaseMinusAscorbic.Visible = true;
-        }
-
-        private void PurchaseMinusAscorbic_Click(object sender, EventArgs e)
-        {
-            PurchaseAscorbicQuantity--;
-            UpdateLabel("Fern-C", PurchaseAscorbicQuantity * AscorbicPrice);
-            PurchaseMinusAscorbic.Visible = PurchaseAscorbicQuantity > 0;
-        }
-
-        private void PurchaseAddKremilS_Click(object sender, EventArgs e)
-        {
-            PurchaseKremilSQuantity++;
-            UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
-
-            PurchaseMinusKremilS.Visible = true;
-        }
-
-        private void PurchaseMinusKremilS_Click(object sender, EventArgs e)
-        {
-            PurchaseKremilSQuantity--;
-            UpdateLabel("KremilS", PurchaseKremilSQuantity * KremilSPrice);
-            PurchaseMinusKremilS.Visible = PurchaseKremilSQuantity > 0;
-        }
-
-        private void PurchaseCartPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PurchaseCartText_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PurchaseTabPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ThesisBeta
 {
-    public partial class Products1 : UserControl
+    public partial class PaymentOption : Form
     {
-        public Products1()
+        public PaymentOption()
         {
             InitializeComponent();
         }
