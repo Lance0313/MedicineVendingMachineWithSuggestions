@@ -29,31 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
-            this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
             this.StartScreenLabel = new System.Windows.Forms.Label();
-            this.StartScreenSuggestion = new ePOSOne.btnProduct.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.StartScreenFooter = new System.Windows.Forms.Label();
+            this.dataGridViewCart = new System.Windows.Forms.DataGridView();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartScreenSuggestion = new ePOSOne.btnProduct.RoundButton();
+            this.StartScreenPurchase = new ePOSOne.btnProduct.RoundButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
             this.SuspendLayout();
-            // 
-            // StartScreenPurchase
-            // 
-            this.StartScreenPurchase.BorderColor = System.Drawing.Color.Transparent;
-            this.StartScreenPurchase.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
-            this.StartScreenPurchase.FlatAppearance.BorderSize = 0;
-            this.StartScreenPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartScreenPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartScreenPurchase.Location = new System.Drawing.Point(138, 297);
-            this.StartScreenPurchase.Name = "StartScreenPurchase";
-            this.StartScreenPurchase.OnHoverBorderColor = System.Drawing.Color.Gold;
-            this.StartScreenPurchase.OnHoverButtonColor = System.Drawing.Color.Gold;
-            this.StartScreenPurchase.OnHoverTextColor = System.Drawing.Color.Black;
-            this.StartScreenPurchase.Size = new System.Drawing.Size(208, 46);
-            this.StartScreenPurchase.TabIndex = 0;
-            this.StartScreenPurchase.Text = "Purchase";
-            this.StartScreenPurchase.TextColor = System.Drawing.Color.Black;
-            this.StartScreenPurchase.UseVisualStyleBackColor = true;
-            this.StartScreenPurchase.Click += new System.EventHandler(this.StartScreenPurchase_Click);
             // 
             // StartScreenLabel
             // 
@@ -112,6 +98,73 @@
             this.StartScreenFooter.TabIndex = 4;
             this.StartScreenFooter.Text = "All rights reserved. 2024 ©LMMN";
             // 
+            // dataGridViewCart
+            // 
+            this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductName,
+            this.Quantity,
+            this.ProductPrice});
+            this.dataGridViewCart.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewCart.Name = "dataGridViewCart";
+            this.dataGridViewCart.Size = new System.Drawing.Size(334, 183);
+            this.dataGridViewCart.TabIndex = 5;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "String";
+            this.ProductName.HeaderText = "ProductName";
+            this.ProductName.Name = "ProductName";
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "int";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.DataPropertyName = "double";
+            this.ProductPrice.HeaderText = "ProductPrice";
+            this.ProductPrice.Name = "ProductPrice";
+            // 
+            // StartScreenSuggestion
+            // 
+            this.StartScreenSuggestion.BorderColor = System.Drawing.Color.Transparent;
+            this.StartScreenSuggestion.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.StartScreenSuggestion.FlatAppearance.BorderSize = 0;
+            this.StartScreenSuggestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartScreenSuggestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartScreenSuggestion.Location = new System.Drawing.Point(457, 297);
+            this.StartScreenSuggestion.Name = "StartScreenSuggestion";
+            this.StartScreenSuggestion.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.StartScreenSuggestion.OnHoverButtonColor = System.Drawing.Color.Gold;
+            this.StartScreenSuggestion.OnHoverTextColor = System.Drawing.Color.Black;
+            this.StartScreenSuggestion.Size = new System.Drawing.Size(208, 46);
+            this.StartScreenSuggestion.TabIndex = 2;
+            this.StartScreenSuggestion.Text = "Suggestion";
+            this.StartScreenSuggestion.TextColor = System.Drawing.Color.Black;
+            this.StartScreenSuggestion.UseVisualStyleBackColor = true;
+            // 
+            // StartScreenPurchase
+            // 
+            this.StartScreenPurchase.BorderColor = System.Drawing.Color.Transparent;
+            this.StartScreenPurchase.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(88)))));
+            this.StartScreenPurchase.FlatAppearance.BorderSize = 0;
+            this.StartScreenPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartScreenPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartScreenPurchase.Location = new System.Drawing.Point(138, 297);
+            this.StartScreenPurchase.Name = "StartScreenPurchase";
+            this.StartScreenPurchase.OnHoverBorderColor = System.Drawing.Color.Gold;
+            this.StartScreenPurchase.OnHoverButtonColor = System.Drawing.Color.Gold;
+            this.StartScreenPurchase.OnHoverTextColor = System.Drawing.Color.Black;
+            this.StartScreenPurchase.Size = new System.Drawing.Size(208, 46);
+            this.StartScreenPurchase.TabIndex = 0;
+            this.StartScreenPurchase.Text = "Purchase";
+            this.StartScreenPurchase.TextColor = System.Drawing.Color.Black;
+            this.StartScreenPurchase.UseVisualStyleBackColor = true;
+            this.StartScreenPurchase.Click += new System.EventHandler(this.StartScreenPurchase_Click);
+            // 
             // StartScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +172,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 480);
+            this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.StartScreenFooter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StartScreenSuggestion);
@@ -129,6 +183,7 @@
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +196,10 @@
         private ePOSOne.btnProduct.RoundButton StartScreenSuggestion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label StartScreenFooter;
+        private System.Windows.Forms.DataGridView dataGridViewCart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
     }
 }
 

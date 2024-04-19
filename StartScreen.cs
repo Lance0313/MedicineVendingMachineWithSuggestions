@@ -12,6 +12,7 @@ namespace ThesisBeta
 {
     public partial class StartScreen : Form
     {
+        public DataGridView DataGridViewCart { get { return DataGridViewCart; } }
         public StartScreen()
         {
             InitializeComponent();
@@ -28,12 +29,8 @@ namespace ThesisBeta
         private void StartScreenPurchase_Click(object sender, EventArgs e)
         {
             Purchase purchase = new Purchase();
-
-            // Show Form2
             purchase.Show();
-
-            // Close Form1
-            this.Hide();
+            this.Visible = false;
         }
 
         private void StartScreenSuggestion_Click(object sender, EventArgs e)
